@@ -75,15 +75,9 @@ This is a simple text-based site map for the proposed Two-Bit Alchemy informatio
 |
 |-- About
 |   |-- About Dada
-|   |-- Philosophy
-|   `-- Contact Link
+|   `-- Philosophy
 |
 |-- Contact
-|
-`-- Search
-    |-- Search Results
-    |-- Tags
-    `-- Categories
 ```
 
 ## Cross-Section Relationships
@@ -106,10 +100,10 @@ Tags -> Cross-Section Discovery
 Categories -> Broad Content Structure
 ```
 
-## Proposed Primary Navigation
+## Approved Primary Navigation
 
 ```text
-Home | Projects | Field Notes | Workshop Journal | Cabinet | About | Contact | Search
+Home | Projects | Field Notes | Workshop Journal | Cabinet | About | Contact
 ```
 
 ## Footer Or Utility Navigation Candidates
@@ -123,3 +117,30 @@ Categories
 Legacy Fisher Aquatics, if approved
 ```
 
+## Approved Launch URL Structure
+
+```text
+/
+/projects/
+/projects/fisher-aquatics/
+/projects/kiwi/
+/projects/photography/
+/field-notes/
+/workshop-journal/
+/cabinet/
+/about/
+/contact/
+```
+
+## Approved Launch Categories
+
+```text
+Projects
+Field Notes
+Workshop Journal
+Photography
+Aquatics
+Software
+Electronics
+Craft
+```

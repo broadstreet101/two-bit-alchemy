@@ -31,9 +31,9 @@ The architecture should make current curiosity visible while preserving past dis
 - Search, tags, and categories should help visitors follow themes across sections.
 - Final WordPress content types, URL rules, and template implementation are not yet approved.
 
-## Top-Level Navigation
+## Approved Launch Architecture Decisions
 
-Recommended top-level navigation:
+Approved top navigation:
 
 - Home
 - Projects
@@ -42,7 +42,56 @@ Recommended top-level navigation:
 - Cabinet
 - About
 - Contact
-- Search
+
+Approved launch rules:
+
+- Place Philosophy under About for launch. Do not make it top-level yet.
+- Do not include Search in primary navigation at launch.
+- Use "Workshop Journal" publicly.
+- Treat "Build Log" as an internal or documentation concept.
+- Use Photography as a project page, as selected galleries, and as embedded support throughout related projects and posts.
+- Place Fisher Aquatics under Projects.
+- Preserve or redirect Fisher Aquatics legacy URLs later after audit.
+- Start with minimal categories.
+- Add tags organically later.
+- Use project status labels internally for now; do not make public status labels prominent at launch.
+- Use simple lowercase URL slugs.
+
+Approved launch categories:
+
+- Projects
+- Field Notes
+- Workshop Journal
+- Photography
+- Aquatics
+- Software
+- Electronics
+- Craft
+
+Approved launch URL structure:
+
+- `/`
+- `/projects/`
+- `/projects/fisher-aquatics/`
+- `/projects/kiwi/`
+- `/projects/photography/`
+- `/field-notes/`
+- `/workshop-journal/`
+- `/cabinet/`
+- `/about/`
+- `/contact/`
+
+## Top-Level Navigation
+
+Approved top-level navigation:
+
+- Home
+- Projects
+- Field Notes
+- Workshop Journal
+- Cabinet
+- About
+- Contact
 
 ### Navigation Rationale
 
@@ -52,7 +101,7 @@ Recommended top-level navigation:
 - `Cabinet` supports collections, tools, books, specimens, photographs, and artifacts.
 - `About` keeps the personal context available without making the site resume-like.
 - `Contact` provides a clear path for direct communication without turning the site into a sales funnel.
-- `Search` supports exploratory browsing as the archive grows.
+- Search should exist as an archive support feature later, but it is not part of primary navigation at launch.
 
 ## Secondary Navigation
 
@@ -248,6 +297,9 @@ Statement of values, explanation of the name, the observe-record-understand-crea
 Relationships to other sections:
 Philosophy can sit within or near About. It should connect the brand manifest's ideas to public-facing content.
 
+Launch placement:
+Philosophy should live under About for launch and should not appear as a top-level navigation item yet.
+
 ### Contact
 
 Purpose:
@@ -275,6 +327,9 @@ Search field, search results, filters or refinements if approved later, and link
 
 Relationships to other sections:
 Search should index Projects, Field Notes, Workshop Journal, Cabinet entries, and other public content. It should support tags and categories without replacing section navigation.
+
+Launch placement:
+Search should not appear in primary navigation at launch. It may be added later when the archive has enough content to justify it.
 
 ## Projects Structure
 
@@ -307,7 +362,8 @@ Project status labels may be useful later, such as:
 - Archived
 - Reference
 
-These labels require approval before implementation.
+Approved launch use:
+Project status labels may be used internally for planning, but they should not be prominent public labels at launch.
 
 ## Fisher Aquatics Integration
 
@@ -321,8 +377,8 @@ Recommended integration:
 - Use redirects if existing URLs change.
 - Avoid making aquatics the dominant site-wide navigation identity.
 
-Decision required:
-Whether Fisher Aquatics should keep a legacy landing page, redirect entirely into the project page, or maintain both a project page and legacy context page.
+Approved launch handling:
+Fisher Aquatics becomes a project under Projects. Legacy URLs should be preserved or redirected later after audit.
 
 ## Photography Organization
 
@@ -330,6 +386,7 @@ Photography should be organized in two ways:
 
 - As a standalone project for photographic work.
 - As supporting documentation across other sections.
+- As galleries for selected work.
 
 Potential photography groupings:
 
@@ -341,8 +398,8 @@ Potential photography groupings:
 - Experiments
 - Camera or process notes
 
-Decision required:
-Whether photography should have gallery-style archive pages, journal-style posts, project pages, or a combination.
+Approved launch handling:
+Use a combination approach: Photography as a project page, selected galleries, and photos embedded throughout related projects and posts.
 
 ## Field Notes And Journal Organization
 
@@ -378,8 +435,8 @@ Recommended organization:
 - Failures and Lessons
 - Updates connected to Projects
 
-Decision required:
-Whether "Workshop Journal" and "Build Log" should be separate public labels or whether "Workshop Journal" should contain build log content as a category.
+Approved launch handling:
+Use "Workshop Journal" publicly. Treat "Build Log" as an internal or documentation concept.
 
 ## About And Contact Organization
 
@@ -394,8 +451,8 @@ Recommended organization:
   - Relevant topics
   - Optional external links
 
-Decision required:
-Whether Philosophy should be its own top-level page, a child of About, or both linked prominently.
+Approved launch handling:
+Place Philosophy under About for launch. Do not make it top-level yet.
 
 ## Search Strategy
 
@@ -419,8 +476,8 @@ Search should prioritize:
 - Project relationships
 - Tags and categories
 
-Decision required:
-Whether search should be exposed as a top-level navigation item from launch or introduced later when enough content exists.
+Approved launch handling:
+Do not include Search in primary navigation at launch.
 
 ## Tag And Category Strategy
 
@@ -428,39 +485,25 @@ Categories should define broad content structure. Tags should connect ideas acro
 
 ### Recommended Categories
 
-Categories should be few and stable:
+Approved launch categories:
 
 - Projects
 - Field Notes
 - Workshop Journal
-- Cabinet
 - Photography
+- Aquatics
+- Software
+- Electronics
+- Craft
 
 If WordPress remains the platform, these may map to pages, post categories, custom post types, or taxonomies after implementation decisions are made.
 
-### Recommended Tags
+### Tags
 
 Tags should capture recurring ideas, materials, methods, and subjects.
 
-Possible initial tags:
-
-- Aquatics
-- Appalachia
-- Botany
-- Camera
-- Craft
-- Electronics
-- Experiments
-- Field Work
-- Learning
-- Microscopy
-- Natural History
-- Observation
-- Photography
-- Repair
-- Software
-- Tools
-- Water
+Approved launch handling:
+Start with minimal categories. Add tags organically later.
 
 Tag rules:
 
@@ -469,8 +512,7 @@ Tag rules:
 - Prefer tags that can connect multiple sections.
 - Review tags periodically as the archive grows.
 
-Decision required:
-Approve initial tag list and decide whether project names should also be tags.
+Project names should not automatically become tags unless they emerge organically as useful cross-section connectors.
 
 ## Future Expansion Points
 
@@ -496,13 +538,8 @@ Add new sections only when repeated content no longer fits existing sections cle
 
 ## Decisions Requiring Approval
 
-- Final top-level navigation labels and order.
-- Whether Philosophy is top-level, inside About, or both.
-- Whether Search appears in primary navigation at launch.
-- Whether Workshop Journal and Build Log are separate labels.
-- Photography archive type: gallery, posts, project pages, or combination.
-- Fisher Aquatics legacy handling and redirect strategy.
-- Initial category and tag list.
-- Whether project status labels should be public.
-- Final URL structure.
-
+- Final WordPress content type and taxonomy mapping.
+- Final redirect strategy after the Fisher Aquatics audit.
+- Whether Search should be added after launch as the archive grows.
+- Whether public project status labels should be introduced after launch.
+- Final handling for project pages not included in the approved launch URL list, such as WMS, Electronics, Software, and Other Experiments.

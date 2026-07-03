@@ -2,6 +2,21 @@
 
 ## 2026-07-03
 
+Information architecture decisions approved.
+
+### Completed
+
+- Updated `docs/site-architecture.md` with approved launch navigation, Philosophy placement, Search handling, Workshop Journal naming, Photography structure, Fisher Aquatics integration, category strategy, internal project status handling, and URL structure.
+- Updated `docs/site-map.md` to remove Search from primary navigation, place Philosophy under About, and add approved launch URLs and categories.
+- Updated `docs/decisions.md` so the approved information architecture is recorded as a durable project decision.
+
+### Notes
+
+- No website code was implemented.
+- No page layouts, themes, or plugins were added or recommended.
+
+## 2026-07-03
+
 Information Architecture Phase started.
 
 ### Completed
