@@ -4,6 +4,8 @@ This document captures the current-state audit framework for the existing Fisher
 
 No live WordPress inspection has been performed yet. Information not present in the repository is explicitly marked as requiring live WordPress inspection.
 
+Use `docs/wordpress-inspection-checklist.md` for the step-by-step live inspection order.
+
 ## Audit Rules
 
 - Do not modify the live website during audit.
@@ -463,4 +465,3 @@ The following information must be gathered from the live WordPress site or hosti
 - Current permalink and URL structure.
 - SEO metadata, indexing, redirects, and sitemap status.
 - Migration risks tied to content, media, URLs, plugins, and theme dependencies.
-

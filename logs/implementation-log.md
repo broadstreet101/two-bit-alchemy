@@ -2,6 +2,24 @@
 
 ## 2026-07-03
 
+Live WordPress Inspection Phase prepared.
+
+### Completed
+
+- Added `docs/wordpress-inspection-checklist.md` as a step-by-step read-only inspection checklist for the existing Fisher Aquatics WordPress installation.
+- Organized the checklist to minimize unnecessary WordPress admin navigation.
+- Included purpose, WordPress location, information to record, evidence to collect, export opportunities, administrator-access requirements, and migration relevance for each step.
+- Added Inspection Complete criteria.
+- Cross-referenced the checklist from `docs/wordpress-audit.md`.
+
+### Notes
+
+- No live website inspection was performed.
+- No live website modifications were made.
+- No themes or plugins were recommended.
+
+## 2026-07-03
+
 WordPress Audit Phase started.
 
 ### Completed
