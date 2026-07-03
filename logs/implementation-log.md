@@ -2,6 +2,24 @@
 
 ## 2026-07-03
 
+Information Architecture Phase started.
+
+### Completed
+
+- Added `docs/site-architecture.md`.
+- Added `docs/site-map.md`.
+- Proposed top-level navigation, secondary navigation, homepage content hierarchy, section purposes, audiences, typical content, and cross-section relationships.
+- Documented Fisher Aquatics as a project inside Two-Bit Alchemy rather than the primary identity.
+- Included assumptions, search strategy, category and tag strategy, future expansion points, and decisions requiring user approval.
+
+### Notes
+
+- No page layouts were designed.
+- No themes or plugins were recommended.
+- No website code was implemented.
+
+## 2026-07-03
+
 Development workflow policy established.
 
 ### Completed
