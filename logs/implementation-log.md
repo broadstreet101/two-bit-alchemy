@@ -2,6 +2,23 @@
 
 ## 2026-07-03
 
+Theme Architecture Phase started.
+
+### Completed
+
+- Added `docs/theme-architecture.md`.
+- Documented architecture for a lightweight, maintainable custom Two-Bit Alchemy WordPress theme.
+- Covered philosophy, folder structure, template hierarchy, reusable template parts, assets, CSS, JavaScript, image handling, typography, color tokens, Gutenberg compatibility, child theme considerations, accessibility, and performance.
+- Used official WordPress Theme Handbook and `theme.json` documentation as technical references.
+
+### Notes
+
+- No live WordPress site modifications were made.
+- No PHP, CSS, or JavaScript was written.
+- No third-party page builders, Elementor-style tools, themes, or plugins were recommended.
+
+## 2026-07-03
+
 Live WordPress Inspection Phase prepared.
 
 ### Completed
