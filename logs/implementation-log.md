@@ -2,6 +2,22 @@
 
 ## 2026-07-03
 
+WordPress Audit Phase started.
+
+### Completed
+
+- Added `docs/wordpress-audit.md` as a framework for capturing the current state of the existing Fisher Aquatics WordPress site before redesign.
+- Included audit sections for hosting, WordPress/PHP versions, theme status, plugins, media, pages, posts, menus, widgets, custom CSS/JavaScript, performance, accessibility, backups, security, URLs, SEO, and migration risks.
+- Marked unknown information as requiring live WordPress inspection where the repository cannot verify it.
+
+### Notes
+
+- No live website inspection was performed.
+- No website modifications were made.
+- No themes or plugins were recommended.
+
+## 2026-07-03
+
 Information architecture decisions approved.
 
 ### Completed
