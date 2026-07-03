@@ -2,6 +2,22 @@
 
 ## 2026-07-03
 
+Website Discovery Phase started.
+
+### Completed
+
+- Added `docs/discovery-phase.md`.
+- Documented facts, assumptions, and items requiring user decisions.
+- Added objective recommendations for WordPress architecture, theme strategy, plugin strategy, content migration, brand assets, accessibility, performance, security, and launch roadmap.
+
+### Notes
+
+- Recommendations were documented as recommendations, not final decisions.
+- No website implementation was started.
+- No website files were modified.
+
+## 2026-07-03
+
 Brand manifest refinements added.
 
 ### Completed
