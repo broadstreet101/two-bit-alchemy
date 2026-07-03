@@ -144,7 +144,10 @@ Approved launch page templates:
 - Contact page.
 
 Content model direction:
-`docs/content-model.md` recommends standard pages, posts, categories, tags, and media for launch, with no custom post types or custom taxonomies until a clear future need is approved.
+`docs/content-model.md` approves standard pages, posts, categories, tags, and media for launch, with no custom post types or custom taxonomies until a clear future need is approved.
+
+Approved archive template requirement:
+Include category archive templates for Field Notes and Workshop Journal at launch.
 
 ## Reusable Template Parts
 
@@ -466,11 +469,20 @@ Already approved:
 - Minimal CSS and JavaScript.
 - No page builders.
 
-Pending content-model approval:
+Content model approval status:
 
-- Launch model using standard pages plus posts/categories.
+Approved.
+
+Approved content model:
+
+- Launch model uses standard pages plus posts/categories.
 - No custom post types at launch.
 - No custom taxonomies at launch.
+- Cabinet starts as a curated page.
+- Projects are child pages under `/projects/`.
+- Philosophy lives under About.
+- Media uses clear filenames, meaningful alt text, and credit notes where needed.
+- Category archive templates are included at launch for Field Notes and Workshop Journal.
 
 ## Non-Goals
 

@@ -104,12 +104,19 @@ Approved launch URL structure:
 - Do not use page builders.
 - Do not use Elementor or similar tools.
 
-## Proposed Content Model Pending Approval
+## Approved Launch Content Model
 
+- Use standard WordPress Pages plus Posts/Categories at launch.
 - Use standard WordPress Pages for stable launch sections and project pages.
+- Projects are child pages under `/projects/`.
+- Fisher Aquatics, Kiwi, and Photography are child pages under `/projects/`.
+- Philosophy lives under About.
+- Cabinet starts as a curated page.
 - Use standard WordPress Posts for Field Notes, Workshop Journal entries, and article-like content.
 - Use approved native Categories: Projects, Field Notes, Workshop Journal, Photography, Aquatics, Software, Electronics, Craft.
 - Add Tags organically later.
 - Use the native WordPress Media Library for launch.
-- Do not create custom post types at launch unless a later user decision approves one.
-- Do not create custom taxonomies at launch unless a later user decision approves one.
+- Media should use clear filenames, meaningful alt text, and credit notes where needed.
+- Do not create custom post types at launch.
+- Do not create custom taxonomies at launch.
+- Include category archive templates at launch for Field Notes and Workshop Journal.

@@ -2,6 +2,21 @@
 
 ## 2026-07-03
 
+Launch content model approved.
+
+### Completed
+
+- Updated `docs/content-model.md` to mark the launch content model as approved.
+- Updated `docs/theme-architecture.md` to reflect the approved content model and the requirement for Field Notes and Workshop Journal category archive templates.
+- Updated `docs/decisions.md` to record approved launch content model decisions.
+
+### Notes
+
+- No theme code was written.
+- No live WordPress site changes were made.
+
+## 2026-07-03
+
 Content Model Phase started.
 
 ### Completed

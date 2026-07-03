@@ -1,6 +1,6 @@
 # Content Model
 
-This document defines the proposed WordPress content model for Two-Bit Alchemy. It is a planning document only. Do not write theme code or modify the live WordPress site from this document.
+This document defines the approved launch WordPress content model for Two-Bit Alchemy. It is a planning document only. Do not write theme code or modify the live WordPress site from this document.
 
 ## Source Documents
 
@@ -20,17 +20,21 @@ Prefer the simplest maintainable WordPress architecture.
 
 The launch content model should use standard WordPress pages, posts, categories, tags, and media wherever they fit cleanly. Custom post types and custom taxonomies should be introduced only when they provide clear long-term benefit that outweighs added complexity.
 
-## Summary Recommendation
+## Approved Launch Model
 
-Recommended launch model:
+Approved launch model:
 
 - Standard Pages for top-level sections, project landing pages, individual project pages, About, Philosophy, Contact, and curated index pages.
 - Posts for dated or article-like content, including Field Notes and Workshop Journal entries.
 - Native Categories for the approved launch category set.
 - Native Tags added organically later.
-- Native Media Library for images and files, with naming and alt text discipline.
+- Native Media Library for images and files, with clear filenames, meaningful alt text, and credit notes where needed.
 - No custom post types at launch.
 - No custom taxonomies at launch.
+- Cabinet starts as a curated page.
+- Projects are child pages under `/projects/`.
+- Philosophy lives under About.
+- Category archive templates should be included at launch for Field Notes and Workshop Journal.
 
 This keeps the first implementation small, understandable, and aligned with the repository-first workflow.
 
@@ -137,6 +141,9 @@ Field Notes and Workshop Journal are both article-like content streams. Categori
 ### Launch Recommendation
 
 Do not create custom post types at launch.
+
+Approval status:
+Approved.
 
 ### Why This Is Objectively Beneficial
 
@@ -258,6 +265,9 @@ Tags are useful for recurring ideas, materials, methods, people, places, and ref
 
 Do not create custom taxonomies at launch.
 
+Approval status:
+Approved.
+
 ### Why Custom Taxonomies Are Not Yet Justified
 
 The approved category list and organic tags are enough for the first content model. Custom taxonomies would add implementation complexity before the live content audit proves a need.
@@ -312,7 +322,7 @@ Use the native WordPress Media Library for launch.
 - Add meaningful alt text for informative images.
 - Use empty alt text for decorative images.
 - Use captions when they add context.
-- Preserve credit and source information.
+- Preserve credit and source information with credit notes where needed.
 - Avoid uploading oversized originals when optimized exports are available.
 - Keep sensitive family or memorial media private until permissions are clear.
 - Do not publish copyrighted archive material without review.
@@ -489,7 +499,7 @@ Consider Project only if the number of projects grows enough to require structur
 The theme should support this model with:
 
 - Page templates for approved launch pages.
-- Category archive templates or filtered landing sections for Field Notes and Workshop Journal.
+- Category archive templates for Field Notes and Workshop Journal.
 - Template parts for project cards, post cards, gallery previews, and related links.
 - Editor styles that make standard WordPress content feel consistent.
 - No custom post type implementation until approved.
@@ -497,12 +507,6 @@ The theme should support this model with:
 
 ## Decisions Required Before Theme Implementation
 
-- Approve launch content model: pages plus posts/categories, with no custom post types at launch.
-- Confirm whether Field Notes and Workshop Journal use standard posts with categories.
-- Confirm Cabinet starts as a curated page rather than a custom post type.
-- Confirm Projects start as child pages under `/projects/`.
-- Confirm whether Philosophy is a child page under About or a section within About.
 - Confirm whether any legacy Fisher Aquatics content requires special handling after audit.
-- Confirm media naming, alt text, and credit rules.
-- Confirm whether theme implementation should include category archive templates at launch.
-
+- Confirm whether Philosophy is implemented as a child page under About or as a section within the About page.
+- Confirm final template file list for the approved content model.
