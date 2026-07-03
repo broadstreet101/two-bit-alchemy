@@ -2,6 +2,21 @@
 
 ## 2026-07-03
 
+Brand manifest created.
+
+### Completed
+
+- Added `docs/brand-manifest.md` as the long-term creative and design constitution for Two-Bit Alchemy.
+- Used the AI handoff, README, project summary, and decisions documents as source material.
+- Included sections for identity, guiding question, design philosophy, visual style, voice, site principles, approved symbols, things to avoid, decision rules, and ChatGPT/Codex responsibilities.
+
+### Notes
+
+- No new brand direction was invented.
+- No website implementation was started.
+
+## 2026-07-03
+
 GitHub repository setup completed.
 
 ### Completed
