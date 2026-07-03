@@ -55,7 +55,7 @@ Pages are best for stable, hierarchical, non-date-driven content. They fit the a
 - Workshop Journal landing page: `/workshop-journal/`
 - Cabinet landing page: `/cabinet/`
 - About: `/about/`
-- Philosophy under About, if public as a child page or section.
+- Philosophy as a section on the About page.
 - Contact: `/contact/`
 
 ### Section Mapping
@@ -71,7 +71,7 @@ Pages are best for stable, hierarchical, non-date-driven content. They fit the a
 | Workshop Journal | Page plus Posts category | Landing page curates posts categorized as Workshop Journal. |
 | Cabinet | Page for launch | Curated landing page; individual cabinet entries can wait until volume justifies more structure. |
 | About | Page | Personal context. |
-| Philosophy | Child page or section under About | Approved under About for launch, not top-level. |
+| Philosophy | Section on About page | Approved under About for launch, not top-level and not a separate child page. |
 | Contact | Page | Simple communication path. |
 
 ### Why Pages Should Not Be Custom Post Types
@@ -508,5 +508,4 @@ The theme should support this model with:
 ## Decisions Required Before Theme Implementation
 
 - Confirm whether any legacy Fisher Aquatics content requires special handling after audit.
-- Confirm whether Philosophy is implemented as a child page under About or as a section within the About page.
-- Confirm final template file list for the approved content model.
+- Final template file list is defined in `docs/theme-skeleton-plan.md`.

@@ -2,6 +2,23 @@
 
 ## 2026-07-03
 
+Theme skeleton prerequisites finalized.
+
+### Completed
+
+- Added `docs/theme-skeleton-plan.md`.
+- Finalized the initial template file list, reusable template-part list, minimal block pattern list, typography strategy, color tokens, brand asset export requirements, image rules, accessibility targets, performance targets, deployment process, and Philosophy placement.
+- Updated `docs/theme-architecture.md` to reference the skeleton plan and reduce remaining implementation prerequisites to explicit approval to create files.
+- Updated `docs/content-model.md` to record Philosophy as a section on the About page at launch.
+- Updated `docs/decisions.md` with approved theme skeleton prerequisites.
+
+### Notes
+
+- No theme code was written.
+- No live WordPress site changes were made.
+
+## 2026-07-03
+
 Launch content model approved.
 
 ### Completed

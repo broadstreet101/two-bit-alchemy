@@ -11,6 +11,7 @@ Project documents:
 - `docs/site-architecture.md`
 - `docs/site-map.md`
 - `docs/content-model.md`
+- `docs/theme-skeleton-plan.md`
 - `docs/decisions.md`
 - `docs/discovery-phase.md`
 
@@ -140,7 +141,7 @@ Approved launch page templates:
 - Field Notes landing page.
 - Workshop Journal landing page.
 - Cabinet landing page.
-- About page with Philosophy under About.
+- About page with Philosophy as a section on the About page.
 - Contact page.
 
 Content model direction:
@@ -279,8 +280,11 @@ Likely theme image needs:
 - Gallery image.
 - Social preview image.
 
-Implementation decision still required:
-Final image sizes and crop behavior should be based on approved content models and actual media inventory from the WordPress audit.
+Theme skeleton planning:
+Initial image use cases and crop rules are finalized in `docs/theme-skeleton-plan.md`.
+
+Final launch note:
+Exact image dimensions should be confirmed after the WordPress media audit.
 
 ## Typography Strategy
 
@@ -308,8 +312,11 @@ Token groups:
 - Heading scale.
 - Line heights.
 
-Implementation decision still required:
-Final typefaces and font licensing.
+Theme skeleton planning:
+Use system fonts initially unless a clearly licensed typeface is already available and approved.
+
+Future refinement:
+Custom typefaces require licensing review before use.
 
 ## Color Token Strategy
 
@@ -338,8 +345,11 @@ Possible token categories:
 - Focus outline.
 - Warning or error, if forms require it.
 
-Implementation decision still required:
-Final palette and contrast validation.
+Theme skeleton planning:
+Initial token categories and WCAG 2.2 AA contrast targets are finalized in `docs/theme-skeleton-plan.md`.
+
+Final launch note:
+Specific token values must be contrast-tested before launch.
 
 ## Gutenberg Compatibility
 
@@ -449,16 +459,7 @@ Performance checks:
 
 Before theme implementation begins, approve:
 
-- Required initial templates.
-- Required reusable template parts.
-- Initial block pattern list.
-- Typography choices and licensing.
-- Color tokens and contrast targets.
-- Production brand asset exports.
-- Image sizes and crop rules.
-- Accessibility target.
-- Performance target.
-- Deployment process from repository to WordPress.
+- Explicit approval to create the theme skeleton files.
 
 Already approved:
 
@@ -483,6 +484,17 @@ Approved content model:
 - Philosophy lives under About.
 - Media uses clear filenames, meaningful alt text, and credit notes where needed.
 - Category archive templates are included at launch for Field Notes and Workshop Journal.
+
+Approved theme skeleton plan:
+
+- Initial template file list is defined in `docs/theme-skeleton-plan.md`.
+- Reusable template-part list is defined in `docs/theme-skeleton-plan.md`.
+- Initial block patterns are minimal and defined in `docs/theme-skeleton-plan.md`.
+- System fonts are used initially.
+- Theme uses `theme.json` for typography, colors, spacing, and editor consistency.
+- Accessibility target is WCAG 2.2 AA.
+- Deployment is a simple package/upload/install/activate process after backup and review.
+- Philosophy is a section on the About page at launch.
 
 ## Non-Goals
 

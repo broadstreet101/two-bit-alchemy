@@ -59,7 +59,7 @@ Future refinements from the handoff:
 ## Approved Information Architecture For Launch
 
 - Top navigation: Home, Projects, Field Notes, Workshop Journal, Cabinet, About, Contact.
-- Philosophy belongs under About for launch and should not be top-level yet.
+- Philosophy should be a section on the About page at launch and should not be top-level yet.
 - Search should not appear in primary navigation at launch.
 - "Workshop Journal" is the public label.
 - "Build Log" is an internal or documentation concept.
@@ -110,7 +110,7 @@ Approved launch URL structure:
 - Use standard WordPress Pages for stable launch sections and project pages.
 - Projects are child pages under `/projects/`.
 - Fisher Aquatics, Kiwi, and Photography are child pages under `/projects/`.
-- Philosophy lives under About.
+- Philosophy lives as a section on the About page.
 - Cabinet starts as a curated page.
 - Use standard WordPress Posts for Field Notes, Workshop Journal entries, and article-like content.
 - Use approved native Categories: Projects, Field Notes, Workshop Journal, Photography, Aquatics, Software, Electronics, Craft.
@@ -120,3 +120,18 @@ Approved launch URL structure:
 - Do not create custom post types at launch.
 - Do not create custom taxonomies at launch.
 - Include category archive templates at launch for Field Notes and Workshop Journal.
+
+## Approved Theme Skeleton Prerequisites
+
+- Initial template file list is defined in `docs/theme-skeleton-plan.md`.
+- Initial reusable template-part list is defined in `docs/theme-skeleton-plan.md`.
+- Initial block pattern list is minimal and defined in `docs/theme-skeleton-plan.md`.
+- Use system fonts initially unless a clearly licensed typeface is already available.
+- Use `theme.json` for typography, colors, spacing, and editor consistency.
+- Use semantic color tokens and target WCAG 2.2 AA contrast.
+- Brand asset export requirements are defined in `docs/theme-skeleton-plan.md`.
+- Image sizes and crop rules are defined in `docs/theme-skeleton-plan.md`.
+- Accessibility target is WCAG 2.2 AA.
+- Performance target prioritizes fast loading, minimal CSS, minimal JavaScript, no page builders, and system fonts initially.
+- Deployment process: package the custom theme from the repository, upload/install it in WordPress, and activate after backup and review.
+- Philosophy is a section on the About page at launch, not a separate child page.
