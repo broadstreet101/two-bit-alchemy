@@ -108,6 +108,7 @@ Approved technology principles:
 - Easy to maintain.
 - Open standards.
 - Minimal dependencies.
+- Keep implementation work in version-controlled project files, following `docs/development-workflow.md`.
 
 ## 10. Approved Symbolic Elements
 
@@ -210,6 +211,7 @@ Codex responsibilities:
 - Optimize performance, accessibility, maintainability, and security.
 - Maintain the implementation log after each coding or repository session.
 - Distinguish objective improvements from subjective preferences.
+- Keep implementation work in the repository and avoid code that exists only inside chat conversations.
 
 Shared responsibility:
 

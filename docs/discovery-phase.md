@@ -22,6 +22,7 @@ This discovery is based on the existing project documentation:
 - Before redesign work touches the live site, WordPress should be backed up, updated, audited, cleaned, and reviewed for security.
 - No implementation framework, WordPress theme strategy, or platform direction has been approved yet.
 - The brand manifest is the long-term creative and design constitution.
+- The development workflow policy makes the Git repository the single source of truth.
 - The project values simple technology, fast loading, accessibility, maintainability, open standards, and minimal dependencies.
 
 ## Assumptions
@@ -372,6 +373,7 @@ Do not redesign on top of an unaudited or unbacked WordPress installation. Backu
 - Maintain project docs, brand manifest, implementation log, and discovery notes.
 - Keep decisions separate from recommendations.
 - Confirm GitHub remains the source of truth for project documentation and implementation files.
+- Follow `docs/development-workflow.md` so implementation occurs as maintainable version-controlled files.
 
 Status: In progress.
 
@@ -453,4 +455,3 @@ Status: In progress.
 - Define performance targets before implementation choices.
 - Complete backup, update, and security basics before redesign work.
 - Use a phased launch roadmap that separates discovery, decisions, implementation, QA, and launch.
-

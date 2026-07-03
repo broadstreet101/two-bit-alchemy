@@ -27,6 +27,7 @@ This is more important than presenting the site as a business brochure.
 - Avoid corporate styling, fantasy magic, steampunk, horror, and excessive motion.
 - Keep the site personal, exploratory, and authentic.
 - Use `docs/brand-manifest.md` as the long-term creative and design constitution.
+- Use `docs/development-workflow.md` as permanent implementation workflow policy.
 
 ## Primary Site Areas
 

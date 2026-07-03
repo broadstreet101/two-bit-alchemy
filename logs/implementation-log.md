@@ -2,6 +2,22 @@
 
 ## 2026-07-03
 
+Development workflow policy established.
+
+### Completed
+
+- Added `docs/development-workflow.md` as permanent project governance.
+- Documented the repository-first workflow: repository, Git, GitHub, deployment, then WordPress configuration and content.
+- Limited expected WordPress admin work to activation, configuration, content, media, menus, widgets, unavoidable configuration, and final testing.
+- Added references to the workflow policy in the README, project summary, brand manifest, and discovery phase document.
+
+### Notes
+
+- No website features were implemented.
+- No website implementation files were added.
+
+## 2026-07-03
+
 Website Discovery Phase started.
 
 ### Completed

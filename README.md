@@ -21,6 +21,7 @@ No website code has been generated yet. Implementation should begin only after a
 
 - `docs/project-summary.md` - concise project summary.
 - `docs/brand-manifest.md` - long-term creative and design constitution.
+- `docs/development-workflow.md` - permanent development workflow policy.
 - `docs/repository-structure.md` - recommended folder structure.
 - `docs/planning/missing-project-files.md` - missing files and why they matter.
 - `docs/decisions.md` - durable project decisions.
