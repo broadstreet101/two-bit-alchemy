@@ -117,6 +117,24 @@ Categories
 Legacy Fisher Aquatics, if approved
 ```
 
+## Future Expansion Candidates
+
+```text
+Future
+|-- Tributes / Memorials
+|   |-- James McLaughlin
+|   |-- David McLaughlin
+|   |-- Grandparents / Loved Ones
+|   |-- Submitted Stories
+|   `-- Submitted Photos
+|
+`-- Clutch Archive / Interactive References
+    |-- Historical Archive
+    |-- Reference Annotations
+    |-- Source Links
+    `-- Restored Late-1990s Site Experience, if approved
+```
+
 ## Approved Launch URL Structure
 
 ```text

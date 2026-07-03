@@ -83,3 +83,23 @@ Approved launch URL structure:
 - `/cabinet/`
 - `/about/`
 - `/contact/`
+
+## Approved Future Content Areas
+
+- Tributes / Memorials is a future section dedicated to remembering important deceased people in Dada's life.
+- Initial likely Tributes / Memorials focus: James McLaughlin, David McLaughlin, and possibly grandparents and other loved ones.
+- Tributes / Memorials may include personal biography pages, photos, short remembrances, long stories, submitted stories from others, and optional story or photo submissions.
+- Tributes / Memorials should be treated as a meaningful personal archive with a respectful memorial tone, not generic blog content.
+- Clutch Archive / Interactive References is a future special project inspired by Dada's original Clutch fan/archive website.
+- Clutch Archive / Interactive References may include historical archive material, interactive lyric or reference annotations, obscure reference explanations, authoritative source links where appropriate, and possible restoration or preservation of a saved late-1990s Clutch website experience.
+- Clutch Archive / Interactive References requires copyright and attribution review before implementation.
+
+## Approved Theme Architecture
+
+- Build a custom repository-controlled WordPress theme.
+- Use `src/themes/two-bit-alchemy/` as the theme path.
+- Keep the theme Gutenberg-compatible.
+- Use `theme.json` for design tokens where appropriate.
+- Use minimal CSS and JavaScript.
+- Do not use page builders.
+- Do not use Elementor or similar tools.

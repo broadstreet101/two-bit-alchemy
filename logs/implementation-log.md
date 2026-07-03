@@ -2,6 +2,25 @@
 
 ## 2026-07-03
 
+Future content areas recorded and theme architecture approved.
+
+### Completed
+
+- Added Tributes / Memorials as a future meaningful personal archive in `docs/site-architecture.md`.
+- Added Clutch Archive / Interactive References as a future special project requiring copyright and attribution review in `docs/site-architecture.md`.
+- Added future expansion candidates to `docs/site-map.md`.
+- Recorded future content areas and approved theme architecture in `docs/decisions.md`.
+- Updated `docs/theme-architecture.md` to mark the custom repository-controlled theme model and `src/themes/two-bit-alchemy/` path as approved.
+
+### Notes
+
+- No code was implemented.
+- No live WordPress site changes were made.
+- Future Tributes / Memorials work requires privacy, permissions, and submission decisions.
+- Future Clutch archive work requires copyright and attribution review before implementation.
+
+## 2026-07-03
+
 Theme Architecture Phase started.
 
 ### Completed

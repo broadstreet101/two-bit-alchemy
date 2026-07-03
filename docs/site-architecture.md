@@ -314,6 +314,52 @@ Contact instructions, preferred topics, optional social or external links, and e
 Relationships to other sections:
 Contact should be accessible from primary navigation, About, project pages, and footer navigation. It should not dominate the site or reframe it as a service business.
 
+### Tributes / Memorials
+
+Purpose:
+Create a future meaningful personal archive dedicated to remembering important deceased people in Dada's life.
+
+Primary audience:
+Family, friends, loved ones, collaborators, and future readers seeking personal history and remembrance.
+
+Typical content:
+Personal biography pages, photos, short remembrances, long stories, submitted stories from others, and optional story or photo submissions.
+
+Initial likely focus:
+
+- James McLaughlin
+- David McLaughlin
+- Possibly grandparents and other loved ones
+
+Relationships to other sections:
+Tributes / Memorials should relate to About because it preserves personal history, and to Photography or Cabinet when photos, objects, artifacts, letters, or documents support a person's story. It should not be treated as generic blog content.
+
+Tone:
+Respectful, personal, careful, and archival.
+
+Launch handling:
+Future section only. Not part of launch navigation until content, privacy, permissions, and submission expectations are approved.
+
+### Clutch Archive / Interactive References
+
+Purpose:
+Create a future special project inspired by Dada's original Clutch fan/archive website.
+
+Primary audience:
+Dada, Clutch fans, archive-minded readers, music-reference researchers, and visitors interested in obscure references or web preservation.
+
+Typical content:
+Historical archive material, interactive lyric or reference annotations, obscure reference explanations, authoritative source links where appropriate, and possible restoration or preservation of a saved late-1990s Clutch website experience.
+
+Relationships to other sections:
+Clutch Archive / Interactive References should likely live under Projects as a special archive project. It may connect to Field Notes for reference explanations, Cabinet for preserved artifacts, and Workshop Journal for restoration or preservation work.
+
+Risk handling:
+This is a future special project requiring copyright and attribution review before implementation. Lyric excerpts, archival material, images, source links, and restored website content must be reviewed before publication.
+
+Launch handling:
+Future section only. Not part of launch navigation.
+
 ### Search
 
 Purpose:
@@ -523,6 +569,8 @@ Potential expansion:
 - Additional projects
 - Project status archives
 - Photo series
+- Tributes / Memorials
+- Clutch Archive / Interactive References
 - Public notes by place or subject
 - Resource lists
 - Reading lists
@@ -536,6 +584,11 @@ Potential expansion:
 Expansion rule:
 Add new sections only when repeated content no longer fits existing sections cleanly.
 
+Future content-area rules:
+
+- Tributes / Memorials should be treated as a meaningful personal archive with a respectful memorial tone.
+- Clutch Archive / Interactive References should be treated as a special project requiring copyright and attribution review before implementation.
+
 ## Decisions Requiring Approval
 
 - Final WordPress content type and taxonomy mapping.
@@ -543,3 +596,6 @@ Add new sections only when repeated content no longer fits existing sections cle
 - Whether Search should be added after launch as the archive grows.
 - Whether public project status labels should be introduced after launch.
 - Final handling for project pages not included in the approved launch URL list, such as WMS, Electronics, Software, and Other Experiments.
+- Whether and when Tributes / Memorials should enter public navigation.
+- Privacy, permissions, and submission rules for Tributes / Memorials.
+- Copyright, attribution, and restoration boundaries for Clutch Archive / Interactive References.

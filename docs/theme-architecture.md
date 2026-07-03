@@ -34,7 +34,7 @@ Architectural principles:
 - Do not depend on Elementor or similar tools.
 - Do not place durable implementation code only inside WordPress admin fields.
 
-Recommended theme model:
+Approved theme model:
 
 - A custom repository-controlled WordPress theme.
 - PHP templates and template parts for durable layout structure.
@@ -42,10 +42,11 @@ Recommended theme model:
 - `theme.json` for editor-facing design tokens, block settings, and global styles where appropriate.
 - Minimal JavaScript, only where interaction requires it.
 - Minimal WordPress admin customization beyond theme activation, menus, media, content, and unavoidable configuration.
+- No page builders.
 
 ## Proposed Folder Structure
 
-Future implementation should place the theme under `src/themes/two-bit-alchemy/`.
+Future implementation should place the theme under the approved path `src/themes/two-bit-alchemy/`.
 
 ```text
 src/
@@ -444,9 +445,7 @@ Performance checks:
 
 Before theme implementation begins, approve:
 
-- Custom theme model: repository-controlled PHP templates with Gutenberg support and `theme.json`.
 - Final content type and taxonomy mapping.
-- Final theme folder path.
 - Required initial templates.
 - Required reusable template parts.
 - Initial block pattern list.
@@ -458,6 +457,15 @@ Before theme implementation begins, approve:
 - Performance target.
 - Deployment process from repository to WordPress.
 
+Already approved:
+
+- Custom theme model: repository-controlled WordPress theme.
+- Theme folder path: `src/themes/two-bit-alchemy/`.
+- Gutenberg compatibility.
+- `theme.json`-based design tokens.
+- Minimal CSS and JavaScript.
+- No page builders.
+
 ## Non-Goals
 
 - Do not modify the live WordPress site during architecture.
@@ -466,4 +474,3 @@ Before theme implementation begins, approve:
 - Do not use Elementor or similar tools.
 - Do not make WordPress admin edits the source of truth.
 - Do not create a child theme for launch unless separately approved.
-
