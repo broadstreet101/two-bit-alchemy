@@ -2,6 +2,8 @@
 
 This file records durable decisions that should not be casually overwritten.
 
+For creative and design decisions, `docs/brand-manifest.md` is the long-term constitution and should be checked before recommending or implementing changes.
+
 ## Approved Baseline
 
 - Two-Bit Alchemy is the main identity.
@@ -53,4 +55,3 @@ Future refinements from the handoff:
 - Make Draco feel like an authentic celestial engraving.
 - Reduce remaining geometric diagrams.
 - Remove or soften constellation labels.
-

@@ -26,6 +26,7 @@ This is more important than presenting the site as a business brochure.
 - Favor calm reading, excellent typography, strong imagery, and minimal animation.
 - Avoid corporate styling, fantasy magic, steampunk, horror, and excessive motion.
 - Keep the site personal, exploratory, and authentic.
+- Use `docs/brand-manifest.md` as the long-term creative and design constitution.
 
 ## Primary Site Areas
 
@@ -44,4 +45,3 @@ The workspace contains the current emblem artwork:
 - `ChatGPT Image Jul 3, 2026, 01_25_38 PM.png`
 
 This file should be treated as a reference asset until a final asset naming and optimization pass is approved.
-

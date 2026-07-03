@@ -20,7 +20,13 @@ This question takes priority over:
 
 > What services does this business sell?
 
-## 3. Design Philosophy
+## 3. North Star
+
+Two-Bit Alchemy celebrates the joy of learning by making.
+
+The site exists to document genuine curiosity, preserve discoveries, and encourage others to observe the world a little more closely.
+
+## 4. Design Philosophy
 
 The design should support observation, recordkeeping, understanding, and making.
 
@@ -33,7 +39,7 @@ Approved themes:
 
 Two-Bit Alchemy represents transformation through observation, craftsmanship, patience, and curiosity.
 
-## 4. Visual Style
+## 5. Visual Style
 
 The approved visual direction is Victorian natural-history engraving.
 
@@ -50,7 +56,7 @@ The mood should be curious, grounded, handcrafted, and quietly mystical.
 
 Visual execution should favor excellent typography, strong photography, carefully used illustration, calm layouts, and minimal animation.
 
-## 5. Voice And Tone
+## 6. Voice And Tone
 
 The voice should be personal, reflective, curious, and specific.
 
@@ -65,7 +71,18 @@ Preferred qualities:
 - Handmade
 - Knowledgeable without showing off
 
-## 6. Site Experience Principles
+## 7. Content Principles
+
+Approved content principles:
+
+- Show rather than tell.
+- Explain the process, not just the result.
+- Prefer real projects over hypothetical examples.
+- Celebrate experimentation, including failures.
+- Preserve the history of ideas instead of rewriting it.
+- Let photographs and artifacts support the story.
+
+## 8. Site Experience Principles
 
 The site experience should be calm, readable, and easy to explore.
 
@@ -79,7 +96,20 @@ Approved principles:
 - Separate workshop progress posts from evergreen field notes.
 - Let the site reward curiosity and wandering.
 
-## 7. Approved Symbolic Elements
+## 9. Technology Philosophy
+
+Technology should quietly support the content.
+
+Approved technology principles:
+
+- Prefer simple solutions before complex ones.
+- Prefer fast loading.
+- Accessible by default.
+- Easy to maintain.
+- Open standards.
+- Minimal dependencies.
+
+## 10. Approved Symbolic Elements
 
 Approved emblem and symbolic elements include:
 
@@ -103,7 +133,7 @@ Approved future refinements:
 - Reduce remaining geometric diagrams.
 - Remove or soften constellation labels.
 
-## 8. Things To Avoid
+## 11. Things To Avoid
 
 Avoid:
 
@@ -118,7 +148,7 @@ Avoid:
 - Treating Fisher Aquatics as the whole identity
 - Replacing the approved direction without an explicit decision
 
-## 9. Objective Vs Subjective Decision Rules
+## 12. Objective Vs Subjective Decision Rules
 
 Objective improvements are changes that measurably or clearly improve:
 
@@ -145,7 +175,19 @@ Decision rule:
 
 When recommending a change, identify whether it is objective or subjective. Objective improvements may be recommended directly with rationale. Subjective changes should be framed as options and should not overwrite approved direction without approval.
 
-## 10. ChatGPT Vs Codex Responsibilities
+## 13. Major Brand Decisions
+
+This section is a chronological decision log for major brand decisions.
+
+| Date | Decision | Reason | Approved by |
+| --- | --- | --- | --- |
+| 2026-07-03 | Two-Bit Alchemy is the umbrella identity; Fisher Aquatics is one project within it. | The project evolved from redesigning Fisher Aquatics into a broader personal identity centered on curiosity, craft, and exploration. | User and ChatGPT |
+| 2026-07-03 | Victorian natural-history engraving is the approved visual direction. | This style supports the desired mood: curious, grounded, handcrafted, quietly mystical, and non-corporate. | User and ChatGPT |
+| 2026-07-03 | The site should answer "What has Dada been curious about lately?" | This keeps the site personal, exploratory, and discovery-led rather than sales-led. | User and ChatGPT |
+| 2026-07-03 | The brand manifest is the long-term creative and design constitution. | Future design, content, and implementation work needs a stable reference point that preserves approved decisions. | User |
+| 2026-07-03 | Two-Bit Alchemy celebrates the joy of learning by making. | This clarifies the project's North Star without changing the existing direction. | User |
+
+## 14. ChatGPT Vs Codex Responsibilities
 
 ChatGPT serves as Creative Director.
 
@@ -176,4 +218,3 @@ Shared responsibility:
 - Avoid unnecessary changes.
 - Keep documentation concise enough for future AI handoffs.
 - Do not begin website implementation without approval.
-

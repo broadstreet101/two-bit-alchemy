@@ -2,6 +2,21 @@
 
 ## 2026-07-03
 
+Brand manifest refinements added.
+
+### Completed
+
+- Added North Star, Content Principles, Technology Philosophy, and Major Brand Decisions sections to `docs/brand-manifest.md`.
+- Preserved the existing approved brand manifest content while adding the approved refinements.
+- Added references to the brand manifest in the README, project summary, project decisions, and implementation approval checklist.
+
+### Notes
+
+- No new brand direction was invented.
+- No website implementation was started.
+
+## 2026-07-03
+
 Brand manifest created.
 
 ### Completed
