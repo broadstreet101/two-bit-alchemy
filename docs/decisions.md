@@ -103,3 +103,13 @@ Approved launch URL structure:
 - Use minimal CSS and JavaScript.
 - Do not use page builders.
 - Do not use Elementor or similar tools.
+
+## Proposed Content Model Pending Approval
+
+- Use standard WordPress Pages for stable launch sections and project pages.
+- Use standard WordPress Posts for Field Notes, Workshop Journal entries, and article-like content.
+- Use approved native Categories: Projects, Field Notes, Workshop Journal, Photography, Aquatics, Software, Electronics, Craft.
+- Add Tags organically later.
+- Use the native WordPress Media Library for launch.
+- Do not create custom post types at launch unless a later user decision approves one.
+- Do not create custom taxonomies at launch unless a later user decision approves one.

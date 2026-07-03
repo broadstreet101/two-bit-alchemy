@@ -2,6 +2,25 @@
 
 ## 2026-07-03
 
+Content Model Phase started.
+
+### Completed
+
+- Added `docs/content-model.md`.
+- Proposed a simple maintainable WordPress content model using standard Pages, Posts, native Categories, organic Tags, and the native Media Library.
+- Documented why custom post types and custom taxonomies are not recommended for launch.
+- Mapped Projects, Fisher Aquatics, Kiwi, Photography, Field Notes, Workshop Journal, Cabinet, Tributes / Memorials, and Clutch Archive to launch or future content models.
+- Updated `docs/theme-architecture.md` with a cross-reference to the content model.
+- Added the proposed content model to `docs/decisions.md` as pending approval.
+
+### Notes
+
+- No theme code was written.
+- No live WordPress site changes were made.
+- Future custom post types remain possible only if content volume or structure justifies them later.
+
+## 2026-07-03
+
 Future content areas recorded and theme architecture approved.
 
 ### Completed

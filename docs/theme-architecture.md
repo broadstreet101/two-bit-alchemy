@@ -10,6 +10,7 @@ Project documents:
 - `docs/development-workflow.md`
 - `docs/site-architecture.md`
 - `docs/site-map.md`
+- `docs/content-model.md`
 - `docs/decisions.md`
 - `docs/discovery-phase.md`
 
@@ -142,8 +143,8 @@ Approved launch page templates:
 - About page with Philosophy under About.
 - Contact page.
 
-Implementation decision still required:
-Whether Projects, Field Notes, Workshop Journal, Cabinet, and Photography are built as standard pages/posts/categories, custom post types, custom taxonomies, or a minimal combination.
+Content model direction:
+`docs/content-model.md` recommends standard pages, posts, categories, tags, and media for launch, with no custom post types or custom taxonomies until a clear future need is approved.
 
 ## Reusable Template Parts
 
@@ -445,7 +446,6 @@ Performance checks:
 
 Before theme implementation begins, approve:
 
-- Final content type and taxonomy mapping.
 - Required initial templates.
 - Required reusable template parts.
 - Initial block pattern list.
@@ -465,6 +465,12 @@ Already approved:
 - `theme.json`-based design tokens.
 - Minimal CSS and JavaScript.
 - No page builders.
+
+Pending content-model approval:
+
+- Launch model using standard pages plus posts/categories.
+- No custom post types at launch.
+- No custom taxonomies at launch.
 
 ## Non-Goals
 
