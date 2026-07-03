@@ -12,6 +12,7 @@ Project documents:
 - `docs/site-map.md`
 - `docs/content-model.md`
 - `docs/theme-skeleton-plan.md`
+- `docs/theme-deployment.md`
 - `docs/decisions.md`
 - `docs/discovery-phase.md`
 
@@ -48,7 +49,7 @@ Approved theme model:
 
 ## Proposed Folder Structure
 
-Future implementation should place the theme under the approved path `src/themes/two-bit-alchemy/`.
+Theme implementation lives under the approved path `src/themes/two-bit-alchemy/`.
 
 ```text
 src/
@@ -114,7 +115,7 @@ src/
         `-- languages/
 ```
 
-This is an architectural target, not an instruction to create files yet.
+The initial skeleton is intentionally smaller than the full architectural target. JavaScript and additional utility files should be added only when an approved feature requires them.
 
 ## Template Hierarchy
 
@@ -460,6 +461,7 @@ Performance checks:
 Before theme implementation begins, approve:
 
 - Explicit approval to create the theme skeleton files.
+- Local installation testing of the skeleton theme.
 
 Already approved:
 
@@ -495,6 +497,10 @@ Approved theme skeleton plan:
 - Accessibility target is WCAG 2.2 AA.
 - Deployment is a simple package/upload/install/activate process after backup and review.
 - Philosophy is a section on the About page at launch.
+
+Theme deployment:
+
+- Packaging, WordPress installation, safe activation, and rollback steps are documented in `docs/theme-deployment.md`.
 
 ## Non-Goals
 

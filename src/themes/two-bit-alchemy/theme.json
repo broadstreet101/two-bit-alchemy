@@ -1,0 +1,190 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": false,
+    "border": {
+      "color": true,
+      "radius": false,
+      "style": true,
+      "width": true
+    },
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "name": "Background",
+          "slug": "background",
+          "color": "#f7f1e6"
+        },
+        {
+          "name": "Surface",
+          "slug": "surface",
+          "color": "#fffaf0"
+        },
+        {
+          "name": "Text",
+          "slug": "text",
+          "color": "#1f1b16"
+        },
+        {
+          "name": "Muted Text",
+          "slug": "muted-text",
+          "color": "#665d50"
+        },
+        {
+          "name": "Border",
+          "slug": "border",
+          "color": "#c8bca9"
+        },
+        {
+          "name": "Link",
+          "slug": "link",
+          "color": "#4b2f19"
+        },
+        {
+          "name": "Link Hover",
+          "slug": "link-hover",
+          "color": "#23150c"
+        },
+        {
+          "name": "Accent",
+          "slug": "accent",
+          "color": "#6d4c2f"
+        },
+        {
+          "name": "Focus",
+          "slug": "focus",
+          "color": "#1f5f75"
+        },
+        {
+          "name": "Selection",
+          "slug": "selection",
+          "color": "#d9c7a8"
+        },
+        {
+          "name": "Error",
+          "slug": "error",
+          "color": "#8a1f17"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1120px"
+    },
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true,
+      "spacingScale": {
+        "steps": 0
+      },
+      "spacingSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.75rem"
+        },
+        {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "1.5rem"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "3rem"
+        }
+      ],
+      "units": [
+        "px",
+        "rem",
+        "%"
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "dropCap": false,
+      "fluid": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif",
+          "name": "System Sans",
+          "slug": "system-sans"
+        },
+        {
+          "fontFamily": "Georgia, \"Times New Roman\", Times, serif",
+          "name": "System Serif",
+          "slug": "system-serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.875rem"
+        },
+        {
+          "name": "Base",
+          "slug": "base",
+          "size": "1rem"
+        },
+        {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "1.25rem"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "1.75rem"
+        },
+        {
+          "name": "Extra Large",
+          "slug": "x-large",
+          "size": "2.25rem"
+        }
+      ],
+      "lineHeight": true
+    },
+    "useRootPaddingAwareAlignments": true
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|background",
+      "text": "var:preset|color|text"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "var:preset|color|text",
+          "text": "var:preset|color|background"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|link"
+        },
+        ":hover": {
+          "color": {
+            "text": "var:preset|color|link-hover"
+          }
+        }
+      }
+    },
+    "spacing": {
+      "blockGap": "1.5rem"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|system-sans",
+      "fontSize": "var:preset|font-size|base",
+      "lineHeight": "1.6"
+    }
+  }
+}

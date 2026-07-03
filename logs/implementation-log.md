@@ -2,6 +2,23 @@
 
 ## 2026-07-03
 
+WordPress theme skeleton created.
+
+### Completed
+
+- Added the initial custom WordPress theme under `src/themes/two-bit-alchemy/`.
+- Created required theme files, core templates, approved page templates, reusable template parts, setup includes, `theme.json`, and minimal CSS/editor support.
+- Added intentionally empty asset folders for future JavaScript, fonts, images, icons, and language files.
+- Added `docs/theme-deployment.md` with packaging, installation, safe activation, and rollback instructions.
+- Updated `docs/theme-architecture.md` to reference deployment documentation and the implemented skeleton path.
+
+### Notes
+
+- No live WordPress site changes were made.
+- No page layouts, decorative styling, page builders, third-party libraries, or unnecessary JavaScript were added.
+
+## 2026-07-03
+
 Theme skeleton prerequisites finalized.
 
 ### Completed
