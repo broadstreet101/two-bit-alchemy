@@ -12,6 +12,7 @@ Project documents:
 - `docs/site-map.md`
 - `docs/content-model.md`
 - `docs/design-system.md`
+- `docs/layout-system.md`
 - `docs/theme-skeleton-plan.md`
 - `docs/theme-deployment.md`
 - `docs/decisions.md`
@@ -358,6 +359,9 @@ Specific token values must be contrast-tested before launch.
 
 Design system reference:
 Detailed visual rules for layout, typography, color, components, motion, accessibility, and future artwork integration are documented in `docs/design-system.md`.
+
+Layout system reference:
+Structural rules for content widths, section rhythm, page structure, image placement, navigation placement, footer behavior, and responsive layout are documented in `docs/layout-system.md`.
 
 ## Gutenberg Compatibility
 

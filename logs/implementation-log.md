@@ -2,6 +2,21 @@
 
 ## 2026-07-04
 
+Layout System Phase completed.
+
+### Completed
+
+- Added `docs/layout-system.md` as the structural layout reference for Two-Bit Alchemy.
+- Documented content width philosophy, vertical rhythm, homepage section order, interior page structure, image placement, navigation placement, footer philosophy, responsive behavior, accessibility considerations, and objective versus subjective layout decisions.
+- Updated `docs/theme-architecture.md` to cross-reference the layout system.
+
+### Notes
+
+- No code, decorative styling, final typography, color, illustration, ornamentation, or live WordPress changes were implemented.
+- The document establishes structural layout language for future implementation phases.
+
+## 2026-07-04
+
 Homepage Welcome Content Phase completed.
 
 ### Completed
