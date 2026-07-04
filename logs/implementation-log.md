@@ -2,6 +2,21 @@
 
 ## 2026-07-03
 
+Creative Constitution Phase started.
+
+### Completed
+
+- Added `docs/creative-constitution.md` as the internal long-term creative purpose document for Two-Bit Alchemy.
+- Documented purpose, philosophy, what belongs, what does not belong, visitor experience, creative principles, preservation principles, and a future decision test.
+- Updated `docs/decisions.md` to reference the Creative Constitution as a durable project decision source.
+
+### Notes
+
+- No code, website features, visual styling, or live WordPress changes were implemented.
+- Future planning documents should reference the Creative Constitution when evaluating major content, design, or feature decisions.
+
+## 2026-07-03
+
 Design System Phase started.
 
 ### Completed

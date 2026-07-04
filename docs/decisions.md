@@ -2,7 +2,7 @@
 
 This file records durable decisions that should not be casually overwritten.
 
-For creative and design decisions, `docs/brand-manifest.md` is the long-term constitution and should be checked before recommending or implementing changes.
+For creative and design decisions, `docs/brand-manifest.md`, `docs/creative-constitution.md`, and `docs/design-system.md` should be checked before recommending or implementing changes.
 
 ## Approved Baseline
 
@@ -144,3 +144,13 @@ Approved launch URL structure:
 - Use warm, readable surfaces and semantic color tokens with WCAG 2.2 AA contrast goals.
 - Animation should remain minimal and purposeful.
 - Artwork integration, including the emblem, favicon, social preview image, section illustrations, and Victorian engraving assets, requires future creative approval before final placement.
+
+## Approved Creative Constitution
+
+- `docs/creative-constitution.md` is the internal long-term creative purpose document for Two-Bit Alchemy.
+- Two-Bit Alchemy exists to collect, preserve, and share the things that reward curiosity.
+- The site should feel like being invited into a thoughtful workshop rather than reading someone's private journal.
+- The common thread is learning enough about something to make something meaningful with it.
+- The site should encourage wandering and discovery, with each major section feeling like another room in a cabinet of curiosities.
+- Authenticity is more important than completeness.
+- Future ideas, features, content, and design decisions should pass the Creative Constitution decision test before implementation.
