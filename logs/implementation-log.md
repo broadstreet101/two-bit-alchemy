@@ -2,6 +2,22 @@
 
 ## 2026-07-03
 
+Design System Phase started.
+
+### Completed
+
+- Added `docs/design-system.md` as the permanent visual design reference for the Two-Bit Alchemy website.
+- Documented design philosophy, layout system, typography, color, components, motion, accessibility, and future artwork integration.
+- Updated `docs/theme-architecture.md` to reference the design system.
+- Updated `docs/decisions.md` with approved design system direction.
+
+### Notes
+
+- No homepage redesign, CSS implementation, decorative Victorian artwork, JavaScript, or new website features were added.
+- Final palette values, typeface choices, illustration density, ornament placement, and artwork placement still require future approval before implementation.
+
+## 2026-07-03
+
 Homepage Structure Phase started.
 
 ### Completed

@@ -135,3 +135,12 @@ Approved launch URL structure:
 - Performance target prioritizes fast loading, minimal CSS, minimal JavaScript, no page builders, and system fonts initially.
 - Deployment process: package the custom theme from the repository, upload/install it in WordPress, and activate after backup and review.
 - Philosophy is a section on the About page at launch, not a separate child page.
+
+## Approved Design System Direction
+
+- `docs/design-system.md` is the permanent visual design reference for layout, typography, color, components, motion, accessibility, and future artwork integration.
+- The design system preserves the approved Victorian natural-history engraving direction without implementing decorative artwork yet.
+- Use system fonts initially; future typefaces require licensing review and approval.
+- Use warm, readable surfaces and semantic color tokens with WCAG 2.2 AA contrast goals.
+- Animation should remain minimal and purposeful.
+- Artwork integration, including the emblem, favicon, social preview image, section illustrations, and Victorian engraving assets, requires future creative approval before final placement.

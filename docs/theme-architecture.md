@@ -11,6 +11,7 @@ Project documents:
 - `docs/site-architecture.md`
 - `docs/site-map.md`
 - `docs/content-model.md`
+- `docs/design-system.md`
 - `docs/theme-skeleton-plan.md`
 - `docs/theme-deployment.md`
 - `docs/decisions.md`
@@ -354,6 +355,9 @@ Initial token categories and WCAG 2.2 AA contrast targets are finalized in `docs
 
 Final launch note:
 Specific token values must be contrast-tested before launch.
+
+Design system reference:
+Detailed visual rules for layout, typography, color, components, motion, accessibility, and future artwork integration are documented in `docs/design-system.md`.
 
 ## Gutenberg Compatibility
 
