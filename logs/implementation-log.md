@@ -2,6 +2,21 @@
 
 ## 2026-07-04
 
+Experience Map Phase completed.
+
+### Completed
+
+- Added `docs/experience-map.md` to describe the intended visitor journey through Two-Bit Alchemy.
+- Documented first-time and returning visitor paths, natural content relationships, cross-linking philosophy, suggested related-content patterns, section reinforcement, and future-area integration.
+- Included guidance for Tributes, Memorials, and the Clutch Archive as future experience areas requiring privacy, permission, copyright, and attribution review.
+
+### Notes
+
+- No theme files, templates, CSS, WordPress configuration, or live site content were modified.
+- The experience map is planning documentation only.
+
+## 2026-07-04
+
 About Page Content Implementation completed.
 
 ### Completed
