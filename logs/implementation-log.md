@@ -2,6 +2,22 @@
 
 ## 2026-07-03
 
+Homepage Structure Phase started.
+
+### Completed
+
+- Implemented the structural homepage framework in `src/themes/two-bit-alchemy/front-page.php`.
+- Added semantic sections for hero, featured projects, latest Field Notes, latest Workshop Journal, Cabinet call-to-action, and reflection.
+- Used native WordPress category queries for Field Notes and Workshop Journal with friendly empty states when categories or posts are missing.
+- Updated `docs/theme-architecture.md` to record the homepage implementation direction.
+
+### Notes
+
+- No decorative Victorian artwork, animations, JavaScript, page builders, third-party libraries, or final homepage design work was added.
+- Visual styling remains intentionally minimal and will be handled in a later approved phase.
+
+## 2026-07-03
+
 Theme Smoke Test Phase prepared.
 
 ### Completed

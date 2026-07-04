@@ -151,6 +151,9 @@ Content model direction:
 Approved archive template requirement:
 Include category archive templates for Field Notes and Workshop Journal at launch.
 
+Homepage implementation direction:
+The initial `front-page.php` is a permanent structural framework controlled by the theme. It includes a hero, featured project links, recent Field Notes, recent Workshop Journal entries, Cabinet call-to-action, and reflection area. Field Notes and Workshop Journal sections use native post categories and display empty-state copy when the categories or posts are not yet available.
+
 ## Reusable Template Parts
 
 Template parts should prevent duplicate markup and keep future maintenance simple.
