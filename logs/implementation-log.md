@@ -1,5 +1,21 @@
 # Implementation Log
 
+## 2026-07-04
+
+Voice & Editorial Guide Phase started.
+
+### Completed
+
+- Added `docs/voice-and-editorial-guide.md` as the writing voice reference for future Two-Bit Alchemy content.
+- Documented core voice, tone, storytelling, technical writing, preservation philosophy, editorial test, and practical writing rules.
+- Updated `docs/creative-constitution.md` to cross-reference the editorial guide.
+- Updated `docs/decisions.md` with approved voice and editorial direction.
+
+### Notes
+
+- No code, website features, visual styling, or live WordPress changes were implemented.
+- Future content documents should reference the voice and editorial guide before drafting or publishing.
+
 ## 2026-07-03
 
 Creative Constitution Phase started.

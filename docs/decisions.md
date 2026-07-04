@@ -2,7 +2,7 @@
 
 This file records durable decisions that should not be casually overwritten.
 
-For creative and design decisions, `docs/brand-manifest.md`, `docs/creative-constitution.md`, and `docs/design-system.md` should be checked before recommending or implementing changes.
+For creative, editorial, and design decisions, `docs/brand-manifest.md`, `docs/creative-constitution.md`, `docs/voice-and-editorial-guide.md`, and `docs/design-system.md` should be checked before recommending or implementing changes.
 
 ## Approved Baseline
 
@@ -154,3 +154,11 @@ Approved launch URL structure:
 - The site should encourage wandering and discovery, with each major section feeling like another room in a cabinet of curiosities.
 - Authenticity is more important than completeness.
 - Future ideas, features, content, and design decisions should pass the Creative Constitution decision test before implementation.
+
+## Approved Voice And Editorial Direction
+
+- `docs/voice-and-editorial-guide.md` defines the writing voice for future Two-Bit Alchemy content.
+- The core voice should feel like: "Come here for a minute. I want to show you something."
+- The voice should invite curiosity rather than perform expertise.
+- Future content should teach through experience, preserve meaningful observations, admit uncertainty when appropriate, and avoid marketing language.
+- Future content documents should use the editorial test before publication.

@@ -7,6 +7,7 @@ It is not marketing copy. It is not an About page. It is an internal reference u
 ## Source Documents
 
 - `docs/brand-manifest.md`
+- `docs/voice-and-editorial-guide.md`
 - `docs/design-system.md`
 - `docs/site-architecture.md`
 - `docs/content-model.md`
@@ -96,7 +97,7 @@ Creative work should follow these principles:
 - Preserve real stories, projects, and observations rather than manufacturing content.
 - Show process, not just finished outcomes.
 - Let photographs and artifacts support the story.
-- Keep the tone personal, clear, warm, observant, and patient.
+- Keep the tone personal, clear, warm, observant, and patient, following `docs/voice-and-editorial-guide.md`.
 - Favor specificity over polish when both cannot be achieved at once.
 - Let the site feel handmade without making it fragile or hard to use.
 - Use design to clarify and invite, not to perform.
