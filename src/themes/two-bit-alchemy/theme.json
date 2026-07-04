@@ -126,6 +126,11 @@
       ],
       "fontSizes": [
         {
+          "name": "Extra Small",
+          "slug": "x-small",
+          "size": "0.8125rem"
+        },
+        {
           "name": "Small",
           "slug": "small",
           "size": "0.875rem"
@@ -149,6 +154,16 @@
           "name": "Extra Large",
           "slug": "x-large",
           "size": "2.25rem"
+        },
+        {
+          "name": "2 Extra Large",
+          "slug": "2-x-large",
+          "size": "3rem"
+        },
+        {
+          "name": "3 Extra Large",
+          "slug": "3-x-large",
+          "size": "3.75rem"
         }
       ],
       "lineHeight": true
@@ -165,6 +180,22 @@
         "color": {
           "background": "var:preset|color|text",
           "text": "var:preset|color|background"
+        }
+      },
+      "caption": {
+        "color": {
+          "text": "var:preset|color|muted-text"
+        },
+        "typography": {
+          "fontSize": "var:preset|font-size|small",
+          "lineHeight": "1.5"
+        }
+      },
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|system-serif",
+          "fontWeight": "600",
+          "lineHeight": "1.15"
         }
       },
       "link": {
@@ -184,7 +215,7 @@
     "typography": {
       "fontFamily": "var:preset|font-family|system-sans",
       "fontSize": "var:preset|font-size|base",
-      "lineHeight": "1.6"
+      "lineHeight": "1.65"
     }
   }
 }

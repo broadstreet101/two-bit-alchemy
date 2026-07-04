@@ -2,6 +2,21 @@
 
 ## 2026-07-04
 
+Typography Implementation Phase completed.
+
+### Completed
+
+- Updated `src/themes/two-bit-alchemy/theme.json` with expanded system-font typography tokens and heading/caption defaults.
+- Updated `src/themes/two-bit-alchemy/assets/css/main.css` with base typography, heading hierarchy, paragraph rhythm, lists, links, captions, metadata, blockquotes, code/preformatted blocks, tables, and responsive typography adjustments.
+- Updated `src/themes/two-bit-alchemy/assets/css/editor.css` so the block editor better reflects the front-end typography foundation.
+
+### Notes
+
+- No decorative artwork, animations, Victorian ornament, JavaScript, page builders, or live WordPress changes were added.
+- Typography remains intentionally restrained and system-font based.
+
+## 2026-07-04
+
 Component Library Phase completed.
 
 ### Completed

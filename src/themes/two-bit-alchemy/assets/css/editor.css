@@ -1,9 +1,84 @@
 body {
 	font-family: var(--wp--preset--font-family--system-sans);
-	line-height: 1.6;
+	font-size: var(--wp--preset--font-size--base);
+	line-height: 1.65;
 }
 
 .editor-styles-wrapper {
 	color: var(--wp--preset--color--text);
 	background: var(--wp--preset--color--background);
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	margin-block: var(--wp--preset--spacing--large) var(--wp--preset--spacing--small);
+	font-family: var(--wp--preset--font-family--system-serif);
+	font-weight: 600;
+	line-height: 1.15;
+	letter-spacing: 0;
+}
+
+.editor-styles-wrapper h1 {
+	font-size: var(--wp--preset--font-size--3-x-large);
+}
+
+.editor-styles-wrapper h2 {
+	font-size: var(--wp--preset--font-size--2-x-large);
+}
+
+.editor-styles-wrapper h3 {
+	font-size: var(--wp--preset--font-size--x-large);
+}
+
+.editor-styles-wrapper p,
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol,
+.editor-styles-wrapper blockquote,
+.editor-styles-wrapper pre,
+.editor-styles-wrapper figure,
+.editor-styles-wrapper table {
+	margin-block: 0 var(--wp--preset--spacing--medium);
+}
+
+.editor-styles-wrapper a {
+	color: var(--wp--preset--color--link);
+	text-decoration-thickness: 0.08em;
+	text-underline-offset: 0.18em;
+}
+
+.editor-styles-wrapper figcaption,
+.editor-styles-wrapper caption,
+.editor-styles-wrapper .wp-caption-text {
+	color: var(--wp--preset--color--muted-text);
+	font-size: var(--wp--preset--font-size--small);
+	line-height: 1.5;
+}
+
+.editor-styles-wrapper blockquote {
+	padding-inline-start: var(--wp--preset--spacing--medium);
+	border-inline-start: 3px solid var(--wp--preset--color--border);
+	font-family: var(--wp--preset--font-family--system-serif);
+	font-size: var(--wp--preset--font-size--medium);
+	line-height: 1.6;
+}
+
+.editor-styles-wrapper code,
+.editor-styles-wrapper kbd,
+.editor-styles-wrapper samp {
+	padding: 0.1em 0.25em;
+	background: var(--wp--preset--color--surface);
+	font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+	font-size: 0.92em;
+}
+
+.editor-styles-wrapper pre {
+	padding: var(--wp--preset--spacing--medium);
+	overflow-x: auto;
+	background: var(--wp--preset--color--surface);
+	border: 1px solid var(--wp--preset--color--border);
+	line-height: 1.55;
 }
