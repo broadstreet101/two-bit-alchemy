@@ -27,7 +27,16 @@ $zip = [System.IO.Compression.ZipFile]::Open(
 )
 
 try {
-    Get-ChildItem -LiteralPath $themeRoot -Recurse -File | ForEach-Object {
+    $zip.CreateEntry('two-bit-alchemy/') | Out-Null
+
+    Get-ChildItem -LiteralPath $themeRoot -Recurse -Directory | Sort-Object FullName | ForEach-Object {
+        $relative = $_.FullName.Substring($themeRoot.Length + 1).Replace('\', '/')
+        $entryName = 'two-bit-alchemy/' + $relative.TrimEnd('/') + '/'
+
+        $zip.CreateEntry($entryName) | Out-Null
+    }
+
+    Get-ChildItem -LiteralPath $themeRoot -Recurse -File | Sort-Object FullName | ForEach-Object {
         $relative = $_.FullName.Substring($themeRoot.Length + 1).Replace('\', '/')
         $entryName = 'two-bit-alchemy/' + $relative
 
@@ -43,7 +52,7 @@ try {
 }
 ```
 
-This creates explicit forward-slash ZIP paths so WordPress sees `two-bit-alchemy/style.css` directly inside the theme folder.
+This creates explicit folder entries and forward-slash ZIP paths so WordPress sees `two-bit-alchemy/style.css` directly inside the theme folder. Avoid `Compress-Archive` for this package because it can create backslash paths inside the ZIP on Windows.
 
 Before uploading, confirm the ZIP structure resembles:
 
