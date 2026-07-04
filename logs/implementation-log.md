@@ -2,6 +2,20 @@
 
 ## 2026-07-04
 
+First Workbench Artifact Phase completed.
+
+### Completed
+
+- Added `content/workbench/cabinet/walking-dead-sketch.md` as the first Workbench Cabinet artifact starting point.
+- Included only structured placeholder headings for object description, story, relationships, photographs, status, and notes.
+
+### Notes
+
+- No website, theme, template, CSS, WordPress configuration, live site content, artifact prose, or invented content was added.
+- The artifact remains unpublished Workbench material.
+
+## 2026-07-04
+
 Workbench Workflow Phase completed.
 
 ### Completed
