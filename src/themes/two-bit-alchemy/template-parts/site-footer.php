@@ -10,7 +10,7 @@
 <footer class="site-footer" role="contentinfo">
 	<p>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-			<?php bloginfo( 'name' ); ?>
+			<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 		</a>
 	</p>
 </footer>
@@ -18,4 +18,3 @@
 <?php wp_footer(); ?>
 </body>
 </html>
-

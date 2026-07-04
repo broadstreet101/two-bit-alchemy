@@ -2,6 +2,22 @@
 
 ## 2026-07-03
 
+Theme skeleton validation completed.
+
+### Completed
+
+- Added `docs/theme-validation.md`.
+- Verified required theme files, template-part references, `theme.json` validity, enqueued asset paths, dependency-free scope, and accessibility basics.
+- Documented that PHP is not available locally, so PHP lint could not be run.
+- Fixed objective skeleton defects found during validation.
+
+### Notes
+
+- No layouts, decorative styling, third-party libraries, page builders, unnecessary JavaScript, or live WordPress changes were added.
+- The theme skeleton is ready to package for WordPress installation testing, with PHP lint/install testing still required in a WordPress/PHP environment.
+
+## 2026-07-03
+
 WordPress theme skeleton created.
 
 ### Completed
