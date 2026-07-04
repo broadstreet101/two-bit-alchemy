@@ -2,6 +2,21 @@
 
 ## 2026-07-04
 
+Kiwi Exhibit Completion Phase 1 completed.
+
+### Completed
+
+- Expanded `src/themes/two-bit-alchemy/templates/page-kiwi.php` into a fuller Phase 1 exhibit with metadata, final orientation copy, timeline, gallery support, figure/caption placeholder, educational callout, related exhibits, related Field Notes, related Workshop Journal, and You May Also Enjoy paths.
+- Preserved the rule that repository-approved content remains the source of truth and kept Kiwi-specific unknowns as concise placeholders.
+- Added supporting CSS for exhibit metadata, timeline layout, figure/caption presentation, related exhibit cards, and educational callouts.
+
+### Notes
+
+- No homepage content, JavaScript, animations, new color tokens, artwork, photographs, or live WordPress changes were added.
+- No Kiwi-specific facts were invented; project-specific narrative, images, milestones, and related entries still require approved source content.
+
+## 2026-07-04
+
 Exhibit Standard Phase completed.
 
 ### Completed

@@ -538,6 +538,76 @@ th {
 	max-width: none;
 }
 
+.metadata-list {
+	display: grid;
+	gap: var(--wp--preset--spacing--small);
+	max-width: var(--wp--style--global--content-size);
+}
+
+.metadata-list > div {
+	display: grid;
+	grid-template-columns: minmax(9rem, 0.4fr) minmax(0, 1fr);
+	gap: var(--wp--preset--spacing--small) var(--wp--preset--spacing--medium);
+	padding-block-end: var(--wp--preset--spacing--small);
+	border-block-end: 1px solid var(--wp--preset--color--border);
+}
+
+.metadata-list dt {
+	color: var(--wp--preset--color--muted-text);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 700;
+}
+
+.metadata-list dd {
+	margin-block-end: 0;
+}
+
+.exhibit-timeline {
+	display: grid;
+	gap: var(--wp--preset--spacing--medium);
+	max-width: var(--wp--style--global--content-size);
+	padding-inline-start: 0;
+	list-style: none;
+}
+
+.exhibit-timeline li,
+.educational-callout,
+.related-exhibit-card,
+.exhibit-figure {
+	padding: var(--wp--preset--spacing--medium);
+	background: var(--wp--preset--color--surface);
+	border: 1px solid var(--wp--preset--color--border);
+	box-shadow: inset 0 0 0 1px var(--wp--preset--color--background);
+}
+
+.exhibit-timeline h3,
+.educational-callout h3,
+.related-exhibit-card h3 {
+	margin-block-start: 0;
+	font-size: var(--wp--preset--font-size--medium);
+}
+
+.related-exhibit-list,
+.exhibit-gallery {
+	display: grid;
+	gap: var(--wp--preset--spacing--medium);
+	max-width: var(--wp--style--global--content-size);
+}
+
+.exhibit-figure {
+	max-width: var(--wp--style--global--content-size);
+}
+
+.exhibit-figure__placeholder {
+	min-height: 12rem;
+	border: 1px dashed var(--wp--preset--color--border);
+	background: var(--wp--preset--color--background);
+}
+
+.exhibit-figure figcaption {
+	margin-block-start: var(--wp--preset--spacing--medium);
+}
+
 .placeholder-note {
 	padding: var(--wp--preset--spacing--medium);
 	background: var(--wp--preset--color--surface);
@@ -582,6 +652,10 @@ th {
 	.primary-navigation ul,
 	.footer-navigation ul {
 		gap: 0.5rem 0.875rem;
+	}
+
+	.metadata-list > div {
+		grid-template-columns: 1fr;
 	}
 
 	pre,
