@@ -10,8 +10,40 @@ PowerShell example:
 
 ```powershell
 New-Item -ItemType Directory -Force dist
-Compress-Archive -Path src/themes/two-bit-alchemy -DestinationPath dist/two-bit-alchemy.zip -Force
+
+$themeRoot = (Resolve-Path 'src/themes/two-bit-alchemy').Path.TrimEnd('\')
+$zipPath = Join-Path (Resolve-Path 'dist') 'two-bit-alchemy.zip'
+
+if (Test-Path $zipPath) {
+    Remove-Item -LiteralPath $zipPath -Force
+}
+
+Add-Type -AssemblyName System.IO.Compression
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+
+$zip = [System.IO.Compression.ZipFile]::Open(
+    $zipPath,
+    [System.IO.Compression.ZipArchiveMode]::Create
+)
+
+try {
+    Get-ChildItem -LiteralPath $themeRoot -Recurse -File | ForEach-Object {
+        $relative = $_.FullName.Substring($themeRoot.Length + 1).Replace('\', '/')
+        $entryName = 'two-bit-alchemy/' + $relative
+
+        [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile(
+            $zip,
+            $_.FullName,
+            $entryName,
+            [System.IO.Compression.CompressionLevel]::Optimal
+        ) | Out-Null
+    }
+} finally {
+    $zip.Dispose()
+}
 ```
+
+This creates explicit forward-slash ZIP paths so WordPress sees `two-bit-alchemy/style.css` directly inside the theme folder.
 
 Before uploading, confirm the ZIP structure resembles:
 
