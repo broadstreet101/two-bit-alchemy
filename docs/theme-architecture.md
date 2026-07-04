@@ -11,6 +11,7 @@ Project documents:
 - `docs/site-architecture.md`
 - `docs/site-map.md`
 - `docs/content-model.md`
+- `docs/component-library.md`
 - `docs/design-system.md`
 - `docs/layout-system.md`
 - `docs/theme-skeleton-plan.md`
@@ -362,6 +363,9 @@ Detailed visual rules for layout, typography, color, components, motion, accessi
 
 Layout system reference:
 Structural rules for content widths, section rhythm, page structure, image placement, navigation placement, footer behavior, and responsive layout are documented in `docs/layout-system.md`.
+
+Component library reference:
+Reusable UI component definitions and implementation rules are documented in `docs/component-library.md`.
 
 ## Gutenberg Compatibility
 

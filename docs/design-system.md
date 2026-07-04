@@ -10,6 +10,7 @@ It documents the design system only. It does not implement CSS, PHP, JavaScript,
 - `docs/theme-architecture.md`
 - `docs/content-model.md`
 - `docs/site-architecture.md`
+- `docs/component-library.md`
 - `docs/visual-language.md`
 - `docs/decisions.md`
 
@@ -251,6 +252,9 @@ Target WCAG 2.2 AA:
 Contrast should be tested before launch and after any color-token change.
 
 ## 5. Components
+
+Component reference:
+Reusable component purposes, content rules, accessibility expectations, responsive behavior, reuse guidelines, objective implementation rules, and subjective styling considerations are documented in `docs/component-library.md`.
 
 ### Navigation
 
