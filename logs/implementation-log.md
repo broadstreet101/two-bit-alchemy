@@ -2,6 +2,21 @@
 
 ## 2026-07-04
 
+Homepage Welcome Content Phase completed.
+
+### Completed
+
+- Added `content/homepage/welcome.md` with the approved Welcome text exactly as provided.
+- Updated `src/themes/two-bit-alchemy/front-page.php` to render the approved Welcome beneath the homepage site title.
+- Preserved the existing homepage structure and guiding words.
+
+### Notes
+
+- The Welcome text was not rewritten, summarized, or embellished.
+- No decorative artwork, animations, marketing call-to-action buttons, or new JavaScript were added.
+
+## 2026-07-04
+
 About Page Implementation completed.
 
 ### Completed

@@ -43,7 +43,18 @@ $latest_sections = array(
 
 <section class="home-hero" aria-labelledby="home-hero-title">
 	<h1 id="home-hero-title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h1>
-	<p><?php esc_html_e( 'Two-Bit Alchemy celebrates the joy of learning by making, preserving discoveries, and noticing the world more closely.', 'two-bit-alchemy' ); ?></p>
+
+	<div class="home-hero__welcome">
+		<h2><?php esc_html_e( 'Welcome', 'two-bit-alchemy' ); ?></h2>
+		<p><?php esc_html_e( "I'm glad you found your way here.", 'two-bit-alchemy' ); ?></p>
+		<p><?php esc_html_e( "Two-Bit Alchemy isn't a portfolio, and it isn't really a blog.", 'two-bit-alchemy' ); ?></p>
+		<p><?php esc_html_e( "It's a place where I keep the things that have taught me something, surprised me, or simply seemed worth paying attention to.", 'two-bit-alchemy' ); ?></p>
+		<p><?php esc_html_e( 'Some of those things are projects. Others are photographs, field notes, experiments, stories, or people who left the world a little more interesting than they found it.', 'two-bit-alchemy' ); ?></p>
+		<p><?php esc_html_e( 'Think of it less as a collection and more as a workshop with well-used shelves. Everything here earned its place because it taught me something, solved a problem, inspired a question, or reminded me to slow down and notice.', 'two-bit-alchemy' ); ?></p>
+		<p><?php esc_html_e( "I don't expect every shelf to interest every visitor.", 'two-bit-alchemy' ); ?></p>
+		<p><?php esc_html_e( 'But if something here sends you down a rabbit hole of your own, helps you solve a problem, or simply makes you stop and look a little closer, then this little corner of the internet has done exactly what I hoped it would.', 'two-bit-alchemy' ); ?></p>
+		<p><strong><?php esc_html_e( "Come in. There's something I'd like to show you.", 'two-bit-alchemy' ); ?></strong></p>
+	</div>
 
 	<ul class="home-hero__words" aria-label="<?php esc_attr_e( 'Guiding words', 'two-bit-alchemy' ); ?>">
 		<li><?php esc_html_e( 'Observe.', 'two-bit-alchemy' ); ?></li>
