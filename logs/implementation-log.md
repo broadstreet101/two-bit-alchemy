@@ -2,6 +2,22 @@
 
 ## 2026-07-04
 
+Workbench Workflow Phase completed.
+
+### Completed
+
+- Added `content/workbench/` as the repository staging area where new material begins life before publication.
+- Added Workbench subdirectories for Field Notes, Workshop Journal, Cabinet, Exhibits, Tributes, Photography, and Ideas.
+- Added `content/workbench/README.md` with Workbench purpose, rules, and the Observation -> Workbench -> Review -> publication workflow.
+- Updated `README.md` to link to the Workbench.
+
+### Notes
+
+- No website, theme, template, CSS, WordPress configuration, or live site files were modified.
+- Workbench material is explicitly not considered published until it graduates through review.
+
+## 2026-07-04
+
 Kiwi Exhibit Completion Phase 1 completed.
 
 ### Completed

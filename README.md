@@ -25,4 +25,5 @@ No website code has been generated yet. Implementation should begin only after a
 - `docs/repository-structure.md` - recommended folder structure.
 - `docs/planning/missing-project-files.md` - missing files and why they matter.
 - `docs/decisions.md` - durable project decisions.
+- `content/workbench/README.md` - staging workflow for new observations, drafts, and exhibit material before publication.
 - `logs/implementation-log.md` - running implementation history.
