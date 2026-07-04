@@ -10,6 +10,7 @@ It documents the design system only. It does not implement CSS, PHP, JavaScript,
 - `docs/theme-architecture.md`
 - `docs/content-model.md`
 - `docs/site-architecture.md`
+- `docs/visual-language.md`
 - `docs/decisions.md`
 
 ## 1. Design Philosophy
@@ -309,6 +310,7 @@ Guidance:
 - Preserve captions and credit notes where needed.
 - Do not use generic stock-like imagery.
 - Do not place large photography libraries directly inside the theme.
+- Follow `docs/visual-language.md` for photography, illustration, artifact, editing, caption, credit, and licensing rules.
 
 ### Galleries
 
@@ -438,6 +440,9 @@ General rules:
 - Decorative assets should never interfere with reading, navigation, accessibility, or performance.
 - Large or repeated artwork should be optimized before entering the theme.
 - Final placement requires creative approval.
+
+Imagery reference:
+Detailed rules for photography, illustration, artifacts, image hierarchy, editing, accessibility, credits, and licensing are documented in `docs/visual-language.md`.
 
 ### Two-Bit Alchemy Emblem
 

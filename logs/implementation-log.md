@@ -2,6 +2,21 @@
 
 ## 2026-07-04
 
+Visual Language Phase completed.
+
+### Completed
+
+- Added `docs/visual-language.md` to define how imagery is used throughout Two-Bit Alchemy.
+- Documented image philosophy, photography principles, illustration principles, artifact philosophy, image hierarchy, image editing, accessibility, credits, licensing, and objective versus subjective image decisions.
+- Updated `docs/design-system.md` and `docs/creative-constitution.md` to cross-reference the visual language guide.
+
+### Notes
+
+- No website files, code, decorative styling, final artwork placement, or live WordPress changes were modified.
+- Imagery should be treated as evidence, documentation, and historical material rather than filler decoration.
+
+## 2026-07-04
+
 Layout System Phase completed.
 
 ### Completed

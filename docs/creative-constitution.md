@@ -9,6 +9,7 @@ It is not marketing copy. It is not an About page. It is an internal reference u
 - `docs/brand-manifest.md`
 - `docs/voice-and-editorial-guide.md`
 - `docs/design-system.md`
+- `docs/visual-language.md`
 - `docs/site-architecture.md`
 - `docs/content-model.md`
 - `docs/theme-architecture.md`
@@ -47,7 +48,7 @@ Belongs here:
 - Real projects and their histories.
 - Field observations and durable notes.
 - Workshop process, experiments, repairs, failures, and lessons.
-- Photographs that document or reveal something.
+- Photographs that document or reveal something, following `docs/visual-language.md`.
 - Cabinet objects, tools, books, specimens, artifacts, and references.
 - Fisher Aquatics as an important project history within the broader identity.
 - Personal context that helps visitors understand the work without becoming resume-like.
