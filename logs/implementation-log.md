@@ -2,6 +2,21 @@
 
 ## 2026-07-04
 
+Exhibit Standard Phase completed.
+
+### Completed
+
+- Added `docs/exhibit-standard.md` to define what makes a Two-Bit Alchemy exhibit complete before publication.
+- Documented required narrative elements, structural elements, educational value, related content expectations, cross-linking requirements, image philosophy, evidence versus storytelling, accessibility expectations, editorial checklist, and publication checklist.
+- Defined the five core exhibit questions: what it is, why it matters, what someone can learn, where visitors should go next, and why it belongs in Two-Bit Alchemy.
+
+### Notes
+
+- No theme files, templates, CSS, WordPress configuration, or live site content were modified.
+- The exhibit standard is documentation only and should guide future project, artifact, and archive exhibits.
+
+## 2026-07-04
+
 Kiwi Project Exhibit Implementation completed.
 
 ### Completed
