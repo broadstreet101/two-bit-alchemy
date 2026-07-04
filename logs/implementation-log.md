@@ -2,6 +2,22 @@
 
 ## 2026-07-04
 
+Global Site Shell Implementation completed.
+
+### Completed
+
+- Refined the shared site header with quieter spacing, title hierarchy, and archival separation.
+- Implemented the approved primary navigation order as a fallback when no WordPress menu is assigned.
+- Added a restrained shared footer with site identity, footer navigation, and a simple ownership note.
+- Updated site-shell CSS for responsive navigation, footer rhythm, and accessible link/focus behavior.
+
+### Notes
+
+- No homepage content, decorative artwork, icons, animations, JavaScript, new color tokens, or live WordPress changes were added.
+- WordPress-assigned primary menus remain supported and take precedence over the fallback navigation.
+
+## 2026-07-04
+
 Cabinet Motif Implementation completed.
 
 ### Completed
