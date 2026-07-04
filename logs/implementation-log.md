@@ -2,6 +2,22 @@
 
 ## 2026-07-03
 
+Theme Smoke Test Phase prepared.
+
+### Completed
+
+- Added `docs/theme-smoke-test.md`.
+- Created a first-activation checklist covering immediate activation, front-end rendering, WordPress admin, accessibility, browser console checks, and recovery procedure.
+- Reviewed the current theme skeleton for objective pre-homepage issues.
+
+### Notes
+
+- No layouts, styling, new features, third-party libraries, page builders, or live WordPress changes were added.
+- No objective skeleton issues were identified that must be corrected before first activation.
+- Activation is recommended as the next validation step before homepage implementation.
+
+## 2026-07-03
+
 Theme skeleton validation completed.
 
 ### Completed
