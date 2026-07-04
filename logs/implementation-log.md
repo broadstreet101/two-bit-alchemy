@@ -2,6 +2,22 @@
 
 ## 2026-07-04
 
+Cabinet Motif Implementation completed.
+
+### Completed
+
+- Added subtle CSS-only archival separators for homepage sections and footer separation.
+- Refined homepage project and entry cards to feel more like restrained catalog cards using existing color tokens.
+- Added non-animated hover and focus-within treatments for homepage cards while preserving accessibility and responsive behavior.
+- Adjusted homepage guiding-word alignment without changing content, typography tokens, or homepage order.
+
+### Notes
+
+- No decorative artwork, new colors, animations, JavaScript, new content, template changes, or live WordPress changes were added.
+- The motif remains intentionally quiet and uses existing theme tokens only.
+
+## 2026-07-04
+
 Homepage Layout Refinement Phase completed.
 
 ### Completed
