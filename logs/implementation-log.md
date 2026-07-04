@@ -2,6 +2,22 @@
 
 ## 2026-07-04
 
+Kiwi Project Exhibit Implementation completed.
+
+### Completed
+
+- Added `src/themes/two-bit-alchemy/templates/page-kiwi.php` as the initial Kiwi project exhibit template.
+- Included sections for Project Introduction, Purpose, Background, Timeline, Related Field Notes, Related Workshop Journal, Gallery, Related Projects, and You May Also Enjoy.
+- Used only approved project-architecture facts and clearly labeled placeholders where Kiwi-specific content has not yet been approved.
+- Updated `src/themes/two-bit-alchemy/assets/css/main.css` so project exhibit sections share the established archival section rhythm.
+
+### Notes
+
+- No Kiwi facts, artwork, photographs, homepage changes, JavaScript, animations, new color tokens, or live WordPress changes were added.
+- The Kiwi page template is ready for assignment to the `/projects/kiwi/` WordPress page once that page exists.
+
+## 2026-07-04
+
 Experience Map Phase completed.
 
 ### Completed
