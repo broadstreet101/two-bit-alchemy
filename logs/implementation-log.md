@@ -2,6 +2,21 @@
 
 ## 2026-07-05
 
+First Workbench Field Note Phase completed.
+
+### Completed
+
+- Added `content/workbench/field-notes/black-willow-propagation.md` as the first structured Workbench Field Note draft.
+- Captured the black willow propagation observations, including the mistaken weeping willow order, several years of growth, rooting experiments, lavender result, and Heidi O'Toole's practical insight about natural rooting compounds.
+- Clearly marked uncertain details and preserved the distinction between practical observation and scientific proof.
+
+### Notes
+
+- No website, theme, templates, CSS, JavaScript, WordPress configuration, or live site content were modified.
+- The Field Note remains unpublished Workbench material and was not polished into finished prose.
+
+## 2026-07-05
+
 Shelf Worthiness Guide Phase completed.
 
 ### Completed
