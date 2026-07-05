@@ -2,6 +2,23 @@
 
 ## 2026-07-05
 
+Museum Opening Phase 1 completed.
+
+### Completed
+
+- Updated the homepage featured project summaries to use approved repository text for Fisher Aquatics, Kiwi, and Photography.
+- Surfaced `Black Willow Propagation` as the first featured Field Note on the homepage.
+- Added the Black Willow Field Note content to the Field Notes page using approved Workbench facts while preserving uncertainty and practical-observation boundaries.
+- Added the Cabinet introduction and launch-status note without displaying individual artifacts.
+- Reviewed About and Kiwi content; existing templates continue to use approved content and guarded placeholders where final content is not yet approved.
+
+### Notes
+
+- No redesign, decorative artwork, animation, JavaScript, WordPress admin change, or live-site modification was introduced.
+- Kiwi-specific purpose, background, timeline, and image content remain placeholders because the repository still marks those details as missing approved content.
+
+## 2026-07-05
+
 First Workbench Field Note Phase completed.
 
 ### Completed

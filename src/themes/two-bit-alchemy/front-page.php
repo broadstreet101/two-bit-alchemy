@@ -11,17 +11,17 @@ $featured_projects = array(
 	array(
 		'title'       => __( 'Fisher Aquatics', 'two-bit-alchemy' ),
 		'url'         => home_url( '/projects/fisher-aquatics/' ),
-		'description' => __( 'A legacy aquatics project becoming part of the larger Two-Bit Alchemy archive.', 'two-bit-alchemy' ),
+		'description' => __( 'Fisher Aquatics should be treated as a project within Two-Bit Alchemy, not as the entire site identity.', 'two-bit-alchemy' ),
 	),
 	array(
 		'title'       => __( 'Kiwi', 'two-bit-alchemy' ),
 		'url'         => home_url( '/projects/kiwi/' ),
-		'description' => __( 'A project space for careful making, practical experiments, and what gets learned along the way.', 'two-bit-alchemy' ),
+		'description' => __( 'This exhibit is the public home for Kiwi inside Two-Bit Alchemy. It is designed to preserve the project story, gather related notes and artifacts, and give visitors a clear path into the work once approved Kiwi-specific material has been created.', 'two-bit-alchemy' ),
 	),
 	array(
 		'title'       => __( 'Photography', 'two-bit-alchemy' ),
 		'url'         => home_url( '/projects/photography/' ),
-		'description' => __( 'Selected photographs and visual observations that support the record of curiosity.', 'two-bit-alchemy' ),
+		'description' => __( 'Support photography as both a standalone project and a documentation method across the whole site.', 'two-bit-alchemy' ),
 	),
 );
 
@@ -84,6 +84,21 @@ $latest_sections = array(
 <?php foreach ( $latest_sections as $section ) : ?>
 	<section class="home-latest" aria-labelledby="<?php echo esc_attr( $section['id'] ); ?>-title">
 		<h2 id="<?php echo esc_attr( $section['id'] ); ?>-title"><?php echo esc_html( $section['title'] ); ?></h2>
+
+		<?php if ( 'field-notes' === $section['category_slug'] ) : ?>
+			<div class="home-entry-list">
+				<article class="home-entry" id="black-willow-propagation">
+					<h3>
+						<a href="<?php echo esc_url( home_url( '/field-notes/#black-willow-propagation' ) ); ?>">
+							<?php esc_html_e( 'Black Willow Propagation', 'two-bit-alchemy' ); ?>
+						</a>
+					</h3>
+					<p><?php esc_html_e( 'Black willow cuttings were originally obtained by mistake after ordering weeping willow.', 'two-bit-alchemy' ); ?></p>
+					<p><?php esc_html_e( 'Water used to root black willow cuttings appears to dramatically improve rooting success in other plants, including lavender, based on practical observation rather than controlled experimentation.', 'two-bit-alchemy' ); ?></p>
+				</article>
+			</div>
+			<?php continue; ?>
+		<?php endif; ?>
 
 		<?php
 		$category     = get_category_by_slug( $section['category_slug'] );
