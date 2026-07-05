@@ -10,6 +10,7 @@ It is not marketing copy. It is not an About page. It is an internal reference u
 - `docs/voice-and-editorial-guide.md`
 - `docs/design-system.md`
 - `docs/visual-language.md`
+- `docs/shelf-worthiness.md`
 - `docs/site-architecture.md`
 - `docs/content-model.md`
 - `docs/theme-architecture.md`

@@ -9,6 +9,7 @@ It is documentation only. It does not modify the website, theme, templates, Word
 - `docs/creative-constitution.md`
 - `docs/voice-and-editorial-guide.md`
 - `docs/exhibit-standard.md`
+- `docs/shelf-worthiness.md`
 - `content/workbench/README.md`
 
 ## 1. Lifecycle

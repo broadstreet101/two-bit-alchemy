@@ -2,6 +2,21 @@
 
 ## 2026-07-05
 
+Shelf Worthiness Guide Phase completed.
+
+### Completed
+
+- Added `docs/shelf-worthiness.md` to define how objects, stories, photographs, projects, memories, and exhibits earn a lasting place in Two-Bit Alchemy.
+- Documented that shelf worthiness is based on meaning, learning, memory, kindness, curiosity, and preservation rather than monetary value, rarity, or prestige.
+- Added cross-references from `docs/creative-constitution.md` and `docs/editorial-workflow.md`.
+
+### Notes
+
+- No website, theme, templates, CSS, JavaScript, WordPress configuration, Workbench artifacts, or live site content were modified.
+- The guide clarifies that not every interesting thing earns a shelf, not every shelf item becomes an exhibit, some stories remain private, and some stories may stay in the Workbench indefinitely.
+
+## 2026-07-05
+
 First Artifact Draft Population completed.
 
 ### Completed
