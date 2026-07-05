@@ -1,5 +1,20 @@
 # Implementation Log
 
+## 2026-07-05
+
+Editorial Workflow Phase completed.
+
+### Completed
+
+- Added `docs/editorial-workflow.md` to document the lifecycle from Conversation to Workbench Notes, Editorial Draft, Fact Review, Final Exhibit, and Publication.
+- Clarified that every exhibit begins as conversation, the Workbench preserves raw observations, editorial work improves structure without changing facts, and the author's voice should be preserved.
+- Documented the boundary between editorial development and technical implementation, including Codex's support role and limits.
+
+### Notes
+
+- No website, theme, template, CSS, WordPress configuration, live site content, or Workbench artifacts were modified.
+- Codex may structure and support editorial material but should not author personal stories or invent facts.
+
 ## 2026-07-04
 
 First Workbench Artifact Phase completed.
