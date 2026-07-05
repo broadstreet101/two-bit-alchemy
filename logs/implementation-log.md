@@ -2,6 +2,21 @@
 
 ## 2026-07-05
 
+First Artifact Draft Population completed.
+
+### Completed
+
+- Updated `content/workbench/artifacts/tori-amos-cigarette-pack.md` with raw story material supplied by Dada, including the 9:30 Club context, uncertain late-1990s tour/date, autograph circumstances, starstruck memory, and shelf location.
+- Updated `content/workbench/artifacts/1981-ford-escort-model.md` with raw story material supplied by Dada, including the model description, real car connection, accident context, Jon provenance, family/friend connections, and current relationship to the signed Tori Amos cigarette pack.
+- Clearly marked uncertain or missing details as open questions or placeholders.
+
+### Notes
+
+- No website, theme, templates, CSS, JavaScript, WordPress configuration, or live site content were modified.
+- The material remains unpublished Workbench content and was not polished into final exhibit prose.
+
+## 2026-07-05
+
 Artifact Draft Workflow Phase completed.
 
 ### Completed

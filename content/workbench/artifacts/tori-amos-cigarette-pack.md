@@ -10,35 +10,47 @@ Workbench artifact draft; unpublished.
 
 ## Physical Description
 
-Placeholder: physical description not yet captured.
+- Camel cigarette pack.
+- Signed by Tori Amos.
+- Now kept on a shelf.
 
 ## Provenance (how it came into my possession)
 
-Placeholder: provenance not yet captured.
+- Tori Amos show at the 9:30 Club in Washington, DC.
+- Late 1990s.
+- Exact tour uncertain.
+- Dada did not bring planned autograph material.
+- After the show, Dada crossed near the alley/bus area at the right time.
+- Tori Amos was signing a few things.
+- The only available object was a Camel cigarette pack.
 
 ## Story
 
-Placeholder: story not yet captured.
+- Dada remembers being starstruck.
+- Dada remembers only managing to say thank you.
 
 ## Why I Kept It
 
-Placeholder: reason not yet captured.
+- Placeholder: reason beyond the remembered encounter not yet captured.
+- The signed cigarette pack is now kept on a shelf.
 
 ## Why It Matters
 
-Placeholder: significance not yet captured.
+- Placeholder: significance not yet fully captured.
 
 ## Related People
 
-Placeholder: related people not yet identified.
+- Dada.
+- Tori Amos.
 
 ## Related Places
 
-Placeholder: related places not yet identified.
+- 9:30 Club, Washington, DC.
+- Alley/bus area near the venue.
 
 ## Related Exhibits
 
-Placeholder: related exhibits not yet identified.
+- 1981 Ford Escort model.
 
 ## Related Field Notes
 
@@ -50,24 +62,32 @@ Placeholder: related Workshop Journal entries not yet identified.
 
 ## Historical Context
 
-Placeholder: historical context not yet captured.
+- Late 1990s.
+- Exact tour uncertain.
+- Tori Amos show at the 9:30 Club in Washington, DC.
 
 ## Publication Notes
 
-Placeholder: publication notes not yet captured.
+- Workbench material only.
+- Do not publish until Dada reviews the story, date range, and any photographs.
+- Exact tour should be verified or left clearly uncertain.
 
 ## Open Questions
 
-Placeholder: open questions not yet captured.
+- Exact date of show.
+- Exact tour.
+- Whether there are photographs of the signed cigarette pack.
 
 ## Media Needed
 
-Placeholder: media needs not yet identified.
+- Photograph of the signed cigarette pack.
+- Photograph of the shelf context, if Dada wants that preserved.
 
 ## Source Material
 
-Placeholder: source material not yet identified.
+- Raw story material supplied by Dada in conversation.
 
 ## Editorial Notes
 
-Placeholder: editorial notes not yet captured.
+- Preserve the starstruck memory without polishing it into a bigger story than Dada provided.
+- Keep exact tour/date uncertain unless verified.
