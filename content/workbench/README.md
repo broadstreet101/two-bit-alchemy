@@ -35,6 +35,7 @@ Published
 - `field-notes/` - early durable observations, reference notes, and reusable knowledge.
 - `workshop-journal/` - early process notes, experiments, repairs, and build records.
 - `cabinet/` - early object, artifact, source, tool, book, and reference notes.
+- `artifacts/` - structured artifact drafts before they graduate into Cabinet entries, exhibits, or related content.
 - `exhibits/` - early exhibit drafts before they meet `docs/exhibit-standard.md`.
 - `tributes/` - early memorial or remembrance material requiring privacy and permission review.
 - `photography/` - early image selections, captions, contact sheets, and photo notes.

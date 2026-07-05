@@ -2,6 +2,22 @@
 
 ## 2026-07-05
 
+Artifact Draft Workflow Phase completed.
+
+### Completed
+
+- Added `content/workbench/artifacts/` for structured unpublished artifact drafts.
+- Added `content/workbench/artifacts/README.md` defining the Artifact Draft workflow, required sections, rules, source references, and graduation criteria.
+- Added initial Workbench artifact drafts for `tori-amos-cigarette-pack.md` and `1981-ford-escort-model.md` using only known artifact names and unpublished Workbench status, with placeholders for unknown details.
+- Updated `content/workbench/README.md` to include the new artifact draft area.
+
+### Notes
+
+- No website, theme, templates, CSS, JavaScript, WordPress configuration, or live site content were modified.
+- No artifact details were invented; unknown information remains explicitly marked as placeholder material.
+
+## 2026-07-05
+
 Editorial Workflow Phase completed.
 
 ### Completed
