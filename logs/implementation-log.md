@@ -1,5 +1,35 @@
 # Implementation Log
 
+## 2026-07-06
+
+Publication Phase Step 2 completed.
+
+### Completed
+
+- Added `docs/publication-readiness-checklist.md` as a reusable pre-publication checklist for future shelves, exhibits, Field Notes, artifacts, projects, and related content groups.
+- Included checklist sections for repository content, editorial review, fact and uncertainty review, image inventory, captions, alt text, metadata, cross-links, related content, accessibility, proofreading, and final approval.
+- Added concise image preparation guidelines for artifacts, Field Notes, projects, and exhibits.
+
+### Notes
+
+- No website, theme, templates, CSS, JavaScript, WordPress configuration, live content, or publication actions were modified.
+- The checklist distills `docs/publication-phase-plan.md` into a practical reusable review tool.
+
+## 2026-07-05
+
+Publication Phase planning completed.
+
+### Completed
+
+- Added `docs/publication-phase-plan.md` to define the checklist and implementation plan for bringing the first complete shelf live.
+- Identified remaining publication steps for `Black Willow Propagation`, the Tori Amos Camel cigarette pack, and the 1981 Ford Escort model.
+- Documented required work for repository content completion, page/template decisions, images, captions, metadata, cross-linking, accessibility, related content, quality control, and publication sequencing.
+
+### Notes
+
+- No website, theme, templates, CSS, JavaScript, WordPress configuration, live site content, or publication actions were modified.
+- The plan preserves the current boundary that all three shelf items still require final content, review, media preparation, and approval before publication.
+
 ## 2026-07-05
 
 Museum Opening Phase 1 completed.
