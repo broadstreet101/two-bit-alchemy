@@ -1,5 +1,20 @@
 # Implementation Log
 
+## 2026-08-12
+
+Publication Phase Step 3 completed.
+
+### Completed
+
+- Added `docs/cabinet-publication-queue.md` as a reusable queue for tracking Cabinet artifacts through the publication pipeline.
+- Seeded the queue with the current known Cabinet artifact drafts: Charlie Adlard Amish Zombie Sketch, Tori Amos Camel cigarette pack, and 1981 Ford Escort model.
+- Tracked each artifact for status, editorial completeness, story completeness, image status, metadata, captions, cross-links, accessibility, publication readiness, target shelf, and notes.
+
+### Notes
+
+- No website, theme, templates, CSS, JavaScript, WordPress configuration, published content, or live site content were modified.
+- All seeded artifacts remain unpublished and not publication-ready pending content completion, image preparation, metadata, accessibility review, and final approval.
+
 ## 2026-07-06
 
 Publication Phase Step 2 completed.
