@@ -212,11 +212,12 @@ These are options only. Do not implement them until Dada approves the problem, a
 - WP-CLI over SSH: would automate content inventory, user role counts, cache clearing, plugin inventory, and theme installation.
 - SFTP or hosting file deploy: would reduce manual theme uploads while preserving repository-built packages.
 - Repository-controlled IONOS deployment scripts: can deploy only the validated custom theme after SSH authentication, path discovery, backup confirmation, and explicit approval.
+- Public visual QA screenshots: can be captured with `scripts\visual-qa.ps1` after deployment/cache purge without storing WordPress credentials.
 - A staging WordPress site: would allow safer preview and activation testing before production.
 - GitHub Actions package validation: would run repeatable ZIP checks on every push.
 - WordPress REST API tooling: could automate draft creation, media attachment, metadata checks, and preview workflows.
 - Deployment keys or secrets manager: would support automated deployment while keeping credentials outside Git.
-- Visual regression screenshots: would document frontend changes before approval.
+- Authenticated administrator-only visual QA: remains future work and requires a separately approved safe credential/session model.
 
 ## Build And Package Hardening
 
@@ -297,7 +298,7 @@ The following instructions consolidate existing workflow policy and add automati
 6. Inventory posts, pages, categories, tags, comments, and media.
 7. Inventory menus, widgets, custom CSS, and custom JavaScript.
 8. Record permalink, SEO, indexing, redirects, and sitemap state.
-9. Capture public frontend screenshots and baseline observations.
+9. Run `scripts\visual-qa.ps1` to capture public frontend screenshots and baseline observations.
 10. Summarize cleanup candidates and approval-gated actions.
 
 ## Open Questions

@@ -154,12 +154,20 @@ The deployment script is intentionally guarded. It requires:
 - The remote theme path to end with `/wp-content/themes/two-bit-alchemy`.
 - The `-ConfirmDeploy` switch.
 
+It can optionally run public visual QA after a successful deployment and cache purge with the `-RunVisualQa` switch.
+
 The script must not be run until Dada explicitly authorizes remote deployment.
 
 Example future command after remote path discovery:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\deploy-theme.ps1 -ConfirmDeploy
+```
+
+To run automated public visual QA after deployment and cache purge:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\deploy-theme.ps1 -ConfirmDeploy -RunVisualQa
 ```
 
 To validate the discovered deploy target without writing to the remote server:
@@ -181,6 +189,7 @@ The script:
 9. Fails if expected paths or files differ.
 10. Leaves the previous theme backup available for rollback.
 11. Attempts a non-fatal IONOS Performance full-page cache purge after the theme files are replaced.
+12. Optionally runs public visual QA when `-RunVisualQa` is supplied.
 
 The post-deployment cache purge uses PHP 8.2 explicitly:
 
@@ -195,6 +204,8 @@ Ionos\Performance\Caching\Caching::flush_total_cache()
 ```
 
 If PHP 8.2, WP-CLI, the WordPress root, or the plugin cache class is unavailable, the deployment reports `CACHE_PURGE_STATUS=skipped` or `CACHE_PURGE_STATUS=warning` and leaves the completed theme deployment intact. Cache purge failure must not destructively alter the deployed theme or rollback backup.
+
+Visual QA is local and non-blocking during deployment. It captures public screenshots and reports route, page title, console, and resource observations under `qa\visual\latest\` and `qa\visual\runs\`. Visual QA failures are reported for review and do not automatically trigger rollback. Administrator-only draft preview screenshots remain manual unless a separate authenticated workflow is approved.
 
 ## Rollback Script
 

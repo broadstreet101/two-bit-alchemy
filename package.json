@@ -1,0 +1,12 @@
+{
+  "name": "two-bit-alchemy-tooling",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Repository-local development tooling for the Two-Bit Alchemy WordPress theme.",
+  "scripts": {
+    "visual:qa": "node tools/visual-qa/run-visual-qa.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}

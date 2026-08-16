@@ -24,6 +24,7 @@ No live WordPress content should be published or cleaned up without explicit app
 - `docs/development-workflow.md` - permanent development workflow policy.
 - `docs/wordpress-baseline-automation.md` - WordPress cleanup, baseline audit, and automation plan.
 - `docs/theme-deployment.md` - theme packaging, installation, activation, and rollback instructions.
+- `docs/visual-qa.md` - automated public visual QA screenshots and reports.
 - `docs/repository-structure.md` - recommended folder structure.
 - `docs/planning/missing-project-files.md` - missing files and why they matter.
 - `docs/decisions.md` - durable project decisions.

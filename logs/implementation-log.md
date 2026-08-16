@@ -2,6 +2,38 @@
 
 ## 2026-08-16
 
+Automated public visual QA workflow created.
+
+### Completed
+
+- Added root-level Node/Playwright development tooling for public visual QA without adding production dependencies to the WordPress theme.
+- Added `scripts\visual-qa.ps1` as the canonical local wrapper for browser-based QA.
+- Added `tools\visual-qa\run-visual-qa.mjs` to capture public routes at desktop `1440x1000` and mobile `390x844` viewports.
+- Configured the workflow to capture full-page screenshots for `/`, `/projects/`, `/field-notes/`, `/workshop-journal/`, `/cabinet/`, `/about/`, and `/contact/`.
+- Configured the workflow to verify the public Charlie Adlard Cabinet exhibit URL returns the themed `404` while remaining unavailable to logged-out visitors.
+- Configured reports under `qa\visual\latest\` and timestamped runs under `qa\visual\runs\YYYYMMDD-HHMMSS\`.
+- Added `qa\visual\latest\`, `qa\visual\runs\`, `playwright-report\`, and `test-results\` to `.gitignore`.
+- Added an HTML contact sheet, Markdown report, and JSON report for each visual QA run.
+- Updated deployment tooling so `scripts\deploy-theme.ps1 -ConfirmDeploy -RunVisualQa` can run public visual QA after deployment and cache purge.
+- Documented that public screenshots are now automated and administrator-only draft preview screenshots remain manual unless a safe authenticated QA workflow is separately approved.
+- Installed Playwright `1.62.1` as a pinned root development dependency.
+- Ran visual QA against the current live site and generated `D:\TBA\qa\visual\runs\20260816-200813\`.
+
+### Verification
+
+- Visual QA status: `pass`.
+- Route mismatches: `0`.
+- Browser console errors: `0`.
+- Missing or failed resource errors: `0`.
+- Public Charlie Adlard direct URL result: expected `404`, received `404`.
+
+### Notes
+
+- No site design, theme content, WordPress content, page structure, image files, deployment, or Cabinet publication status changed during this task.
+- QA artifacts are local and Git-ignored.
+
+## 2026-08-16
+
 Restrained visual-character refinement completed.
 
 ### Completed

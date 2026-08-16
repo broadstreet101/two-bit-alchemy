@@ -32,6 +32,12 @@ build/
 .nuxt/
 .vite/
 coverage/
+playwright-report/
+test-results/
+
+# Local QA artifacts
+qa/visual/latest/
+qa/visual/runs/
 
 # Local source media archive
 media-archive/

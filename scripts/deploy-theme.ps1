@@ -3,7 +3,8 @@ param(
     [string] $HostAlias = 'tba-ionos',
     [string] $RemoteThemePath,
     [switch] $ValidateOnly,
-    [switch] $ConfirmDeploy
+    [switch] $ConfirmDeploy,
+    [switch] $RunVisualQa
 )
 
 $ErrorActionPreference = 'Stop'
@@ -318,5 +319,20 @@ exit 0
 
 $quotedWordPressRoot = Quote-Remote -Value $remoteWordPressRoot
 Invoke-RemoteShellScript -HostAlias $HostAlias -Script $cachePurgeScript -RemoteArguments $quotedWordPressRoot
+
+if ($RunVisualQa) {
+    $visualQaScript = Join-Path $PSScriptRoot 'visual-qa.ps1'
+
+    if (Test-Path -LiteralPath $visualQaScript -PathType Leaf) {
+        Write-Host 'Running non-blocking public visual QA...'
+        & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $visualQaScript
+
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warning "Visual QA reported issues for review with exit code $LASTEXITCODE. Rollback was not run."
+        }
+    } else {
+        Write-Warning "Visual QA script not found: $visualQaScript"
+    }
+}
 
 Write-Host 'Deployment completed. WordPress theme activation and content publication were not changed.'
