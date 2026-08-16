@@ -17,6 +17,7 @@ global $two_bit_alchemy_current_cabinet_exhibit;
 	</nav>
 
 	<header class="entry-header project-exhibit__header">
+		<p class="catalog-label"><?php esc_html_e( 'Cabinet No. 001', 'two-bit-alchemy' ); ?></p>
 		<p class="entry-meta"><?php esc_html_e( 'Cabinet Exhibit', 'two-bit-alchemy' ); ?></p>
 		<?php if ( ! empty( $two_bit_alchemy_current_cabinet_exhibit ) && ! two_bit_alchemy_is_cabinet_exhibit_published( $two_bit_alchemy_current_cabinet_exhibit ) ) : ?>
 			<p class="entry-meta"><?php esc_html_e( 'Preview only. Not publicly published.', 'two-bit-alchemy' ); ?></p>

@@ -137,6 +137,16 @@ caption,
 	margin-block: 0 0.5rem;
 }
 
+.catalog-label {
+	max-width: none;
+	margin-block: 0 0.55rem;
+	color: var(--wp--preset--color--muted-text);
+	font-size: var(--wp--preset--font-size--x-small);
+	font-weight: 700;
+	line-height: 1.3;
+	text-transform: uppercase;
+}
+
 img,
 svg,
 video {
@@ -274,8 +284,7 @@ th {
 .site-footer {
 	margin-block-start: calc(var(--wp--preset--spacing--large) - 0.5rem);
 	padding-block: var(--wp--preset--spacing--medium);
-	border-block-start: 1px solid var(--wp--preset--color--border);
-	box-shadow: inset 0 1px 0 var(--wp--preset--color--surface);
+	border-block-start: 3px double var(--wp--preset--color--border);
 }
 
 .site-main {
@@ -369,9 +378,8 @@ th {
 .home-reflection {
 	position: relative;
 	margin-inline: auto;
-	margin-block-end: calc(var(--wp--preset--spacing--large) - 0.75rem);
+	margin-block-end: calc(var(--wp--preset--spacing--large) - 1rem);
 	padding-block-start: var(--wp--preset--spacing--medium);
-	border-block-start: 1px solid var(--wp--preset--color--border);
 }
 
 .home-hero {
@@ -414,7 +422,7 @@ th {
 	margin-block-start: var(--wp--preset--spacing--medium);
 	padding-block-start: var(--wp--preset--spacing--small);
 	padding-inline-start: 0;
-	border-block-start: 1px solid var(--wp--preset--color--border);
+	border-block-start: 3px double var(--wp--preset--color--border);
 	list-style: none;
 	font-family: var(--wp--preset--font-family--system-serif);
 	font-size: var(--wp--preset--font-size--medium);
@@ -426,13 +434,23 @@ th {
 }
 
 .home-frontispiece {
-	max-width: min(100%, 640px);
-	padding-block-start: 0;
-	border-block-start: 0;
+	max-width: min(100%, 600px);
+	padding: 0.7rem 0.7rem 0.45rem;
+	border: 3px double var(--wp--preset--color--border);
 }
 
 .home-frontispiece img {
 	width: 100%;
+}
+
+.home-frontispiece figcaption {
+	max-width: none;
+	margin-block-start: 0.45rem;
+	text-align: center;
+}
+
+.home-frontispiece + .home-featured-projects {
+	padding-block-start: 0;
 }
 
 .home-featured-projects {
@@ -449,12 +467,24 @@ th {
 	font-size: var(--wp--preset--font-size--large);
 }
 
+.home-featured-projects > h2::after,
+.home-latest > h2::after,
+.home-cabinet > h2::after,
+.home-reflection > h2::after {
+	display: block;
+	width: 3.5rem;
+	margin-block-start: 0.45rem;
+	border-block-start: 1px solid var(--wp--preset--color--border);
+	content: "";
+}
+
 .home-card-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-	gap: 1rem;
+	grid-template-columns: minmax(0, 1.25fr) minmax(min(100%, 17rem), 0.75fr);
+	gap: 0.9rem;
 	max-width: var(--wp--style--global--wide-size);
 	margin-block-start: 1rem;
+	align-items: stretch;
 }
 
 .home-card,
@@ -462,8 +492,8 @@ th {
 	position: relative;
 	padding: 1.1rem 1.2rem;
 	background: var(--wp--preset--color--surface);
-	border: 1px solid var(--wp--preset--color--border);
-	box-shadow: inset 0 0 0 1px var(--wp--preset--color--background);
+	border-block-start: 3px double var(--wp--preset--color--border);
+	border-block-end: 1px solid var(--wp--preset--color--border);
 }
 
 .home-card {
@@ -473,14 +503,10 @@ th {
 	justify-content: space-between;
 }
 
-.home-card::before,
-.home-entry::before {
-	position: absolute;
-	inset-block-start: var(--wp--preset--spacing--small);
-	inset-inline: var(--wp--preset--spacing--medium);
-	display: block;
-	border-block-start: 1px solid var(--wp--preset--color--border);
-	content: "";
+.home-card--primary {
+	grid-row: span 2;
+	min-height: 100%;
+	padding: calc(var(--wp--preset--spacing--medium) + 0.25rem);
 }
 
 .home-card:hover,
@@ -488,16 +514,16 @@ th {
 .home-entry:hover,
 .home-entry:focus-within {
 	border-color: var(--wp--preset--color--accent);
-	box-shadow:
-		inset 0 0 0 1px var(--wp--preset--color--background),
-		0 0.25rem 0 var(--wp--preset--color--border);
 }
 
 .home-card h3,
 .home-entry h3 {
 	margin-block-start: 0;
-	padding-block-start: var(--wp--preset--spacing--small);
 	font-size: var(--wp--preset--font-size--medium);
+}
+
+.home-card--primary h3 {
+	font-size: var(--wp--preset--font-size--large);
 }
 
 .home-card p,
@@ -543,12 +569,12 @@ th {
 .about-section,
 .project-section {
 	padding-block-start: var(--wp--preset--spacing--medium);
-	border-block-start: 1px solid var(--wp--preset--color--border);
 }
 
 .about-section + .about-section,
 .project-section + .project-section {
 	margin-block-start: calc(var(--wp--preset--spacing--medium) + 0.25rem);
+	border-block-start: 1px solid var(--wp--preset--color--border);
 }
 
 .about-section h2,
@@ -573,16 +599,17 @@ th {
 
 .metadata-list {
 	display: grid;
-	gap: 0;
+	gap: 0.35rem;
 	max-width: var(--wp--style--global--content-size);
+	padding-block: 0.35rem;
+	border-block: 3px double var(--wp--preset--color--border);
 }
 
 .metadata-list > div {
 	display: grid;
 	grid-template-columns: minmax(9rem, 0.4fr) minmax(0, 1fr);
 	gap: 0.5rem var(--wp--preset--spacing--medium);
-	padding-block: 0.55rem;
-	border-block-end: 1px solid var(--wp--preset--color--border);
+	padding-block: 0.35rem;
 }
 
 .metadata-list > div:first-child {
@@ -591,8 +618,9 @@ th {
 
 .metadata-list dt {
 	color: var(--wp--preset--color--muted-text);
-	font-size: var(--wp--preset--font-size--small);
+	font-size: var(--wp--preset--font-size--x-small);
 	font-weight: 700;
+	text-transform: uppercase;
 }
 
 .metadata-list dd {
@@ -613,13 +641,16 @@ th {
 .exhibit-figure {
 	padding: 1.1rem 1.2rem;
 	background: var(--wp--preset--color--surface);
-	border: 1px solid var(--wp--preset--color--border);
-	box-shadow: inset 0 0 0 1px var(--wp--preset--color--background);
+	border-block-start: 3px double var(--wp--preset--color--border);
+	border-block-end: 1px solid var(--wp--preset--color--border);
 }
 
 .related-exhibit-card {
 	max-width: var(--wp--style--global--content-size);
-	border-inline-start: 3px solid var(--wp--preset--color--border);
+}
+
+.related-exhibit-card--catalog {
+	background: transparent;
 }
 
 .exhibit-timeline h3,
@@ -655,6 +686,9 @@ th {
 
 .cabinet-exhibit .exhibit-figure {
 	margin-block-end: var(--wp--preset--spacing--medium);
+	padding: 0.8rem;
+	border: 3px double var(--wp--preset--color--border);
+	background: transparent;
 }
 
 .cabinet-exhibit__story p {
@@ -731,8 +765,8 @@ th {
 	}
 
 	.home-frontispiece {
-		max-width: min(100%, 36rem);
-		padding-block-start: var(--wp--preset--spacing--small);
+		max-width: min(100%, 34rem);
+		padding: 0.5rem 0.5rem 0.35rem;
 	}
 
 	.home-hero > h1 {
@@ -741,6 +775,15 @@ th {
 
 	.home-card {
 		min-height: 0;
+	}
+
+	.home-card-list {
+		grid-template-columns: 1fr;
+	}
+
+	.home-card--primary {
+		grid-row: auto;
+		padding: 1.1rem 1.2rem;
 	}
 }
 

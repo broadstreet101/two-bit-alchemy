@@ -36,7 +36,8 @@ while ( have_posts() ) :
 				<h2 id="cabinet-exhibits-title"><?php esc_html_e( 'Cabinet Exhibits', 'two-bit-alchemy' ); ?></h2>
 				<div class="related-exhibit-list">
 					<?php foreach ( $cabinet_exhibits as $slug => $exhibit ) : ?>
-						<article class="related-exhibit-card">
+						<article class="related-exhibit-card related-exhibit-card--catalog">
+							<p class="catalog-label"><?php esc_html_e( 'Cabinet No. 001', 'two-bit-alchemy' ); ?></p>
 							<h3>
 								<a href="<?php echo esc_url( home_url( '/cabinet/' . $slug . '/' ) ); ?>">
 									<?php echo esc_html( $exhibit['title'] ); ?>

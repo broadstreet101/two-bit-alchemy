@@ -75,14 +75,24 @@ $latest_sections = array(
 		decoding="async"
 		loading="lazy"
 	/>
+	<figcaption><?php esc_html_e( 'Frontispiece', 'two-bit-alchemy' ); ?></figcaption>
 </figure>
 
 <section class="home-featured-projects" aria-labelledby="home-featured-projects-title">
 	<h2 id="home-featured-projects-title"><?php esc_html_e( 'Featured Projects', 'two-bit-alchemy' ); ?></h2>
 
 	<div class="home-card-list">
-		<?php foreach ( $featured_projects as $project ) : ?>
-			<article class="home-card">
+		<?php foreach ( $featured_projects as $index => $project ) : ?>
+			<article class="home-card<?php echo 0 === $index ? ' home-card--primary' : ''; ?>">
+				<p class="catalog-label">
+					<?php
+					printf(
+						/* translators: %s: Project number. */
+						esc_html__( 'Project %s', 'two-bit-alchemy' ),
+						esc_html( str_pad( (string) ( $index + 1 ), 2, '0', STR_PAD_LEFT ) )
+					);
+					?>
+				</p>
 				<h3>
 					<a href="<?php echo esc_url( $project['url'] ); ?>">
 						<?php echo esc_html( $project['title'] ); ?>
