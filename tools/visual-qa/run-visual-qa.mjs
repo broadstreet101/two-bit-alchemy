@@ -22,7 +22,13 @@ const routes = [
     path: '/cabinet/a-sketch-that-was-never-meant-to-exist/',
     label: 'charlie-draft-public',
     expectedStatus: 404,
-    note: 'Draft Cabinet exhibit should remain unavailable to logged-out visitors.'
+    note: 'Private prototype Cabinet exhibit should remain unavailable to logged-out visitors.'
+  },
+  {
+    path: '/cabinet/1981-ford-escort-model/',
+    label: 'escort-draft-public',
+    expectedStatus: 404,
+    note: 'Draft Cabinet exhibit candidate should remain unavailable to logged-out visitors.'
   }
 ];
 

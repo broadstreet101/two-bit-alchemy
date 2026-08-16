@@ -237,7 +237,9 @@ Remote deployment of theme code must not publish content.
 
 Cabinet exhibit visibility remains controlled by `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php` through the `draft` / `published` status model.
 
-The Charlie Adlard Cabinet exhibit remains `draft` and preview-only until a separate explicit editorial publication decision changes that status.
+The Charlie Adlard Cabinet exhibit remains `draft` as a private/internal prototype and is not part of the active public publication queue.
+
+The 1981 Ford Escort model remains `draft` and reserves `Cabinet No. 001` as the first active Cabinet publication candidate until a separate explicit publication decision changes that status.
 
 ## PHP Version Note
 

@@ -17,10 +17,12 @@ global $two_bit_alchemy_current_cabinet_exhibit;
 	</nav>
 
 	<header class="entry-header project-exhibit__header">
-		<p class="catalog-label"><?php esc_html_e( 'Cabinet No. 001', 'two-bit-alchemy' ); ?></p>
+		<?php if ( ! empty( $two_bit_alchemy_current_cabinet_exhibit ) ) : ?>
+			<p class="catalog-label"><?php echo esc_html( two_bit_alchemy_get_cabinet_exhibit_label( $two_bit_alchemy_current_cabinet_exhibit ) ); ?></p>
+		<?php endif; ?>
 		<p class="entry-meta"><?php esc_html_e( 'Cabinet Exhibit', 'two-bit-alchemy' ); ?></p>
 		<?php if ( ! empty( $two_bit_alchemy_current_cabinet_exhibit ) && ! two_bit_alchemy_is_cabinet_exhibit_published( $two_bit_alchemy_current_cabinet_exhibit ) ) : ?>
-			<p class="entry-meta"><?php esc_html_e( 'Preview only. Not publicly published.', 'two-bit-alchemy' ); ?></p>
+			<p class="entry-meta"><?php echo esc_html( two_bit_alchemy_get_cabinet_exhibit_status_note( $two_bit_alchemy_current_cabinet_exhibit ) ); ?></p>
 		<?php endif; ?>
 		<h1 class="entry-title"><?php esc_html_e( 'A Sketch That Was Never Meant to Exist', 'two-bit-alchemy' ); ?></h1>
 	</header>

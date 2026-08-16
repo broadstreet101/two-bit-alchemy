@@ -51,15 +51,23 @@ Published
 - `Ready For Approval` - publication checklist appears complete and awaits final approval.
 - `Approved For Publication` - approved, but not yet live.
 - `Preview Only` - implemented in the repository-controlled theme with registry status `draft`; visible only to logged-in administrators.
+- `Private Prototype` - preserved for internal workflow, template, or routing history; not queued for public publication.
 - `Published` - live public content has been verified.
 
-## Current Queue
+## Active Publication Queue
 
 | Artifact | Source file | Current status | Editorial completeness | Story completeness | Image status | Metadata | Caption status | Cross-links | Accessibility | Publication readiness | Target shelf | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Charlie Adlard Amish Zombie Sketch | `content/cabinet/a-sketch-that-was-never-meant-to-exist.md`; source note preserved at `content/workbench/cabinet/walking-dead-sketch.md` | Preview Only | Approved publication draft exists | Complete approved story exists | Master archived outside Git; web derivative and theme deploy copy prepared | Prepared in approved content source and page template | Caption implemented; final review pending WordPress preview | Return to Cabinet implemented; no other related content approved yet | Alt text implemented; final rendered review pending | Not public-launch ready; rights/attribution review, WordPress preview, accessibility review, proofreading, and final approval remain | First Cabinet artifact | Approved title: `A Sketch That Was Never Meant to Exist`. Registry status is `draft` in `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`. Logged-in administrators can preview the card and route; logged-out visitors receive the themed 404. |
-| Tori Amos Camel cigarette pack | `content/workbench/artifacts/tori-amos-cigarette-pack.md` | Workbench Draft | Partial Workbench facts captured | Partial; "Why I Kept It" and "Why It Matters" still contain placeholders | Needed | Partial | Not prepared | Partial; related to 1981 Ford Escort model | Not started | Not ready | First shelf | Exact show date and tour are uncertain. Needs final editorial draft, image review, caption/alt text, privacy/copyright review, and final approval before publication. |
-| 1981 Ford Escort model | `content/workbench/artifacts/1981-ford-escort-model.md` | Workbench Draft | Partial Workbench facts captured | Partial; core connection captured, but dates, names, places, and privacy decisions remain open | Needed | Partial | Not prepared | Partial; related to Tori Amos Camel cigarette pack | Not started | Not ready | First shelf | Needs accident/detail privacy review, public naming decisions, photographs, captions, alt text, final metadata, and final approval before publication. |
+| 1981 Ford Escort model | `content/cabinet/1981-ford-escort-model.md`; Workbench source preserved at `content/workbench/artifacts/1981-ford-escort-model.md` | Preview Only | Editorial Cabinet draft prepared from approved Workbench facts | Partial; core connection captured, but dates, names, places, model details, images, and privacy decisions remain open | Needed; no repository source image exists yet | Partial; draft metadata recorded in Cabinet content source and registry | Draft approach prepared; final caption requires photo review | Planned cross-link to Tori Amos Camel cigarette pack | Not started; final rendered review pending | Not ready; first active candidate | First Cabinet exhibit candidate, `Cabinet No. 001` | Registry status is `draft` in `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`. Logged-in administrators can preview the card and route; logged-out visitors receive the themed 404. Needs accident/detail privacy review, public naming decisions, photographs, captions, alt text, final metadata, and final approval before publication. |
+| Tori Amos Camel cigarette pack | `content/workbench/artifacts/tori-amos-cigarette-pack.md` | Workbench Draft | Partial Workbench facts captured | Partial; "Why I Kept It" and "Why It Matters" still contain placeholders | Needed | Partial | Not prepared | Planned cross-link to 1981 Ford Escort model | Not started | Not ready | Next Cabinet candidate | Exact show date and tour are uncertain. Needs final editorial draft, image review, caption/alt text, privacy/copyright review, and final approval before publication. |
+
+## Private / Internal Prototypes
+
+These preserved items are not part of the active public publication queue.
+
+| Artifact | Source file | Current status | Purpose | Registry status | Public numbering | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Charlie Adlard Amish Zombie Sketch | `content/cabinet/a-sketch-that-was-never-meant-to-exist.md`; source note preserved at `content/workbench/cabinet/walking-dead-sketch.md` | Private Prototype | Preserved internal prototype/test exhibit for Cabinet routing, preview behavior, image handling, rights notes, and draft protection | `draft`; registry role `private_prototype` | None | Existing files, story, image, metadata, template, and registry history remain preserved. It is not queued for public publication and is no longer assigned `Cabinet No. 001`. Logged-in administrators can preview the route; logged-out visitors receive the themed 404. |
 
 ## Artifact Review Template
 
@@ -163,7 +171,8 @@ To publish an exhibit later:
 - Captions and alt text still require final rendered review before public launch.
 - Final metadata still requires review before public launch.
 - Privacy, permission, and copyright review remain open where relevant.
-- Public placement for future Cabinet artifacts still requires approval; the Charlie Adlard route is implemented as preview-only and is not approved for public WordPress publication.
+- `Cabinet No. 001`, the 1981 Ford Escort model, still requires photographs, privacy review, unresolved fact review, caption/alt text review, final metadata review, and final approval.
+- Public placement for future Cabinet artifacts still requires approval; all active Cabinet candidates remain draft-only.
 
 ## Queue Maintenance Rules
 

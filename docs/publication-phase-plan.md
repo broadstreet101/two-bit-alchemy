@@ -32,7 +32,8 @@ The three shelf items are not publication-ready yet.
 Current status:
 
 - Black Willow Propagation is structured Workbench material and has been surfaced in the public framework as Museum Opening Phase 1 content, but the source draft still says publication readiness is not complete.
-- The two artifacts are Workbench artifact drafts and remain unpublished.
+- The 1981 Ford Escort model has an authoritative Cabinet draft at `content/cabinet/1981-ford-escort-model.md`, remains registry `draft`, and is the first active Cabinet publication candidate.
+- The Tori Amos Camel cigarette pack remains a Workbench artifact draft and is the next Cabinet publication candidate.
 - No artifact photographs, captions, alt text, credits, final metadata, privacy review, or final editorial approval have been recorded yet.
 
 Publication should not proceed until the checklist below is complete.
@@ -45,7 +46,7 @@ Required before publication:
 
 - Create approved publication-ready repository content for Black Willow Propagation outside the Workbench.
 - Create approved publication-ready repository content for the Tori Amos Camel cigarette pack outside the Workbench.
-- Create approved publication-ready repository content for the 1981 Ford Escort model outside the Workbench.
+- Continue editorial completion of the 1981 Ford Escort model from `content/cabinet/1981-ford-escort-model.md`.
 - Preserve the Workbench files as raw source material.
 - Remove or rewrite any Workbench-only labels before public use.
 - Keep uncertain details clearly marked as uncertain.
@@ -72,11 +73,11 @@ Tori Amos Camel cigarette pack content still needs:
 
 1981 Ford Escort model content still needs:
 
-- Final editorial draft.
+- Final editorial review of the Cabinet draft.
 - Review of accident details and medical privacy boundaries.
 - Decision on whether to publish names or keep people partially identified.
 - Decision on whether to include the hospital, city, plastic surgeon, and dates if remembered or verified.
-- Final explanation of why it matters, using only Dada-approved wording.
+- Final review of why it matters, using only Dada-approved wording.
 - Photograph of the model in its display case.
 - Photograph of the model serving as the display pedestal for the signed Tori Amos cigarette pack, if approved.
 

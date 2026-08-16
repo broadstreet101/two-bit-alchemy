@@ -28,8 +28,9 @@ The public QA pass captures full-page screenshots at desktop and mobile widths f
 It also checks the public draft-only Cabinet exhibit URL:
 
 - `/cabinet/a-sketch-that-was-never-meant-to-exist/`
+- `/cabinet/1981-ford-escort-model/`
 
-That route is expected to return the themed `404` for logged-out visitors.
+Those routes are expected to return the themed `404` for logged-out visitors.
 
 ## Viewports
 

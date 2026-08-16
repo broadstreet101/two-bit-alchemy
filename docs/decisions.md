@@ -120,6 +120,10 @@ Approved launch URL structure:
 - Do not create custom post types at launch.
 - Do not create custom taxonomies at launch.
 - Include category archive templates at launch for Field Notes and Workshop Journal.
+- Cabinet numbering reflects intended public publication order, not prototype creation order.
+- Private/internal prototype Cabinet exhibits do not receive public Cabinet numbers.
+- The Charlie Adlard Cabinet exhibit is preserved as a private/internal prototype with registry status `draft` and is not part of the active public publication queue.
+- The 1981 Ford Escort model is the first active public Cabinet exhibit candidate and reserves `Cabinet No. 001` while remaining draft-only.
 
 ## Approved Theme Skeleton Prerequisites
 

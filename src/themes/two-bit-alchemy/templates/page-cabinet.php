@@ -36,15 +36,16 @@ while ( have_posts() ) :
 				<h2 id="cabinet-exhibits-title"><?php esc_html_e( 'Cabinet Exhibits', 'two-bit-alchemy' ); ?></h2>
 				<div class="related-exhibit-list">
 					<?php foreach ( $cabinet_exhibits as $slug => $exhibit ) : ?>
+						<?php $status_note = two_bit_alchemy_get_cabinet_exhibit_status_note( $exhibit ); ?>
 						<article class="related-exhibit-card related-exhibit-card--catalog">
-							<p class="catalog-label"><?php esc_html_e( 'Cabinet No. 001', 'two-bit-alchemy' ); ?></p>
+							<p class="catalog-label"><?php echo esc_html( two_bit_alchemy_get_cabinet_exhibit_label( $exhibit ) ); ?></p>
 							<h3>
 								<a href="<?php echo esc_url( home_url( '/cabinet/' . $slug . '/' ) ); ?>">
 									<?php echo esc_html( $exhibit['title'] ); ?>
 								</a>
 							</h3>
-							<?php if ( ! two_bit_alchemy_is_cabinet_exhibit_published( $exhibit ) ) : ?>
-								<p class="entry-meta"><?php esc_html_e( 'Preview only. Not publicly published.', 'two-bit-alchemy' ); ?></p>
+							<?php if ( $status_note ) : ?>
+								<p class="entry-meta"><?php echo esc_html( $status_note ); ?></p>
 							<?php endif; ?>
 							<p><?php echo esc_html( $exhibit['excerpt'] ); ?></p>
 						</article>

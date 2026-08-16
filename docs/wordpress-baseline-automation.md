@@ -22,7 +22,8 @@ Related project references:
 - The active publication model uses standard WordPress Pages plus Posts and Categories at launch.
 - Cabinet exhibits are currently repository-controlled theme routes, not WordPress custom post types.
 - Cabinet exhibit preview/publication status is controlled in `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`.
-- The Charlie Adlard Cabinet exhibit is intentionally `draft`, preview-only, and not publicly approved.
+- The Charlie Adlard Cabinet exhibit is intentionally `draft`, private/internal prototype-only, and not publicly approved.
+- The 1981 Ford Escort model is intentionally `draft` and is the first active Cabinet publication candidate, `Cabinet No. 001`.
 - Theme packages must contain a single top-level `two-bit-alchemy/` folder with `style.css` directly inside it.
 - Previous manual packaging attempts failed when the ZIP included an enclosing `src/`, `themes/`, or similar parent directory.
 - PHP is not required for local ZIP packaging validation.
@@ -387,12 +388,14 @@ Logged-out HTTP verification after reconciliation:
 | `/cabinet/` | 200 | Uses `templates/page-cabinet.php`; draft Cabinet exhibit title not present for logged-out visitors. |
 | `/about/` | 200 | Uses `templates/page-about.php`. |
 | `/contact/` | 200 | Uses `templates/page-contact.php`. |
-| `/cabinet/a-sketch-that-was-never-meant-to-exist/` | 404 | Draft Cabinet exhibit remains non-public for logged-out visitors. |
+| `/cabinet/a-sketch-that-was-never-meant-to-exist/` | 404 | Private prototype Cabinet exhibit remains non-public for logged-out visitors. |
+| `/cabinet/1981-ford-escort-model/` | 404 | Draft Cabinet exhibit candidate remains non-public for logged-out visitors. |
 
 ### Cabinet Preview Safety
 
-- Charlie Adlard Cabinet exhibit registry status remains `draft`.
+- Charlie Adlard Cabinet exhibit registry status remains `draft` with private prototype role.
+- 1981 Ford Escort model registry status remains `draft` as the first active Cabinet publication candidate.
 - Logged-out Cabinet visibility count is `0`.
-- Administrator visibility includes `a-sketch-that-was-never-meant-to-exist`.
+- Administrator visibility includes draft/prototype registry entries.
 - Administrator preview behavior depends on the existing theme registry in `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`.
 - No Cabinet artifact was published.

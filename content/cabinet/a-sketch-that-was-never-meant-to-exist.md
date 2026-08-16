@@ -1,18 +1,22 @@
 # Cabinet Content Source: A Sketch That Was Never Meant to Exist
 
-This is the authoritative approved Cabinet content source for the Charlie Adlard Amish-zombie sketch.
+This is the preserved private/internal prototype Cabinet content source for the Charlie Adlard Amish-zombie sketch.
 
-It is not published to WordPress yet. It does not replace or delete the earlier Workbench note at `content/workbench/cabinet/walking-dead-sketch.md`.
+It is not published to WordPress. It does not replace or delete the earlier Workbench note at `content/workbench/cabinet/walking-dead-sketch.md`.
+
+This file, its theme template, story, image, metadata, and registry history remain preserved as a prototype/test exhibit. It is not part of the active public Cabinet publication queue, and it is not assigned a public Cabinet number.
 
 ## Publication Status
 
-- Status: Approved publication draft prepared in repository.
+- Status: Private/internal prototype preserved in repository.
 - Public destination: `/cabinet/a-sketch-that-was-never-meant-to-exist/`
 - WordPress status: Not published.
 - Theme/template status: Implemented in the repository-controlled theme as administrator-only preview.
 - Publication status source of truth: `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`
 - Registry status: `draft`
-- Source boundary: This file contains the approved publication draft. The Workbench file remains the earlier raw source placeholder.
+- Registry role: `private_prototype`
+- Public Cabinet number: none.
+- Source boundary: This file preserves the approved story draft and prototype implementation. The Workbench file remains the earlier raw source placeholder.
 
 ## Approved Publication Draft
 
