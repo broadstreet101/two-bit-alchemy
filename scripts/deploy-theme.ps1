@@ -303,7 +303,7 @@ cd "$wp_root" || {
     exit 0
 }
 
-"$wp_cli_php" "$wp_cli_phar" eval 'if ( class_exists( "Ionos\\Performance\\Caching\\Caching" ) ) { Ionos\\Performance\\Caching\\Caching::flush_total_cache(); echo "IONOS_PERFORMANCE_CACHE=flushed\n"; } else { echo "IONOS_PERFORMANCE_CACHE=class_unavailable\n"; exit( 2 ); }' --allow-root
+"$wp_cli_php" "$wp_cli_phar" eval 'if ( class_exists( "Ionos\\Performance\\Caching\\Caching" ) ) { \Ionos\Performance\Caching\Caching::flush_total_cache(); echo "IONOS_PERFORMANCE_CACHE=flushed\n"; } else { echo "IONOS_PERFORMANCE_CACHE=class_unavailable\n"; exit( 2 ); }' --allow-root 2>&1
 purge_status=$?
 
 if [ "$purge_status" -eq 0 ]; then
