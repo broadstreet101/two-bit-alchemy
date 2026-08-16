@@ -180,6 +180,21 @@ The script:
 8. Verifies required remote files after upload.
 9. Fails if expected paths or files differ.
 10. Leaves the previous theme backup available for rollback.
+11. Attempts a non-fatal IONOS Performance full-page cache purge after the theme files are replaced.
+
+The post-deployment cache purge uses PHP 8.2 explicitly:
+
+```text
+/usr/bin/php8.2-cli /usr/share/php/wp-cli/wp-cli-2.12.0.phar
+```
+
+The purge calls the active IONOS Performance plugin's locally verified cache method:
+
+```text
+Ionos\Performance\Caching\Caching::flush_total_cache()
+```
+
+If PHP 8.2, WP-CLI, the WordPress root, or the plugin cache class is unavailable, the deployment reports `CACHE_PURGE_STATUS=skipped` or `CACHE_PURGE_STATUS=warning` and leaves the completed theme deployment intact. Cache purge failure must not destructively alter the deployed theme or rollback backup.
 
 ## Rollback Script
 

@@ -28,6 +28,26 @@ function Assert-SafeRemoteThemePath {
     }
 }
 
+function Assert-SafeRemoteWordPressRoot {
+    param([string] $Path)
+
+    if ([string]::IsNullOrWhiteSpace($Path)) {
+        throw 'RemoteWordPressRoot is required.'
+    }
+
+    if (-not $Path.StartsWith('/')) {
+        throw 'RemoteWordPressRoot must be an absolute remote path.'
+    }
+
+    if ($Path.Contains("'")) {
+        throw 'RemoteWordPressRoot must not contain single quotes.'
+    }
+
+    if ($Path -notmatch '/clickandbuilds/TwoBitAlchemy/?$') {
+        throw 'RemoteWordPressRoot must end with /clickandbuilds/TwoBitAlchemy.'
+    }
+}
+
 function Assert-SafeHostAlias {
     param([string] $Alias)
 
@@ -92,6 +112,7 @@ function Invoke-RemoteShellScript {
 
 $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $configPath = Join-Path $projectRoot 'config\ionos-deployment.json'
+$remoteWordPressRoot = $null
 
 if (Test-Path -LiteralPath $configPath -PathType Leaf) {
     $config = Get-Content -Raw -LiteralPath $configPath | ConvertFrom-Json
@@ -103,9 +124,19 @@ if (Test-Path -LiteralPath $configPath -PathType Leaf) {
     if (-not $RemoteThemePath -and $config.wordpress.twoBitAlchemyTheme) {
         $RemoteThemePath = $config.wordpress.twoBitAlchemyTheme
     }
+
+    if ($config.wordpress.twoBitAlchemyRoot) {
+        $remoteWordPressRoot = $config.wordpress.twoBitAlchemyRoot
+    }
 }
 
 Assert-SafeRemoteThemePath -Path $RemoteThemePath
+
+if (-not $remoteWordPressRoot) {
+    $remoteWordPressRoot = $RemoteThemePath -replace '/wp-content/themes/two-bit-alchemy/?$', ''
+}
+
+Assert-SafeRemoteWordPressRoot -Path $remoteWordPressRoot
 
 $packageScript = Join-Path $PSScriptRoot 'package-theme.ps1'
 $zipPath = Join-Path $projectRoot 'dist\two-bit-alchemy.zip'
@@ -239,5 +270,53 @@ $quotedTimestamp = Quote-Remote -Value $timestamp
 
 Write-Host 'Creating remote backup and deploying theme files...'
 Invoke-RemoteShellScript -HostAlias $HostAlias -Script $remoteScript -RemoteArguments "$quotedThemePath $quotedPackagePath $quotedTimestamp"
+
+Write-Host 'Attempting non-fatal IONOS Performance cache purge...'
+$cachePurgeScript = @'
+set +e
+
+wp_root="$1"
+wp_cli_php="/usr/bin/php8.2-cli"
+wp_cli_phar="/usr/share/php/wp-cli/wp-cli-2.12.0.phar"
+
+if [ ! -d "$wp_root" ]; then
+    echo "CACHE_PURGE_STATUS=skipped"
+    echo "CACHE_PURGE_REASON=WordPress root not found: $wp_root"
+    exit 0
+fi
+
+if [ ! -x "$wp_cli_php" ]; then
+    echo "CACHE_PURGE_STATUS=skipped"
+    echo "CACHE_PURGE_REASON=PHP 8.2 CLI not executable: $wp_cli_php"
+    exit 0
+fi
+
+if [ ! -f "$wp_cli_phar" ]; then
+    echo "CACHE_PURGE_STATUS=skipped"
+    echo "CACHE_PURGE_REASON=WP-CLI phar not found: $wp_cli_phar"
+    exit 0
+fi
+
+cd "$wp_root" || {
+    echo "CACHE_PURGE_STATUS=skipped"
+    echo "CACHE_PURGE_REASON=Unable to enter WordPress root: $wp_root"
+    exit 0
+}
+
+"$wp_cli_php" "$wp_cli_phar" eval 'if ( class_exists( "Ionos\\Performance\\Caching\\Caching" ) ) { Ionos\\Performance\\Caching\\Caching::flush_total_cache(); echo "IONOS_PERFORMANCE_CACHE=flushed\n"; } else { echo "IONOS_PERFORMANCE_CACHE=class_unavailable\n"; exit( 2 ); }' --allow-root
+purge_status=$?
+
+if [ "$purge_status" -eq 0 ]; then
+    echo "CACHE_PURGE_STATUS=ok"
+else
+    echo "CACHE_PURGE_STATUS=warning"
+    echo "CACHE_PURGE_EXIT=$purge_status"
+fi
+
+exit 0
+'@
+
+$quotedWordPressRoot = Quote-Remote -Value $remoteWordPressRoot
+Invoke-RemoteShellScript -HostAlias $HostAlias -Script $cachePurgeScript -RemoteArguments $quotedWordPressRoot
 
 Write-Host 'Deployment completed. WordPress theme activation and content publication were not changed.'

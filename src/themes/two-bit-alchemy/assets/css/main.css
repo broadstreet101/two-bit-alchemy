@@ -71,7 +71,7 @@ blockquote,
 pre,
 table,
 figure {
-	margin-block: 0 1rem;
+	margin-block: 0 0.95rem;
 }
 
 p,
@@ -272,14 +272,14 @@ th {
 }
 
 .site-footer {
-	margin-block-start: var(--wp--preset--spacing--large);
-	padding-block: calc(var(--wp--preset--spacing--medium) + 0.5rem);
+	margin-block-start: calc(var(--wp--preset--spacing--large) - 0.5rem);
+	padding-block: var(--wp--preset--spacing--medium);
 	border-block-start: 1px solid var(--wp--preset--color--border);
 	box-shadow: inset 0 1px 0 var(--wp--preset--color--surface);
 }
 
 .site-main {
-	padding-block: calc(var(--wp--preset--spacing--medium) + 0.5rem);
+	padding-block: var(--wp--preset--spacing--medium);
 }
 
 .primary-navigation ul,
@@ -294,6 +294,8 @@ th {
 }
 
 .primary-navigation {
+	display: flex;
+	align-items: center;
 	font-size: var(--wp--preset--font-size--small);
 	line-height: 1.2;
 }
@@ -356,6 +358,7 @@ th {
 .page-content,
 .site-content-entry {
 	max-width: var(--wp--style--global--content-size);
+	margin-inline: auto;
 }
 
 .home-hero,
@@ -365,14 +368,16 @@ th {
 .home-cabinet,
 .home-reflection {
 	position: relative;
-	margin-block-end: calc(var(--wp--preset--spacing--large) - 0.5rem);
-	padding-block-start: calc(var(--wp--preset--spacing--medium) + 0.25rem);
+	margin-inline: auto;
+	margin-block-end: calc(var(--wp--preset--spacing--large) - 0.75rem);
+	padding-block-start: var(--wp--preset--spacing--medium);
 	border-block-start: 1px solid var(--wp--preset--color--border);
 }
 
 .home-hero {
 	max-width: var(--wp--style--global--content-size);
-	padding-block: calc(var(--wp--preset--spacing--medium) + 0.5rem);
+	padding-block: var(--wp--preset--spacing--medium) calc(var(--wp--preset--spacing--medium) + 0.25rem);
+	border-block-start: 0;
 	border-block-end: 1px solid var(--wp--preset--color--border);
 }
 
@@ -392,11 +397,11 @@ th {
 }
 
 .home-hero__welcome p {
-	margin-block-end: 0.95rem;
+	margin-block-end: 0.85rem;
 }
 
 .home-hero__welcome p:last-child {
-	margin-block-start: 1.15rem;
+	margin-block-start: 1rem;
 	margin-block-end: 0;
 }
 
@@ -421,10 +426,17 @@ th {
 }
 
 .home-frontispiece {
-	max-width: min(100%, 700px);
-	margin-inline: auto;
-	padding-block-start: var(--wp--preset--spacing--medium);
+	max-width: min(100%, 640px);
+	padding-block-start: 0;
 	border-block-start: 0;
+}
+
+.home-frontispiece img {
+	width: 100%;
+}
+
+.home-featured-projects {
+	max-width: var(--wp--style--global--wide-size);
 }
 
 .home-featured-projects > h2,
@@ -432,9 +444,8 @@ th {
 .home-cabinet > h2,
 .home-reflection > h2 {
 	margin-block-start: 0;
-	margin-block-end: 1rem;
-	padding-block-end: 0.35rem;
-	border-block-end: 1px solid var(--wp--preset--color--border);
+	margin-block-end: 0.75rem;
+	padding-block-end: 0;
 	font-size: var(--wp--preset--font-size--large);
 }
 
@@ -449,7 +460,7 @@ th {
 .home-card,
 .home-entry {
 	position: relative;
-	padding: 1.25rem;
+	padding: 1.1rem 1.2rem;
 	background: var(--wp--preset--color--surface);
 	border: 1px solid var(--wp--preset--color--border);
 	box-shadow: inset 0 0 0 1px var(--wp--preset--color--background);
@@ -457,7 +468,7 @@ th {
 
 .home-card {
 	display: flex;
-	min-height: 11.5rem;
+	min-height: 10.75rem;
 	flex-direction: column;
 	justify-content: space-between;
 }
@@ -506,19 +517,20 @@ th {
 
 .home-entry-list {
 	display: grid;
-	gap: 1rem;
+	gap: 0.875rem;
 	max-width: var(--wp--style--global--content-size);
 	margin-block-start: 1rem;
 }
 
 .home-cabinet,
+.home-latest,
 .home-reflection {
 	max-width: var(--wp--style--global--content-size);
 }
 
 .about-header,
 .project-exhibit__header {
-	margin-block-end: calc(var(--wp--preset--spacing--medium) + 0.75rem);
+	margin-block-end: calc(var(--wp--preset--spacing--medium) + 0.25rem);
 }
 
 .about-header p,
@@ -530,21 +542,20 @@ th {
 
 .about-section,
 .project-section {
-	padding-block-start: calc(var(--wp--preset--spacing--medium) + 0.25rem);
+	padding-block-start: var(--wp--preset--spacing--medium);
 	border-block-start: 1px solid var(--wp--preset--color--border);
 }
 
 .about-section + .about-section,
 .project-section + .project-section {
-	margin-block-start: calc(var(--wp--preset--spacing--medium) + 0.5rem);
+	margin-block-start: calc(var(--wp--preset--spacing--medium) + 0.25rem);
 }
 
 .about-section h2,
 .project-section h2 {
 	margin-block-start: 0;
-	margin-block-end: 1rem;
-	padding-block-end: 0.35rem;
-	border-block-end: 1px solid var(--wp--preset--color--border);
+	margin-block-end: 0.75rem;
+	padding-block-end: 0;
 	font-size: var(--wp--preset--font-size--large);
 }
 
@@ -569,8 +580,8 @@ th {
 .metadata-list > div {
 	display: grid;
 	grid-template-columns: minmax(9rem, 0.4fr) minmax(0, 1fr);
-	gap: var(--wp--preset--spacing--small) var(--wp--preset--spacing--medium);
-	padding-block: 0.65rem;
+	gap: 0.5rem var(--wp--preset--spacing--medium);
+	padding-block: 0.55rem;
 	border-block-end: 1px solid var(--wp--preset--color--border);
 }
 
@@ -600,13 +611,14 @@ th {
 .educational-callout,
 .related-exhibit-card,
 .exhibit-figure {
-	padding: 1.25rem;
+	padding: 1.1rem 1.2rem;
 	background: var(--wp--preset--color--surface);
 	border: 1px solid var(--wp--preset--color--border);
 	box-shadow: inset 0 0 0 1px var(--wp--preset--color--background);
 }
 
 .related-exhibit-card {
+	max-width: var(--wp--style--global--content-size);
 	border-inline-start: 3px solid var(--wp--preset--color--border);
 }
 
@@ -614,6 +626,7 @@ th {
 .educational-callout h3,
 .related-exhibit-card h3 {
 	margin-block-start: 0;
+	margin-block-end: 0.5rem;
 	font-size: var(--wp--preset--font-size--medium);
 }
 
@@ -626,6 +639,7 @@ th {
 
 .exhibit-figure {
 	max-width: var(--wp--style--global--content-size);
+	margin-inline: auto;
 }
 
 .exhibit-figure__placeholder {
@@ -635,15 +649,16 @@ th {
 }
 
 .exhibit-figure figcaption {
-	margin-block-start: 0.75rem;
+	margin-block-start: 0.65rem;
+	margin-block-end: 0;
 }
 
 .cabinet-exhibit .exhibit-figure {
-	margin-block-end: calc(var(--wp--preset--spacing--medium) + 0.5rem);
+	margin-block-end: var(--wp--preset--spacing--medium);
 }
 
 .cabinet-exhibit__story p {
-	margin-block-end: 1rem;
+	margin-block-end: 0.95rem;
 }
 
 .cabinet-exhibit__story p:last-child {

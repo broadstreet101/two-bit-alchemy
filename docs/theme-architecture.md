@@ -243,6 +243,7 @@ Rules:
 - Avoid page-specific CSS unless a real content need exists.
 - Keep block editor CSS aligned with front-end reading experience.
 - Do not rely on Customizer Additional CSS as durable implementation.
+- Version local theme stylesheets from each asset file's modification time so routine CSS deployments automatically receive a changed WordPress enqueue URL without manual theme-version edits.
 
 ## JavaScript Organization
 

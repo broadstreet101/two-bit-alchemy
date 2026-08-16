@@ -10,6 +10,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Get a deterministic version for a local theme asset.
+ *
+ * @param string $relative_path Theme-relative asset path.
+ * @return string Asset version.
+ */
+function two_bit_alchemy_get_asset_version( $relative_path ) {
+	$asset_path = TWO_BIT_ALCHEMY_DIR . $relative_path;
+
+	if ( file_exists( $asset_path ) ) {
+		return (string) filemtime( $asset_path );
+	}
+
+	return TWO_BIT_ALCHEMY_VERSION;
+}
+
+/**
  * Enqueue theme styles.
  */
 function two_bit_alchemy_enqueue_assets() {
@@ -17,14 +33,14 @@ function two_bit_alchemy_enqueue_assets() {
 		'two-bit-alchemy-main',
 		TWO_BIT_ALCHEMY_URI . '/assets/css/main.css',
 		array(),
-		TWO_BIT_ALCHEMY_VERSION
+		two_bit_alchemy_get_asset_version( '/assets/css/main.css' )
 	);
 
 	wp_enqueue_style(
 		'two-bit-alchemy-print',
 		TWO_BIT_ALCHEMY_URI . '/assets/css/print.css',
 		array( 'two-bit-alchemy-main' ),
-		TWO_BIT_ALCHEMY_VERSION,
+		two_bit_alchemy_get_asset_version( '/assets/css/print.css' ),
 		'print'
 	);
 }
