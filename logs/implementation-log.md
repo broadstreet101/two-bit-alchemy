@@ -2,6 +2,31 @@
 
 ## 2026-08-16
 
+Visual refinement and frontispiece deployment completed.
+
+### Completed
+
+- Refined the shared primary navigation alignment so nav items use consistent flex alignment, line-height, and baseline behavior.
+- Tightened global and section-level vertical rhythm while preserving readable long-form story spacing and clear major-section separation.
+- Refined Cabinet and Cabinet exhibit spacing so exhibit cards, metadata, captions, story content, related content, and return paths read more like restrained archival catalog surfaces.
+- Created a normal web-ready derivative of the approved Two-Bit Alchemy frontispiece image at `src/themes/two-bit-alchemy/assets/images/frontispiece/two-bit-alchemy-frontispiece-web.jpg`.
+- Integrated the frontispiece on the homepage after the approved Welcome/guiding-word area and before Featured Projects.
+- Ran the established theme package validation before deployment.
+- Deployed source commit `e08be895032ee370bf2d086ba8cbdd3864e14ef5` with `scripts/deploy-theme.ps1 -ConfirmDeploy`.
+- Created the timestamped remote backup at `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-150628`.
+- Verified the deployed remote theme contains required theme files, the frontispiece asset, the Cabinet exhibit registry, the Charlie Adlard exhibit template, and the Charlie Adlard artifact image.
+- Confirmed the Charlie Adlard Cabinet exhibit remains `draft`.
+- Verified the public draft exhibit URL still returns the themed 404 for logged-out visitors.
+- Verified the cache-busted public homepage includes the frontispiece asset reference.
+
+### Notes
+
+- No WordPress database content, settings, plugins, uploads, PHP hosting configuration, Charlie Adlard story text, Charlie Adlard artifact image, or Cabinet publication status were changed.
+- The approved source frontispiece image was not modified; the theme contains only a resized/compressed derivative for web delivery.
+- No AI image generation, enhancement, retouching, crop, transparency conversion, or stylistic alteration was performed.
+
+## 2026-08-16
+
 WordPress structural page baseline created.
 
 ### Completed
