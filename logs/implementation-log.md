@@ -2,6 +2,28 @@
 
 ## 2026-08-16
 
+First Cabinet exhibit implementation completed.
+
+### Completed
+
+- Created the local ignored media archive path at `media-archive/cabinet/charlie-adlard-amish-zombie-sketch/master/` and copied the attached source photograph there unchanged as `charlie-adlard-amish-zombie-sketch-master.jpg`.
+- Added `media-archive/` to `.gitignore` so archived source media is not committed.
+- Created the web-ready derivative at `content/media/cabinet/a-sketch-that-was-never-meant-to-exist/charlie-adlard-amish-zombie-sketch-web.jpg`.
+- Added a theme deploy copy at `src/themes/two-bit-alchemy/assets/images/cabinet/charlie-adlard-amish-zombie-sketch-web.jpg` so the WordPress theme package can render the exhibit image after installation.
+- Implemented the repository-controlled Cabinet exhibit route `/cabinet/a-sketch-that-was-never-meant-to-exist/`.
+- Added the Cabinet exhibit page using the approved story verbatim, restrained artifact metadata, image caption, alt text, rights/attribution status, related-content area, and return path to Cabinet.
+- Updated the Cabinet page to surface the implemented exhibit.
+- Updated `docs/cabinet-publication-queue.md`, `docs/publication-readiness-checklist.md`, and `content/cabinet/a-sketch-that-was-never-meant-to-exist.md` with the media workflow, implementation status, and remaining launch blockers.
+
+### Notes
+
+- No source/master image was modified.
+- Image operations performed on the derivative: EXIF orientation checked, no orientation correction needed, no perspective correction, crop of unnecessary surrounding fabric/background, resize to 1000 pixels wide, high-quality JPEG export.
+- No WordPress publication, live-site change, redesign, animation, decorative artwork, AI image enhancement, retouching, artwork recreation, or unrelated navigation change was performed.
+- Public launch remains blocked pending rights/attribution review, WordPress preview, accessibility review, proofreading, and final approval.
+
+## 2026-08-16
+
 First Cabinet artifact content approval completed.
 
 ### Completed

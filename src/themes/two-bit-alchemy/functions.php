@@ -17,4 +17,4 @@ require_once TWO_BIT_ALCHEMY_DIR . '/inc/setup.php';
 require_once TWO_BIT_ALCHEMY_DIR . '/inc/enqueue.php';
 require_once TWO_BIT_ALCHEMY_DIR . '/inc/template-tags.php';
 require_once TWO_BIT_ALCHEMY_DIR . '/inc/image-sizes.php';
-
+require_once TWO_BIT_ALCHEMY_DIR . '/inc/cabinet-exhibits.php';

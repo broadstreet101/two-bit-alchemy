@@ -28,6 +28,9 @@ build/
 .vite/
 coverage/
 
+# Local source media archive
+media-archive/
+
 # Logs
 *.log
 npm-debug.log*
@@ -54,4 +57,3 @@ wp-content/updraft/
 *.zip
 *.tar
 *.tar.gz
-

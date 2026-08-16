@@ -7,9 +7,9 @@ It is not published to WordPress yet. It does not replace or delete the earlier 
 ## Publication Status
 
 - Status: Approved publication draft prepared in repository.
-- Public destination: Future Cabinet exhibit page.
+- Public destination: `/cabinet/a-sketch-that-was-never-meant-to-exist/`
 - WordPress status: Not published.
-- Theme/template status: Not implemented.
+- Theme/template status: Implemented in the repository-controlled theme; not deployed to WordPress.
 - Source boundary: This file contains the approved publication draft. The Workbench file remains the earlier raw source placeholder.
 
 ## Approved Publication Draft
@@ -96,17 +96,19 @@ Do not edit, enhance, crop, retouch, or otherwise alter the existing source phot
 
 ### Archival / Master Image
 
-- Recommended local master location: `D:\TBA Media Archive\cabinet\charlie-adlard-amish-zombie-sketch\master\`
+- Local master location: `D:\TBA\media-archive\cabinet\charlie-adlard-amish-zombie-sketch\master\charlie-adlard-amish-zombie-sketch-master.jpg`
 - Purpose: Preserve the original uploaded/source photograph outside normal web-ready derivatives.
 - Handling rule: Keep the original photograph unchanged.
-- Repository status: Do not commit the master image unless a future media-archive policy explicitly approves that.
+- Repository status: `media-archive/` is ignored by Git. Do not commit the master image.
 
 ### Web-Ready Derivative
 
-- Recommended repository location, if approved later: `content/media/cabinet/a-sketch-that-was-never-meant-to-exist/`
-- Recommended repository filename: `charlie-adlard-amish-zombie-sketch-web.jpg`
-- Purpose: Future optimized derivative for public display.
-- Handling rule: Create only after image-preparation approval. Do not create it during this task.
+- Repository derivative: `content/media/cabinet/a-sketch-that-was-never-meant-to-exist/charlie-adlard-amish-zombie-sketch-web.jpg`
+- Theme deploy copy: `src/themes/two-bit-alchemy/assets/images/cabinet/charlie-adlard-amish-zombie-sketch-web.jpg`
+- Purpose: Optimized derivative for public display while keeping the original master unchanged.
+- Handling rule: Future Cabinet artifact derivatives should begin from the archived master, preserve documentary evidence, and avoid cosmetic restoration.
+- Dimensions: 1000 x 1265 pixels.
+- Operations performed: EXIF orientation checked; no orientation correction needed; no perspective correction performed; cropped surrounding fabric/background while preserving the sheet, blue registration marks, drawing, and signature; resized to 1000 pixels wide; exported as high-quality JPEG.
 
 ### WordPress Media Library
 
@@ -116,7 +118,7 @@ Do not edit, enhance, crop, retouch, or otherwise alter the existing source phot
 
 ### Proposed Caption
 
-Original Amish-zombie sketch by Charlie Adlard, drawn in response to a tattoo idea and later framed in Dada's office.
+Original sketch by Charlie Adlard, created after an email exchange about an Amish-zombie tattoo idea.
 
 ### Proposed Alt Text Approach
 
@@ -124,7 +126,7 @@ Use concise, descriptive alt text that identifies the visible artifact without t
 
 Possible alt text:
 
-Charlie Adlard ink sketch of two Amish zombies, signed by the artist.
+Original black-and-white Charlie Adlard sketch of two Amish zombies, signed by the artist on a sketchbook page.
 
 ### One Image Or Multiple Images
 
@@ -149,7 +151,7 @@ Do not create a cleaned artwork reproduction unless copyright, attribution, and 
 
 ## Cabinet Exhibit Presentation Plan
 
-The eventual page should feel like a Cabinet exhibit, not a generic blog post.
+The page should feel like a Cabinet exhibit, not a generic blog post.
 
 ### Exhibit Title
 
@@ -163,7 +165,7 @@ Proposed URL:
 
 `/cabinet/a-sketch-that-was-never-meant-to-exist/`
 
-Final URL requires implementation approval.
+This URL has been approved for implementation. WordPress publication still requires final launch approval.
 
 ### Artifact Image
 
@@ -192,7 +194,7 @@ Use the approved publication draft verbatim. Do not rewrite, summarize, polish, 
 
 ### Caption
 
-Use the proposed caption only after image review and rights/attribution review.
+Use the proposed caption with the rights/attribution note recorded near the image.
 
 ### Related Content Area
 
@@ -234,14 +236,8 @@ Recommended label:
 ## Remaining Steps Before Public Implementation
 
 1. Confirm image publication rights and attribution requirements.
-2. Select the source photograph for the artifact.
-3. Store the unmodified master photograph in the approved local archive location.
-4. Prepare a web-ready derivative only after approval.
-5. Confirm final caption and alt text against the actual image.
-6. Confirm final metadata.
-7. Decide whether the first Cabinet artifact uses an individual Cabinet page at the proposed URL.
-8. Implement the public page using existing design language and approved content.
-9. Preview desktop and mobile.
-10. Complete accessibility and proofreading review.
-11. Package the theme only if implementation changes require it.
-12. Publish to WordPress only after final approval.
+2. Review the implemented Cabinet exhibit page in WordPress after installing the updated theme package.
+3. Confirm the caption and alt text against the rendered image.
+4. Complete desktop and mobile preview.
+5. Complete accessibility and proofreading review.
+6. Publish to WordPress only after final approval.

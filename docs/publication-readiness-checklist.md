@@ -40,6 +40,15 @@ Use this checklist after Workbench material has been drafted and before anything
 - [ ] Image filenames are descriptive.
 - [ ] Credits, source notes, and permission notes are recorded where needed.
 
+## Media Archive And Derivative Convention
+
+- [ ] The unmodified master image is stored under `media-archive/`.
+- [ ] `media-archive/` is ignored by Git.
+- [ ] Web-ready derivatives are stored under `content/media/` when repository content needs a durable media source.
+- [ ] Theme deploy copies live under `src/themes/two-bit-alchemy/assets/images/` only when the theme package must render the image directly.
+- [ ] Derivative operations are recorded, including orientation correction, crop, resize, compression, and any decision not to perform perspective correction or restoration.
+- [ ] No master/source image is committed unless a future policy explicitly approves it.
+
 ## Image Captions Complete
 
 - [ ] Each image that needs context has a caption.
