@@ -226,11 +226,52 @@ Additional CLI observations:
 - `/usr/bin/php` currently reports PHP 4.4.9 as a CGI/FastCGI binary.
 - `/usr/bin/php8.0-cli`, `/usr/bin/php8.1-cli`, `/usr/bin/php8.2-cli`, and `/usr/bin/php8.3-cli` are available.
 - WP-CLI currently reports PHP 8.0.30 through `/usr/bin/php8.0-cli`.
+- If future automation needs WP-CLI with PHP 8.2 explicitly, use:
+
+```powershell
+ssh tba-ionos "/usr/bin/php8.2-cli /usr/share/php/wp-cli/wp-cli-2.12.0.phar --info"
+```
+
+Do not use the anomalous default `/usr/bin/php` runtime for WordPress automation.
+
+## Deployment History
+
+### 2026-08-16 First Automated Theme Deployment
+
+- Deployment status: succeeded.
+- Deployment time: 2026-08-16 18:35 UTC.
+- Deployed source commit: `d31c03d222464668be962352b2b260977da9a17d`.
+- Remote theme path: `/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content/themes/two-bit-alchemy`.
+- Remote backup path created: `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-143535`.
+- Rollback marker: `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/latest-two-bit-alchemy-backup.txt`.
+- Package validation: passed.
+- Remote post-deployment verification: passed.
+- Required deployed files verified:
+  - `style.css`
+  - `functions.php`
+  - `index.php`
+  - `theme.json`
+  - `inc/cabinet-exhibits.php`
+  - `templates/cabinet-exhibit-a-sketch-that-was-never-meant-to-exist.php`
+  - `assets/images/cabinet/charlie-adlard-amish-zombie-sketch-web.jpg`
+- Charlie Adlard Cabinet exhibit status after deployment: `draft`.
+- Active WordPress stylesheet after deployment: `two-bit-alchemy`.
+- Active WordPress template after deployment: `two-bit-alchemy`.
+- Rollback availability: confirmed.
+- PHP hosting configuration: unchanged.
+- WordPress database content: unchanged by deployment tooling.
+- WordPress core, `wp-config.php`, plugins, uploads, unrelated themes, settings, comments, permalinks, search visibility, and Cabinet publication status were not modified.
+
+Rollback command if needed:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\rollback-theme.ps1 -ConfirmRollback
+```
 
 ## What Remains Manual
 
-- Authorizing the first deployment.
-- Confirming a full backup and rollback path.
+- Authorizing future deployments.
+- Confirming the backup and rollback path before each deployment.
 - Reviewing the site after deployment.
 - Publishing content.
 

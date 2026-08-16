@@ -2,6 +2,31 @@
 
 ## 2026-08-16
 
+First automated production theme deployment completed.
+
+### Completed
+
+- Deployed source commit `d31c03d222464668be962352b2b260977da9a17d` to the IONOS Two-Bit Alchemy WordPress theme directory.
+- Ran local package validation before deployment and confirmed the ZIP structure contained `two-bit-alchemy/style.css` with no enclosing `src/`, `dist/`, or `themes/` paths.
+- Ran remote pre-deployment validation and confirmed the Two-Bit Alchemy WordPress root and existing theme directory were present.
+- Confirmed the pre-deployment remote theme had required core files but did not yet include the newer Cabinet exhibit implementation files.
+- Ran `scripts/deploy-theme.ps1 -ConfirmDeploy`.
+- Created the timestamped remote backup at `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-143535`.
+- Verified the post-deployment remote theme path `/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content/themes/two-bit-alchemy`.
+- Verified deployed files: `style.css`, `functions.php`, `index.php`, `theme.json`, `inc/cabinet-exhibits.php`, `templates/cabinet-exhibit-a-sketch-that-was-never-meant-to-exist.php`, and `assets/images/cabinet/charlie-adlard-amish-zombie-sketch-web.jpg`.
+- Confirmed the Charlie Adlard Cabinet exhibit remains `draft`.
+- Confirmed the rollback marker points to the created backup.
+- Confirmed the active WordPress stylesheet and template remain `two-bit-alchemy`.
+- Validated that WP-CLI can be invoked with PHP 8.2 using `/usr/bin/php8.2-cli /usr/share/php/wp-cli/wp-cli-2.12.0.phar --info`.
+
+### Notes
+
+- No WordPress core, `wp-config.php`, plugins, uploads, database content, unrelated themes, WordPress settings, PHP hosting configuration, Cabinet publication status, story text, or image content were modified.
+- `twobitalchemy.com` hosting runtime remains documented as PHP 8.2, `/usr/bin/wp` reports WP-CLI using PHP 8.0.30, and `/usr/bin/php8.2-cli` is available as PHP 8.2.33.
+- Rollback is available through `scripts/rollback-theme.ps1 -ConfirmRollback`, but rollback was not run.
+
+## 2026-08-16
+
 IONOS SSH deployment discovery completed.
 
 ### Completed
