@@ -52,6 +52,12 @@ The private key must not be copied into `D:\TBA`, Git, documentation, screenshot
 
 The public key is safe to paste into IONOS if IONOS supports SSH public-key authentication for this hosting account.
 
+## SSH Authentication Status
+
+Key-only SSH authentication has been verified through the `tba-ionos` alias.
+
+Password authentication was needed once outside chat to install the public key in `~/.ssh/authorized_keys`. The password was not recorded, printed, stored, committed, or added to scripts.
+
 ## Local SSH Alias
 
 The local SSH configuration includes:
@@ -83,7 +89,7 @@ If this fails because IONOS requires password-only SSH, stop and decide on a saf
 
 ## Remote Path Discovery
 
-Remote WordPress paths have not been discovered yet because SSH public-key authentication has not been confirmed.
+Remote WordPress paths have been discovered using key-only SSH and read-only commands.
 
 After key setup, run the read-only discovery script:
 
@@ -103,15 +109,33 @@ The script attempts to report:
 
 The discovery script does not upload, delete, edit, activate, or publish anything.
 
-Record the verified remote WordPress root and theme path here after discovery:
+```text
+Remote home directory: /kunden/homepages/40/d1019605209/htdocs
+Click & Build root: /kunden/homepages/40/d1019605209/htdocs/clickandbuilds
+Fisher Aquatics WordPress root: /kunden/homepages/40/d1019605209/htdocs/clickandbuilds/FisherAquatics
+Two-Bit Alchemy WordPress root: /kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy
+Two-Bit Alchemy wp-content directory: /kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content
+Two-Bit Alchemy themes directory: /kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content/themes
+Two-Bit Alchemy theme directory: /kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content/themes/two-bit-alchemy
+Active WordPress stylesheet: two-bit-alchemy
+Active WordPress template: two-bit-alchemy
+```
+
+The repository-safe deployment path configuration is recorded in `config/ionos-deployment.json`.
+
+## Remote Tooling Discovery
+
+Read-only discovery found:
 
 ```text
-Remote home directory: Pending discovery
-twobitalchemy.com installation path: Pending discovery
-WordPress root: Pending discovery
-wp-content directory: Pending discovery
-themes directory: Pending discovery
-Two-Bit Alchemy theme directory: Pending discovery
+WP-CLI: /usr/bin/wp
+WP-CLI version: 2.12.0
+WP-CLI PHP binary: /usr/bin/php8.0-cli
+WP-CLI PHP version: 8.0.30
+Default php command: /usr/bin/php
+Default php reported version: PHP 4.4.9 (cgi-fcgi)
+unzip: /usr/bin/unzip
+tar: /usr/bin/tar
 ```
 
 ## Deployment Script
@@ -135,9 +159,13 @@ The script must not be run until Dada explicitly authorizes remote deployment.
 Example future command after remote path discovery:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\deploy-theme.ps1 `
-  -RemoteThemePath "/absolute/path/to/wordpress/wp-content/themes/two-bit-alchemy" `
-  -ConfirmDeploy
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\deploy-theme.ps1 -ConfirmDeploy
+```
+
+To validate the discovered deploy target without writing to the remote server:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\deploy-theme.ps1 -ValidateOnly
 ```
 
 The script:
@@ -166,9 +194,13 @@ Rollback is never automatic. It must be explicitly run after a deployment if the
 Example future command:
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\rollback-theme.ps1 `
-  -RemoteThemePath "/absolute/path/to/wordpress/wp-content/themes/two-bit-alchemy" `
-  -ConfirmRollback
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\rollback-theme.ps1 -ConfirmRollback
+```
+
+To validate the discovered rollback target without restoring anything:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\rollback-theme.ps1 -ValidateOnly
 ```
 
 The rollback script restores the latest recorded timestamped backup created by `scripts\deploy-theme.ps1`, or an explicitly supplied backup path.
@@ -185,15 +217,18 @@ The Charlie Adlard Cabinet exhibit remains `draft` and preview-only until a sepa
 
 - `twobitalchemy.com` currently uses PHP 8.2.
 - `fisheraquatics.com` uses PHP 8.3.
+- Legacy IONOS live-website hostnames use PHP 7.4.
 - PHP migration is intentionally deferred until after deployment automation is proven.
 - Do not change PHP during deployment foundation work.
 
+Additional CLI observations:
+
+- `/usr/bin/php` currently reports PHP 4.4.9 as a CGI/FastCGI binary.
+- `/usr/bin/php8.0-cli`, `/usr/bin/php8.1-cli`, `/usr/bin/php8.2-cli`, and `/usr/bin/php8.3-cli` are available.
+- WP-CLI currently reports PHP 8.0.30 through `/usr/bin/php8.0-cli`.
+
 ## What Remains Manual
 
-- Installing the public key in IONOS.
-- Confirming SSH authentication.
-- Running read-only remote discovery.
-- Reviewing and recording discovered remote paths.
 - Authorizing the first deployment.
 - Confirming a full backup and rollback path.
 - Reviewing the site after deployment.

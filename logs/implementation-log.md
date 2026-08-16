@@ -2,6 +2,30 @@
 
 ## 2026-08-16
 
+IONOS SSH deployment discovery completed.
+
+### Completed
+
+- Verified key-only SSH authentication through the `tba-ionos` alias.
+- Confirmed the remote home path as `/kunden/homepages/40/d1019605209/htdocs`.
+- Ran read-only remote discovery and identified the Click & Build roots for `FisherAquatics` and `TwoBitAlchemy`.
+- Confirmed the Two-Bit Alchemy WordPress root, `wp-content` directory, themes directory, and active `two-bit-alchemy` theme directory.
+- Confirmed WordPress reports active stylesheet and template as `two-bit-alchemy`.
+- Confirmed WP-CLI is available at `/usr/bin/wp` and reports version 2.12.0 using PHP 8.0.30.
+- Recorded PHP status: `twobitalchemy.com` uses PHP 8.2, `fisheraquatics.com` uses PHP 8.3, legacy IONOS live-website hostnames use PHP 7.4, and no PHP changes are authorized.
+- Added `config/ionos-deployment.json` with repository-safe remote path configuration.
+- Updated the remote discovery, deployment, and rollback scripts so remote shell scripts are sent with LF-only stdin and no CRLF parsing errors.
+- Added read-only `-ValidateOnly` modes to deployment and rollback scripts.
+- Updated remote deployment and baseline automation documentation with the confirmed paths and safety status.
+
+### Notes
+
+- No live theme deployment, rollback, WordPress setting change, database write, PHP change, content publication, story edit, or image edit was performed.
+- Password authentication was needed once manually to install the public key, but the password was not provided to Codex, recorded, stored, echoed, or committed.
+- First automated deployment remains blocked pending explicit deployment approval and backup/rollback confirmation.
+
+## 2026-08-16
+
 Safe IONOS deployment workflow foundation created.
 
 ### Completed

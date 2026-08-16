@@ -1,8 +1,8 @@
 [CmdletBinding()]
 param(
     [string] $HostAlias = 'tba-ionos',
-    [Parameter(Mandatory = $true)]
     [string] $RemoteThemePath,
+    [switch] $ValidateOnly,
     [switch] $ConfirmDeploy
 )
 
@@ -28,6 +28,14 @@ function Assert-SafeRemoteThemePath {
     }
 }
 
+function Assert-SafeHostAlias {
+    param([string] $Alias)
+
+    if ($Alias -notmatch '^[A-Za-z0-9._-]+$') {
+        throw 'HostAlias contains unsupported characters.'
+    }
+}
+
 function Quote-Remote {
     param([string] $Value)
 
@@ -38,14 +46,68 @@ function Quote-Remote {
     "'$Value'"
 }
 
-if (-not $ConfirmDeploy) {
-    throw 'Refusing remote deployment. Re-run with -ConfirmDeploy after Dada explicitly authorizes deployment.'
+function Invoke-RemoteShellScript {
+    param(
+        [string] $HostAlias,
+        [string] $Script,
+        [string] $RemoteArguments
+    )
+
+    Assert-SafeHostAlias -Alias $HostAlias
+
+    $processInfo = New-Object System.Diagnostics.ProcessStartInfo
+    $processInfo.FileName = 'ssh'
+    $processInfo.Arguments = "-o BatchMode=yes -o ConnectTimeout=15 $HostAlias sh -s -- $RemoteArguments"
+    $processInfo.UseShellExecute = $false
+    $processInfo.RedirectStandardInput = $true
+    $processInfo.RedirectStandardOutput = $true
+    $processInfo.RedirectStandardError = $true
+    $processInfo.CreateNoWindow = $true
+
+    $process = [System.Diagnostics.Process]::Start($processInfo)
+    $lfScript = $Script -replace "`r`n", "`n"
+    $process.StandardInput.NewLine = "`n"
+    $process.StandardInput.Write($lfScript)
+    if (-not $lfScript.EndsWith("`n")) {
+        $process.StandardInput.Write("`n")
+    }
+    $process.StandardInput.Close()
+
+    $stdout = $process.StandardOutput.ReadToEnd()
+    $stderr = $process.StandardError.ReadToEnd()
+    $process.WaitForExit()
+
+    if ($stdout) {
+        Write-Host $stdout
+    }
+
+    if ($stderr) {
+        Write-Error $stderr
+    }
+
+    if ($process.ExitCode -ne 0) {
+        throw "Remote deployment command failed with exit code $($process.ExitCode)."
+    }
+}
+
+$projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+$configPath = Join-Path $projectRoot 'config\ionos-deployment.json'
+
+if (Test-Path -LiteralPath $configPath -PathType Leaf) {
+    $config = Get-Content -Raw -LiteralPath $configPath | ConvertFrom-Json
+
+    if (-not $PSBoundParameters.ContainsKey('HostAlias') -and $config.ssh.hostAlias) {
+        $HostAlias = $config.ssh.hostAlias
+    }
+
+    if (-not $RemoteThemePath -and $config.wordpress.twoBitAlchemyTheme) {
+        $RemoteThemePath = $config.wordpress.twoBitAlchemyTheme
+    }
 }
 
 Assert-SafeRemoteThemePath -Path $RemoteThemePath
 
 $packageScript = Join-Path $PSScriptRoot 'package-theme.ps1'
-$projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $zipPath = Join-Path $projectRoot 'dist\two-bit-alchemy.zip'
 
 & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $packageScript
@@ -55,6 +117,48 @@ if ($LASTEXITCODE -ne 0) {
 
 if (-not (Test-Path -LiteralPath $zipPath -PathType Leaf)) {
     throw "Validated theme ZIP not found: $zipPath"
+}
+
+if ($ValidateOnly) {
+    $validateScript = @'
+set -eu
+
+theme_path="$1"
+
+case "$theme_path" in
+    */wp-content/themes/two-bit-alchemy|*/wp-content/themes/two-bit-alchemy/) ;;
+    *)
+        echo "Unexpected theme path: $theme_path" >&2
+        exit 30
+        ;;
+esac
+
+theme_path="${theme_path%/}"
+themes_dir=$(dirname "$theme_path")
+
+[ -d "$themes_dir" ] || { echo "Themes directory not found: $themes_dir" >&2; exit 31; }
+[ -d "$theme_path" ] || { echo "Theme directory not found: $theme_path" >&2; exit 32; }
+
+for required_file in style.css functions.php index.php theme.json; do
+    [ -f "$theme_path/$required_file" ] || {
+        echo "Remote theme missing required file: $required_file" >&2
+        exit 33
+    }
+done
+
+echo "VALIDATE_DEPLOY_TARGET=$theme_path"
+echo "VALIDATE_DEPLOY_REQUIRED_FILES=ok"
+echo "VALIDATE_DEPLOY_MODE=read-only"
+'@
+
+    $quotedThemePath = Quote-Remote -Value $RemoteThemePath
+    Invoke-RemoteShellScript -HostAlias $HostAlias -Script $validateScript -RemoteArguments $quotedThemePath
+    Write-Host 'Deployment validation completed without remote writes.'
+    return
+}
+
+if (-not $ConfirmDeploy) {
+    throw 'Refusing remote deployment. Re-run with -ConfirmDeploy after Dada explicitly authorizes deployment.'
 }
 
 $timestamp = Get-Date -Format 'yyyyMMdd-HHmmss'
@@ -134,9 +238,6 @@ $quotedPackagePath = Quote-Remote -Value $remotePackagePath
 $quotedTimestamp = Quote-Remote -Value $timestamp
 
 Write-Host 'Creating remote backup and deploying theme files...'
-$remoteScript | & ssh -o BatchMode=yes -o ConnectTimeout=15 $HostAlias "sh -s -- $quotedThemePath $quotedPackagePath $quotedTimestamp"
-if ($LASTEXITCODE -ne 0) {
-    throw 'Remote deployment failed. Review output above before retrying.'
-}
+Invoke-RemoteShellScript -HostAlias $HostAlias -Script $remoteScript -RemoteArguments "$quotedThemePath $quotedPackagePath $quotedTimestamp"
 
 Write-Host 'Deployment completed. WordPress theme activation and content publication were not changed.'

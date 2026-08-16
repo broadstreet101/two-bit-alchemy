@@ -258,6 +258,7 @@ Remote deployment foundation:
 - `scripts\discover-wordpress-remote.ps1` can discover paths read-only after SSH authentication is configured.
 - `scripts\deploy-theme.ps1` can deploy only the validated Two-Bit Alchemy theme after explicit approval and a verified remote theme path.
 - `scripts\rollback-theme.ps1` can restore the latest timestamped theme backup after explicit approval.
+- `config\ionos-deployment.json` records the confirmed repository-safe IONOS paths used by the deployment and rollback scripts.
 - See `docs/remote-deployment.md` before using any remote deployment script.
 
 Future deployment automation should preserve:
@@ -284,7 +285,7 @@ The following instructions consolidate existing workflow policy and add automati
 - Use `D:\TBA` for all project-controlled files rather than creating additional root-level `D:\` directories.
 - Keep WordPress admin work limited to actions that cannot reasonably be represented in the repository.
 - Report errors before attempting workarounds that affect the live site or deployment process.
-- Do not change PHP versions during deployment automation setup. `twobitalchemy.com` currently uses PHP 8.2, `fisheraquatics.com` uses PHP 8.3, and migration is deferred until after deployment automation is proven.
+- Do not change PHP versions during deployment automation setup. `twobitalchemy.com` currently uses PHP 8.2, `fisheraquatics.com` uses PHP 8.3, legacy IONOS live-website hostnames use PHP 7.4, and migration is deferred until after deployment automation is proven.
 
 ## Recommended Information Collection Order
 

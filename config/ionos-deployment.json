@@ -1,0 +1,31 @@
+{
+  "ssh": {
+    "hostAlias": "tba-ionos",
+    "hostName": "access1019605209.webspace-data.io",
+    "user": "u117706887",
+    "port": 22
+  },
+  "wordpress": {
+    "remoteHome": "/kunden/homepages/40/d1019605209/htdocs",
+    "clickAndBuildRoot": "/kunden/homepages/40/d1019605209/htdocs/clickandbuilds",
+    "twoBitAlchemyRoot": "/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy",
+    "twoBitAlchemyWpContent": "/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content",
+    "twoBitAlchemyThemes": "/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content/themes",
+    "twoBitAlchemyTheme": "/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content/themes/two-bit-alchemy",
+    "fisherAquaticsRoot": "/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/FisherAquatics"
+  },
+  "php": {
+    "twobitalchemyDotCom": "8.2",
+    "fisheraquaticsDotCom": "8.3",
+    "legacyIonosLiveWebsiteHostnames": "7.4",
+    "phpCliDefault": "/usr/bin/php reports PHP 4.4.9 (cgi-fcgi)",
+    "wpCliPhp": "/usr/bin/php8.0-cli reports PHP 8.0.30",
+    "availableCliVersions": [
+      "/usr/bin/php8.0-cli reports PHP 8.0.30",
+      "/usr/bin/php8.1-cli reports PHP 8.1.34",
+      "/usr/bin/php8.2-cli reports PHP 8.2.33",
+      "/usr/bin/php8.3-cli reports PHP 8.3.33"
+    ],
+    "migrationStatus": "Deferred until deployment automation is proven. No PHP changes are authorized."
+  }
+}
