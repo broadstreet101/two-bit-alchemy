@@ -264,6 +264,23 @@ Do not use the anomalous default `/usr/bin/php` runtime for WordPress automation
 
 ## Deployment History
 
+### 2026-08-16 Escort Cabinet Candidate Deployment
+
+- Deployment status: succeeded.
+- Deployed source commit: `756c14747acfe7be99fae3d5b38022fc03dae685`.
+- Remote theme path: `/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content/themes/two-bit-alchemy`.
+- Remote backup path created: `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-184608`.
+- Package validation: passed.
+- Remote post-deployment verification: passed.
+- IONOS Performance cache purge: automated and confirmed.
+- Automated public visual QA: passed for all configured routes.
+- Public Cabinet verification: HTTP `200` and neither the Charlie prototype title nor the Escort draft title appeared to logged-out visitors.
+- Public Charlie prototype direct URL verification: HTTP `404`.
+- Public Escort draft direct URL verification: HTTP `404`.
+- Charlie Adlard Cabinet exhibit status after deployment: `draft`, role `private_prototype`, no public Cabinet number.
+- 1981 Ford Escort model status after deployment: `draft`, role `publication_candidate`, reserved as `Cabinet No. 001`.
+- WordPress database content, page structure, plugins, uploads, PHP hosting configuration, approved story text, images, and Cabinet publication status were not modified.
+
 ### 2026-08-16 Restrained Visual Character Refinement Deployment
 
 - Deployment status: succeeded.

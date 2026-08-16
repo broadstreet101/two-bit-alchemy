@@ -2,6 +2,47 @@
 
 ## 2026-08-16
 
+Charlie Adlard reclassified as a private Cabinet prototype and the 1981 Ford Escort model promoted as the first active Cabinet publication candidate.
+
+### Completed
+
+- Preserved the Charlie Adlard exhibit files, story, image, metadata, template, and registry history while reclassifying the exhibit as a private/internal prototype.
+- Removed Charlie from active public Cabinet publication numbering by changing its registry role to `private_prototype` and clearing its public Cabinet number.
+- Reserved `Cabinet No. 001` for the 1981 Ford Escort model as the first active Cabinet publication candidate.
+- Created the authoritative Escort Cabinet content source at `content/cabinet/1981-ford-escort-model.md`.
+- Added a draft-only Escort registry entry using the reusable Cabinet exhibit template.
+- Added `src/themes/two-bit-alchemy/templates/cabinet-exhibit.php` as a reusable registry-driven Cabinet exhibit template.
+- Updated the Cabinet page and Charlie prototype template to use registry-derived labels instead of hard-coded public numbering.
+- Updated the Cabinet publication queue so Escort is first, Tori Amos is next, and Charlie is documented as a private prototype outside the active queue.
+- Updated publication, deployment, baseline, decision, and visual QA documentation to reflect the new Cabinet numbering and draft-only route expectations.
+- Updated visual QA so `/cabinet/1981-ford-escort-model/` is expected to return the themed `404` to logged-out visitors.
+- Ran theme package validation successfully.
+- Deployed source commit `756c14747acfe7be99fae3d5b38022fc03dae685` with `scripts/deploy-theme.ps1 -ConfirmDeploy -RunVisualQa`.
+- Created the timestamped remote backup at `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-184608`.
+- Confirmed IONOS Performance cache purge completed.
+
+### Verification
+
+- Remote deployed theme directory verified.
+- Remote rollback backup verified.
+- Required theme files verified remotely, including `inc/cabinet-exhibits.php`, `templates/cabinet-exhibit.php`, and the preserved Charlie prototype template.
+- Registry verification confirmed the Escort slug is present, Charlie uses `private_prototype`, and Escort has `number` set to `001`.
+- Public Cabinet route returned HTTP `200` and did not expose the Charlie or Escort titles to logged-out visitors.
+- Public Charlie prototype URL returned HTTP `404`.
+- Public Escort draft URL returned HTTP `404`.
+- Automated public visual QA passed for all configured routes with zero browser console errors and zero failed resource errors.
+
+### Notes
+
+- No Cabinet exhibit was published.
+- Charlie remains draft/private and is no longer treated as `Cabinet No. 001`.
+- Escort remains draft-only and is not visible to logged-out visitors.
+- No Charlie story text, Charlie image, source images, WordPress content, page structure, plugins, uploads, PHP hosting configuration, or database content was modified.
+- No images were edited, generated, resized, or added during this task.
+- Local PHP CLI was not available, so PHP lint was not run locally.
+
+## 2026-08-16
+
 Automated public visual QA workflow created.
 
 ### Completed

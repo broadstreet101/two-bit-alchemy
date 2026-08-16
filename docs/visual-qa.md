@@ -25,7 +25,7 @@ The public QA pass captures full-page screenshots at desktop and mobile widths f
 - `/about/`
 - `/contact/`
 
-It also checks the public draft-only Cabinet exhibit URL:
+It also checks the public draft-only Cabinet exhibit URLs:
 
 - `/cabinet/a-sketch-that-was-never-meant-to-exist/`
 - `/cabinet/1981-ford-escort-model/`
