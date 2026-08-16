@@ -2,6 +2,37 @@
 
 ## 2026-08-16
 
+Cache consistency and layout normalization completed.
+
+### Completed
+
+- Replaced fixed stylesheet enqueue versions with file modification time versions for local theme CSS assets through `two_bit_alchemy_get_asset_version()`.
+- Confirmed `main.css` and `print.css` now receive deterministic WordPress asset versions when their files change, without manual `TWO_BIT_ALCHEMY_VERSION` edits.
+- Centered reading-oriented page composition within the existing wide site wrapper while keeping text left aligned.
+- Centered homepage composition more intentionally, kept the approved section order, and reduced the frontispiece max-width to `640px` on desktop.
+- Tightened vertical rhythm across global paragraphs, homepage sections, section headings, cards, footer spacing, metadata, figure captions, and Cabinet exhibit story transitions.
+- Reduced divider density by keeping major section rules and removing redundant heading underline rules from minor section hierarchy.
+- Refined primary navigation alignment through shared flex alignment and line-height behavior, without any Home-only correction.
+- Verified the active IONOS Performance plugin exposes `Ionos\Performance\Caching\Caching::flush_total_cache()` and that the class is available through PHP 8.2 WP-CLI.
+- Added a non-fatal post-deployment IONOS Performance cache purge to `scripts/deploy-theme.ps1`.
+- Ran package validation and confirmed the ZIP contains `two-bit-alchemy/style.css` without enclosing `src/`, `themes/`, or `dist/` paths.
+- Pushed implementation commits `c0ebd74631fffd39a001052c9206ab46ce602af7` and `13cefd10a3596c8cca7c1442b4f300471aa679f4`.
+- Deployed commit `13cefd10a3596c8cca7c1442b4f300471aa679f4` with `scripts/deploy-theme.ps1 -ConfirmDeploy`.
+- Created the final timestamped remote backup at `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-152731`.
+- Confirmed IONOS Performance cache purge returned `CACHE_PURGE_STATUS=ok`.
+- Verified the public homepage returns HTTP 200 and contains `two-bit-alchemy-frontispiece-web.jpg`.
+- Verified the public Cabinet page returns HTTP 200 and does not contain the Charlie Adlard draft exhibit title.
+- Verified the public direct Charlie Adlard exhibit URL returns HTTP 404.
+- Confirmed the Charlie Adlard Cabinet exhibit remains `draft`.
+
+### Notes
+
+- The first deployment attempt created remote backup `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-152556` and copied theme files, but the newly added cache purge command exposed a PHP namespace quoting defect and returned a deployment-script error. The script was corrected and redeployed successfully.
+- PHP CLI is not available in the local Windows environment, so local PHP lint could not run during this pass. Validation used static review, package validation, PowerShell parse validation, remote deployment verification, and public HTTP checks.
+- No WordPress content, page structure, plugins, uploads, PHP hosting versions, approved story text, source images, Charlie Adlard artifact image, or Cabinet publication status were changed.
+
+## 2026-08-16
+
 Visual refinement and frontispiece deployment completed.
 
 ### Completed
