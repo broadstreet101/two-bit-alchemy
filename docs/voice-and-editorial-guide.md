@@ -117,3 +117,10 @@ If the answer is no, revise, simplify, wait, or do not publish it yet.
 - Avoid inflated claims.
 - Avoid explaining why the reader should be impressed.
 - Let photographs, artifacts, measurements, and examples carry part of the meaning.
+
+## Punctuation House Style
+
+- Avoid em dashes in published Two-Bit Alchemy prose.
+- Prefer commas, periods, parentheses, colons, semicolons, or sentence restructuring as appropriate.
+- This is a house-style preference intended to keep the author's written voice consistent.
+- Do not mechanically replace punctuation where doing so would make a sentence awkward. Rewrite naturally instead.

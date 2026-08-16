@@ -1,5 +1,24 @@
 # Implementation Log
 
+## 2026-08-16
+
+First Cabinet artifact content approval completed.
+
+### Completed
+
+- Added `content/cabinet/a-sketch-that-was-never-meant-to-exist.md` as the authoritative approved Cabinet content source for the Charlie Adlard Amish-zombie sketch.
+- Preserved `content/workbench/cabinet/walking-dead-sketch.md` as the earlier raw Workbench source note.
+- Recorded the approved publication draft verbatim, without publishing it to WordPress or implementing a public page.
+- Documented the image integration plan, including recommended master location, future web-ready derivative location, WordPress filename, caption, alt text approach, image-use approach, and copyright/attribution review needs.
+- Documented the intended Cabinet exhibit presentation plan for the future public page.
+- Added the punctuation house-style rule to `docs/voice-and-editorial-guide.md`.
+- Updated `docs/cabinet-publication-queue.md` and `content/cabinet/README.md` to reflect the approved content source and remaining publication blockers.
+
+### Notes
+
+- No website, theme, templates, CSS, JavaScript, WordPress configuration, source photograph, uploaded image, or published content were modified.
+- The artifact is approved as repository content, but it is not publication-ready until image rights/attribution review, image preparation, final caption/alt text review, page implementation, accessibility review, and final approval are complete.
+
 ## 2026-08-12
 
 Publication Phase Step 3 completed.
