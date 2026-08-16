@@ -312,3 +312,86 @@ The following instructions consolidate existing workflow policy and add automati
 - Is a staging environment available?
 - What permalink structure is currently active?
 - Should search-engine visibility remain enabled during current preview/content preparation?
+
+## Structural Page Baseline
+
+The clean WordPress installation was reconciled with the repository-controlled theme architecture on 2026-08-16 using WP-CLI invoked explicitly with PHP 8.2:
+
+```text
+/usr/bin/php8.2-cli /usr/share/php/wp-cli/wp-cli-2.12.0.phar
+```
+
+The anomalous default `/usr/bin/php` runtime was not used.
+
+### Pages Before Reconciliation
+
+| ID | Title | Slug | Status | Template |
+| --- | --- | --- | --- | --- |
+| 14 | The Beginning | `the-beginning` | Published | Default |
+
+### Structural Pages Created
+
+These pages exist primarily to provide WordPress routes for theme-controlled presentation. Their WordPress content was left empty/minimal.
+
+| ID | Title | Slug | Status | Template |
+| --- | --- | --- | --- | --- |
+| 33 | Projects | `projects` | Published | `templates/page-projects.php` |
+| 34 | Field Notes | `field-notes` | Published | `templates/page-field-notes.php` |
+| 35 | Workshop Journal | `workshop-journal` | Published | `templates/page-workshop-journal.php` |
+| 36 | Cabinet | `cabinet` | Published | `templates/page-cabinet.php` |
+| 37 | About | `about` | Published | `templates/page-about.php` |
+| 38 | Contact | `contact` | Published | `templates/page-contact.php` |
+
+### Preserved Homepage
+
+- Static homepage remains enabled.
+- Homepage page ID remains `14`.
+- Homepage title remains `The Beginning`.
+- No Posts page was created or assigned.
+
+### Baseline Settings Verified
+
+| Setting | Value |
+| --- | --- |
+| Home URL | `https://twobitalchemy.com` |
+| Site URL | `https://twobitalchemy.com` |
+| `show_on_front` | `page` |
+| `page_on_front` | `14` |
+| `page_for_posts` | `0` |
+| Permalink structure | `/%postname%/` |
+| Search engine visibility | `blog_public=0` |
+| New comment default | `closed` |
+| New ping default | `closed` |
+| User registration | `users_can_register=0` |
+| Active stylesheet | `two-bit-alchemy` |
+| Active template | `two-bit-alchemy` |
+
+### Rewrite And Cache
+
+- Rewrite rules were flushed with WP-CLI.
+- Object cache was flushed with WP-CLI.
+- No caching plugin was installed or configured.
+- IONOS hosting configuration was not changed.
+
+### Public Route Verification
+
+Logged-out HTTP verification after reconciliation:
+
+| Route | Status | Observation |
+| --- | --- | --- |
+| `/` | 200 | Homepage title `Two-Bit Alchemy`; static homepage remains active. |
+| `/projects/` | 200 | Uses `templates/page-projects.php`. |
+| `/field-notes/` | 200 | Uses `templates/page-field-notes.php`. |
+| `/workshop-journal/` | 200 | Uses `templates/page-workshop-journal.php`. |
+| `/cabinet/` | 200 | Uses `templates/page-cabinet.php`; draft Cabinet exhibit title not present for logged-out visitors. |
+| `/about/` | 200 | Uses `templates/page-about.php`. |
+| `/contact/` | 200 | Uses `templates/page-contact.php`. |
+| `/cabinet/a-sketch-that-was-never-meant-to-exist/` | 404 | Draft Cabinet exhibit remains non-public for logged-out visitors. |
+
+### Cabinet Preview Safety
+
+- Charlie Adlard Cabinet exhibit registry status remains `draft`.
+- Logged-out Cabinet visibility count is `0`.
+- Administrator visibility includes `a-sketch-that-was-never-meant-to-exist`.
+- Administrator preview behavior depends on the existing theme registry in `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`.
+- No Cabinet artifact was published.

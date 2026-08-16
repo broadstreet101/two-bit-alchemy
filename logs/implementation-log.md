@@ -2,6 +2,39 @@
 
 ## 2026-08-16
 
+WordPress structural page baseline created.
+
+### Completed
+
+- Inspected the clean WordPress installation before writing and found only one page: `The Beginning` (`ID 14`, slug `the-beginning`, published, default template).
+- Confirmed `The Beginning` remained configured as the static homepage before changes.
+- Confirmed the theme uses named page templates under `templates/`, requiring `_wp_page_template` assignments for the structural pages.
+- Created the missing structural pages through WP-CLI using PHP 8.2 explicitly:
+  - `Projects` (`ID 33`, slug `projects`, template `templates/page-projects.php`)
+  - `Field Notes` (`ID 34`, slug `field-notes`, template `templates/page-field-notes.php`)
+  - `Workshop Journal` (`ID 35`, slug `workshop-journal`, template `templates/page-workshop-journal.php`)
+  - `Cabinet` (`ID 36`, slug `cabinet`, template `templates/page-cabinet.php`)
+  - `About` (`ID 37`, slug `about`, template `templates/page-about.php`)
+  - `Contact` (`ID 38`, slug `contact`, template `templates/page-contact.php`)
+- Preserved static homepage setting: `show_on_front=page`, `page_on_front=14`, homepage title `The Beginning`.
+- Preserved no Posts page assignment: `page_for_posts=0`.
+- Verified permalink structure remains `/%postname%/`.
+- Verified search engine visibility remains discouraged with `blog_public=0`.
+- Corrected new-content discussion defaults to `default_comment_status=closed` and `default_ping_status=closed`.
+- Verified user registration remains disabled with `users_can_register=0`.
+- Flushed WordPress rewrite rules and object cache.
+- Verified public routes for `/`, `/projects/`, `/field-notes/`, `/workshop-journal/`, `/cabinet/`, `/about/`, and `/contact/` return HTTP 200.
+- Verified logged-out direct access to `/cabinet/a-sketch-that-was-never-meant-to-exist/` returns HTTP 404.
+- Verified the Cabinet registry keeps the Charlie Adlard exhibit as `draft`, logged-out visibility count is zero, and administrator visibility includes the draft exhibit slug.
+
+### Notes
+
+- No WordPress core, `wp-config.php`, plugins, uploads, unrelated themes, PHP hosting configuration, images, approved story text, Cabinet artifact publication status, or custom theme files were modified.
+- No Posts page was created.
+- The anomalous default `/usr/bin/php` runtime was not used.
+
+## 2026-08-16
+
 First automated production theme deployment completed.
 
 ### Completed
