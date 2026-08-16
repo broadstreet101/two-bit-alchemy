@@ -2,6 +2,28 @@
 
 ## 2026-08-16
 
+Safe IONOS deployment workflow foundation created.
+
+### Completed
+
+- Inspected local SSH capabilities and confirmed OpenSSH client, `ssh-keygen`, `scp`, `sftp`, `ssh-agent`, and PowerShell are available.
+- Created a project-specific local SSH keypair at `C:\Users\dougl\.ssh\two-bit-alchemy-ionos`, outside the repository.
+- Added the local SSH alias `tba-ionos` in the user's SSH configuration, pointing to the IONOS host with the project-specific identity file.
+- Added `docs/remote-deployment.md` documenting the hosting target, secrets policy, SSH setup, one-time IONOS public-key step, read-only path discovery, guarded deployment, rollback, preview/publication safety, and PHP version note.
+- Added `scripts/discover-wordpress-remote.ps1` for read-only remote WordPress path discovery after SSH authentication is configured.
+- Added `scripts/deploy-theme.ps1` for future explicit deployments of only the validated Two-Bit Alchemy theme files.
+- Added `scripts/rollback-theme.ps1` for future explicit rollback from the latest timestamped remote theme backup.
+- Updated `.gitignore`, `docs/development-workflow.md`, `docs/theme-deployment.md`, and `docs/wordpress-baseline-automation.md` with deployment and secrets safeguards.
+
+### Notes
+
+- No live WordPress deployment, remote path discovery, remote write, theme activation, database change, content publication, PHP change, story edit, or image edit was performed.
+- SSH authentication was not tested because the public key still needs to be added to IONOS.
+- Remote WordPress paths remain pending discovery.
+- `twobitalchemy.com` currently uses PHP 8.2; `fisheraquatics.com` uses PHP 8.3; PHP migration remains deferred until deployment automation is proven.
+
+## 2026-08-16
+
 WordPress Baseline and Automation Phase completed.
 
 ### Completed

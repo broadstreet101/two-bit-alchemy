@@ -27,6 +27,18 @@ two-bit-alchemy/
 
 Do not upload a package unless `two-bit-alchemy/style.css` is verified inside the archive.
 
+## Remote Deployment Foundation
+
+Remote deployment tooling exists for future approved deployments:
+
+- `scripts\discover-wordpress-remote.ps1`
+- `scripts\deploy-theme.ps1`
+- `scripts\rollback-theme.ps1`
+
+See `docs/remote-deployment.md` before using these scripts.
+
+Remote deployment is not automatic. It requires SSH authentication, a verified remote theme path, a current backup, and explicit approval. It deploys theme files only and does not activate themes, publish content, change WordPress settings, change the database, or change Cabinet draft/published status.
+
 ### Manual Packaging Reference
 
 PowerShell example:

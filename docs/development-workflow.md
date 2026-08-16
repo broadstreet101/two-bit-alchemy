@@ -49,5 +49,10 @@ No code should exist only inside a chat conversation.
 - Never commit credentials, secrets, private exports, backup files, or production access details.
 - Validate WordPress theme ZIP structure before presenting it for installation.
 - Use `D:\TBA` for all project-controlled files rather than creating additional root-level `D:\` directories.
+- Keep production SSH keys, hosting passwords, deployment credentials, and private exports outside the repository.
+- Treat remote writes as consequential production actions requiring explicit authorization.
+- Keep publication approval separate from code deployment.
 
 For the current WordPress baseline and automation plan, see `docs/wordpress-baseline-automation.md`.
+
+For the remote deployment foundation, see `docs/remote-deployment.md`.

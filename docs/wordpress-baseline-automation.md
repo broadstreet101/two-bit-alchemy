@@ -8,6 +8,7 @@ Related project references:
 
 - `docs/development-workflow.md`
 - `docs/theme-deployment.md`
+- `docs/remote-deployment.md`
 - `docs/wordpress-audit.md`
 - `docs/wordpress-inspection-checklist.md`
 - `docs/theme-smoke-test.md`
@@ -25,6 +26,7 @@ Related project references:
 - Theme packages must contain a single top-level `two-bit-alchemy/` folder with `style.css` directly inside it.
 - Previous manual packaging attempts failed when the ZIP included an enclosing `src/`, `themes/`, or similar parent directory.
 - PHP is not required for local ZIP packaging validation.
+- Remote deployment foundation exists in `docs/remote-deployment.md`, but deployment remains approval-gated.
 
 ## Dada-Reported Live WordPress Facts
 
@@ -209,6 +211,7 @@ These are options only. Do not implement them until Dada approves the problem, a
 
 - WP-CLI over SSH: would automate content inventory, user role counts, cache clearing, plugin inventory, and theme installation.
 - SFTP or hosting file deploy: would reduce manual theme uploads while preserving repository-built packages.
+- Repository-controlled IONOS deployment scripts: can deploy only the validated custom theme after SSH authentication, path discovery, backup confirmation, and explicit approval.
 - A staging WordPress site: would allow safer preview and activation testing before production.
 - GitHub Actions package validation: would run repeatable ZIP checks on every push.
 - WordPress REST API tooling: could automate draft creation, media attachment, metadata checks, and preview workflows.
@@ -250,6 +253,13 @@ Immediate deployment workflow:
 5. Verify homepage, navigation, Cabinet, preview-only exhibits, posts, pages, mobile behavior, and admin access.
 6. Roll back by reactivating the previous theme or renaming the theme folder through hosting access if admin is unavailable.
 
+Remote deployment foundation:
+
+- `scripts\discover-wordpress-remote.ps1` can discover paths read-only after SSH authentication is configured.
+- `scripts\deploy-theme.ps1` can deploy only the validated Two-Bit Alchemy theme after explicit approval and a verified remote theme path.
+- `scripts\rollback-theme.ps1` can restore the latest timestamped theme backup after explicit approval.
+- See `docs/remote-deployment.md` before using any remote deployment script.
+
 Future deployment automation should preserve:
 
 - Explicit human publication approval.
@@ -274,6 +284,7 @@ The following instructions consolidate existing workflow policy and add automati
 - Use `D:\TBA` for all project-controlled files rather than creating additional root-level `D:\` directories.
 - Keep WordPress admin work limited to actions that cannot reasonably be represented in the repository.
 - Report errors before attempting workarounds that affect the live site or deployment process.
+- Do not change PHP versions during deployment automation setup. `twobitalchemy.com` currently uses PHP 8.2, `fisheraquatics.com` uses PHP 8.3, and migration is deferred until after deployment automation is proven.
 
 ## Recommended Information Collection Order
 
