@@ -251,6 +251,21 @@ Do not use the anomalous default `/usr/bin/php` runtime for WordPress automation
 
 ## Deployment History
 
+### 2026-08-16 Restrained Visual Character Refinement Deployment
+
+- Deployment status: succeeded.
+- Deployed source commit: `0e8886290132f6fc909d800da7b0ddf5df104aa1`.
+- Remote theme path: `/kunden/homepages/40/d1019605209/htdocs/clickandbuilds/TwoBitAlchemy/wp-content/themes/two-bit-alchemy`.
+- Remote backup path created: `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-154615`.
+- Package validation: passed.
+- Remote post-deployment verification: passed.
+- IONOS Performance cache purge: automated and confirmed with `CACHE_PURGE_STATUS=ok`.
+- Public homepage verification: HTTP 200 with `two-bit-alchemy-frontispiece-web.jpg`, `Frontispiece`, and `Project 01` present.
+- Public Cabinet verification: HTTP 200 and the Charlie Adlard draft exhibit title absent.
+- Public Charlie Adlard direct URL verification: HTTP 404.
+- Charlie Adlard Cabinet exhibit status after deployment: `draft`.
+- WordPress database content, page structure, plugins, uploads, PHP hosting configuration, approved story text, images, and Cabinet publication status were not modified.
+
 ### 2026-08-16 Cache Consistency And Layout Normalization Deployment
 
 - Deployment status: succeeded after correcting the post-deployment cache purge command.

@@ -2,6 +2,34 @@
 
 ## 2026-08-16
 
+Restrained visual-character refinement completed.
+
+### Completed
+
+- Refined the homepage frontispiece presentation with a reduced `600px` desktop max width, centered composition, restrained double-rule plate framing, and a small `Frontispiece` caption.
+- Reworked Featured Projects into an editorial composition with Fisher Aquatics as the primary larger entry and Kiwi/Photography as secondary companion entries.
+- Added reusable `catalog-label` styling for restrained uppercase catalog labels without adding icons, artwork, animation, or new color tokens.
+- Added `Project 01`, `Project 02`, and `Project 03` labels to homepage project entries without changing approved project text.
+- Added `Cabinet No. 001` as a restrained catalog identifier for the Charlie Adlard Cabinet record and administrator preview page.
+- Reduced divider density by removing repeated plain section-top rules from every homepage section and minor page sections, while retaining double rules for major archival transitions.
+- Refined Cabinet exhibit card, metadata, figure, and related-content styling toward a quieter museum/catalog record feel.
+- Ran package validation and confirmed the ZIP contains `two-bit-alchemy/style.css` without enclosing `src/`, `themes/`, or `dist/` paths.
+- Deployed commit `0e8886290132f6fc909d800da7b0ddf5df104aa1` with `scripts/deploy-theme.ps1 -ConfirmDeploy`.
+- Created the timestamped remote backup at `/kunden/homepages/40/d1019605209/htdocs/tba-theme-backups/two-bit-alchemy-20260816-154615`.
+- Confirmed IONOS Performance cache purge returned `CACHE_PURGE_STATUS=ok`.
+- Verified the public homepage returns HTTP 200 and contains the frontispiece, `Frontispiece` caption, and `Project 01` label.
+- Verified the public Cabinet page returns HTTP 200 and does not contain the Charlie Adlard draft exhibit title.
+- Verified the public direct Charlie Adlard exhibit URL returns HTTP 404.
+- Confirmed the Charlie Adlard Cabinet exhibit remains `draft`.
+
+### Notes
+
+- No WordPress content, page structure, plugins, uploads, PHP hosting versions, approved story text, source images, Charlie Adlard artifact image, frontispiece image file, or Cabinet publication status were changed.
+- No artwork was generated or edited.
+- PHP CLI is not available in the local Windows environment, so local PHP lint could not run during this pass. Validation used static review, package validation, remote deployment verification, and public HTTP checks.
+
+## 2026-08-16
+
 Cache consistency and layout normalization completed.
 
 ### Completed
