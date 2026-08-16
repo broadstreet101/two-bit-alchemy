@@ -7,6 +7,8 @@
 
 get_template_part( 'template-parts/site-header' );
 
+$frontispiece_uri = get_theme_file_uri( '/assets/images/frontispiece/two-bit-alchemy-frontispiece-web.jpg' );
+
 $featured_projects = array(
 	array(
 		'title'       => __( 'Fisher Aquatics', 'two-bit-alchemy' ),
@@ -63,6 +65,17 @@ $latest_sections = array(
 		<li><?php esc_html_e( 'Create.', 'two-bit-alchemy' ); ?></li>
 	</ul>
 </section>
+
+<figure class="home-frontispiece">
+	<img
+		src="<?php echo esc_url( $frontispiece_uri ); ?>"
+		alt="<?php esc_attr_e( 'Engraved Two-Bit Alchemy frontispiece with moon phases, scientific tools, plants, and an axolotl.', 'two-bit-alchemy' ); ?>"
+		width="1000"
+		height="1000"
+		decoding="async"
+		loading="lazy"
+	/>
+</figure>
 
 <section class="home-featured-projects" aria-labelledby="home-featured-projects-title">
 	<h2 id="home-featured-projects-title"><?php esc_html_e( 'Featured Projects', 'two-bit-alchemy' ); ?></h2>
