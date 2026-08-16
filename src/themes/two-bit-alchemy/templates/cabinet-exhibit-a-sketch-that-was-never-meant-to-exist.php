@@ -8,6 +8,7 @@
 get_template_part( 'template-parts/site-header' );
 
 $image_uri = get_theme_file_uri( '/assets/images/cabinet/charlie-adlard-amish-zombie-sketch-web.jpg' );
+global $two_bit_alchemy_current_cabinet_exhibit;
 ?>
 
 <article class="page-content project-exhibit cabinet-exhibit">
@@ -17,6 +18,9 @@ $image_uri = get_theme_file_uri( '/assets/images/cabinet/charlie-adlard-amish-zo
 
 	<header class="entry-header project-exhibit__header">
 		<p class="entry-meta"><?php esc_html_e( 'Cabinet Exhibit', 'two-bit-alchemy' ); ?></p>
+		<?php if ( ! empty( $two_bit_alchemy_current_cabinet_exhibit ) && ! two_bit_alchemy_is_cabinet_exhibit_published( $two_bit_alchemy_current_cabinet_exhibit ) ) : ?>
+			<p class="entry-meta"><?php esc_html_e( 'Preview only. Not publicly published.', 'two-bit-alchemy' ); ?></p>
+		<?php endif; ?>
 		<h1 class="entry-title"><?php esc_html_e( 'A Sketch That Was Never Meant to Exist', 'two-bit-alchemy' ); ?></h1>
 	</header>
 

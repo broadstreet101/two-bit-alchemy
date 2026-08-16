@@ -50,14 +50,14 @@ Published
 - `Media Needed` - required photographs, captions, alt text, or credits are missing.
 - `Ready For Approval` - publication checklist appears complete and awaits final approval.
 - `Approved For Publication` - approved, but not yet live.
-- `Implemented / Not Published` - implemented in the repository-controlled theme, but not yet deployed or approved for public WordPress publication.
+- `Preview Only` - implemented in the repository-controlled theme with registry status `draft`; visible only to logged-in administrators.
 - `Published` - live public content has been verified.
 
 ## Current Queue
 
 | Artifact | Source file | Current status | Editorial completeness | Story completeness | Image status | Metadata | Caption status | Cross-links | Accessibility | Publication readiness | Target shelf | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Charlie Adlard Amish Zombie Sketch | `content/cabinet/a-sketch-that-was-never-meant-to-exist.md`; source note preserved at `content/workbench/cabinet/walking-dead-sketch.md` | Implemented / Not Published | Approved publication draft exists | Complete approved story exists | Master archived outside Git; web derivative and theme deploy copy prepared | Prepared in approved content source and page template | Caption implemented; final review pending WordPress preview | Return to Cabinet implemented; no other related content approved yet | Alt text implemented; final rendered review pending | Not public-launch ready; rights/attribution review, WordPress preview, accessibility review, proofreading, and final approval remain | First Cabinet artifact | Approved title: `A Sketch That Was Never Meant to Exist`. Workbench placeholder preserved. Public route implemented at `/cabinet/a-sketch-that-was-never-meant-to-exist/`; do not publish to WordPress until remaining blockers are cleared. |
+| Charlie Adlard Amish Zombie Sketch | `content/cabinet/a-sketch-that-was-never-meant-to-exist.md`; source note preserved at `content/workbench/cabinet/walking-dead-sketch.md` | Preview Only | Approved publication draft exists | Complete approved story exists | Master archived outside Git; web derivative and theme deploy copy prepared | Prepared in approved content source and page template | Caption implemented; final review pending WordPress preview | Return to Cabinet implemented; no other related content approved yet | Alt text implemented; final rendered review pending | Not public-launch ready; rights/attribution review, WordPress preview, accessibility review, proofreading, and final approval remain | First Cabinet artifact | Approved title: `A Sketch That Was Never Meant to Exist`. Registry status is `draft` in `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`. Logged-in administrators can preview the card and route; logged-out visitors receive the themed 404. |
 | Tori Amos Camel cigarette pack | `content/workbench/artifacts/tori-amos-cigarette-pack.md` | Workbench Draft | Partial Workbench facts captured | Partial; "Why I Kept It" and "Why It Matters" still contain placeholders | Needed | Partial | Not prepared | Partial; related to 1981 Ford Escort model | Not started | Not ready | First shelf | Exact show date and tour are uncertain. Needs final editorial draft, image review, caption/alt text, privacy/copyright review, and final approval before publication. |
 | 1981 Ford Escort model | `content/workbench/artifacts/1981-ford-escort-model.md` | Workbench Draft | Partial Workbench facts captured | Partial; core connection captured, but dates, names, places, and privacy decisions remain open | Needed | Partial | Not prepared | Partial; related to Tori Amos Camel cigarette pack | Not started | Not ready | First shelf | Needs accident/detail privacy review, public naming decisions, photographs, captions, alt text, final metadata, and final approval before publication. |
 
@@ -132,6 +132,30 @@ Identify the planned shelf or publication group. If unknown, mark as pending rat
 
 Record blockers, approval needs, source gaps, privacy concerns, media needs, or editorial cautions.
 
+## Preview / Publish Process
+
+Cabinet exhibit visibility is controlled in `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`.
+
+Use the registry `status` value as the source of truth:
+
+- `draft` means administrator preview only.
+- `published` means public.
+
+For `draft` exhibits:
+
+- Logged-in administrators with `manage_options` can see the Cabinet card.
+- Logged-in administrators with `manage_options` can open the exhibit URL.
+- Logged-out visitors cannot see the Cabinet card.
+- Logged-out direct URL requests return the themed 404 response.
+- Draft preview pages emit `noindex,nofollow`.
+
+To publish an exhibit later:
+
+1. Complete the publication readiness checklist.
+2. Clear rights, attribution, privacy, accessibility, proofreading, and final approval blockers.
+3. Change only the exhibit registry `status` from `draft` to `published`.
+4. Verify the Cabinet card and exhibit URL as a logged-out visitor before launch is considered complete.
+
 ## Current Publication Blockers
 
 - No current Cabinet artifact is publication-ready.
@@ -139,7 +163,7 @@ Record blockers, approval needs, source gaps, privacy concerns, media needs, or 
 - Captions and alt text still require final rendered review before public launch.
 - Final metadata still requires review before public launch.
 - Privacy, permission, and copyright review remain open where relevant.
-- Public placement for future Cabinet artifacts still requires approval; the Charlie Adlard route is implemented but not approved for WordPress publication.
+- Public placement for future Cabinet artifacts still requires approval; the Charlie Adlard route is implemented as preview-only and is not approved for public WordPress publication.
 
 ## Queue Maintenance Rules
 

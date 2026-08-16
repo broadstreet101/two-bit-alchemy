@@ -124,6 +124,15 @@ Use this checklist after Workbench material has been drafted and before anything
 - [ ] A rollback path exists if theme or WordPress changes are involved.
 - [ ] Publication sequence has been approved.
 
+## Cabinet Preview / Publish Status
+
+- [ ] Cabinet exhibit registry status is `draft` while review is active.
+- [ ] Draft Cabinet exhibit cards are visible only to logged-in administrators.
+- [ ] Draft Cabinet exhibit URLs return the themed 404 for logged-out visitors.
+- [ ] Draft previews include `noindex,nofollow`.
+- [ ] Registry status is changed to `published` only after final publication approval.
+- [ ] Published Cabinet exhibit visibility is verified while logged out.
+
 ## Image Preparation Guidelines
 
 Gather photographs before publication whenever images would clarify, preserve, or document the subject.

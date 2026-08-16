@@ -2,6 +2,25 @@
 
 ## 2026-08-16
 
+Cabinet exhibit preview mode completed.
+
+### Completed
+
+- Reworked the Cabinet exhibit route into a reusable registry-controlled preview mechanism in `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`.
+- Added a `draft` / `published` status model as the source of truth for Cabinet exhibit visibility.
+- Kept the Charlie Adlard exhibit in `draft` status so it remains unpublished and preview-only.
+- Updated the Cabinet page so draft exhibit cards are visible only to logged-in administrators with `manage_options`.
+- Updated direct exhibit routing so logged-in administrators can preview draft exhibits and logged-out visitors receive the themed 404.
+- Added `noindex,nofollow` output for draft Cabinet preview pages.
+- Updated the Cabinet publication queue, publication readiness checklist, and Charlie Adlard content source with the reusable preview/publish process.
+
+### Notes
+
+- The approved Charlie Adlard story, source image, derivative image, CSS, unrelated pages, navigation, and WordPress content were not altered.
+- Rights status remains: Publication permission / copyright status: review before public launch.
+
+## 2026-08-16
+
 First Cabinet exhibit implementation completed.
 
 ### Completed

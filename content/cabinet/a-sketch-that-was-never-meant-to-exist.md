@@ -9,7 +9,9 @@ It is not published to WordPress yet. It does not replace or delete the earlier 
 - Status: Approved publication draft prepared in repository.
 - Public destination: `/cabinet/a-sketch-that-was-never-meant-to-exist/`
 - WordPress status: Not published.
-- Theme/template status: Implemented in the repository-controlled theme; not deployed to WordPress.
+- Theme/template status: Implemented in the repository-controlled theme as administrator-only preview.
+- Publication status source of truth: `src/themes/two-bit-alchemy/inc/cabinet-exhibits.php`
+- Registry status: `draft`
 - Source boundary: This file contains the approved publication draft. The Workbench file remains the earlier raw source placeholder.
 
 ## Approved Publication Draft

@@ -30,19 +30,27 @@ while ( have_posts() ) :
 			<p><?php esc_html_e( 'Individual Cabinet artifacts will be added after their stories, photographs, context, privacy, and publication readiness have been reviewed.', 'two-bit-alchemy' ); ?></p>
 		</section>
 
-		<section class="project-section" aria-labelledby="cabinet-exhibits-title">
-			<h2 id="cabinet-exhibits-title"><?php esc_html_e( 'Cabinet Exhibits', 'two-bit-alchemy' ); ?></h2>
-			<div class="related-exhibit-list">
-				<article class="related-exhibit-card">
-					<h3>
-						<a href="<?php echo esc_url( home_url( '/cabinet/a-sketch-that-was-never-meant-to-exist/' ) ); ?>">
-							<?php esc_html_e( 'A Sketch That Was Never Meant to Exist', 'two-bit-alchemy' ); ?>
-						</a>
-					</h3>
-					<p><?php esc_html_e( 'An original Charlie Adlard sketch preserved as the first Cabinet exhibit, with rights and attribution review recorded before public launch.', 'two-bit-alchemy' ); ?></p>
-				</article>
-			</div>
-		</section>
+		<?php $cabinet_exhibits = two_bit_alchemy_get_visible_cabinet_exhibits(); ?>
+		<?php if ( $cabinet_exhibits ) : ?>
+			<section class="project-section" aria-labelledby="cabinet-exhibits-title">
+				<h2 id="cabinet-exhibits-title"><?php esc_html_e( 'Cabinet Exhibits', 'two-bit-alchemy' ); ?></h2>
+				<div class="related-exhibit-list">
+					<?php foreach ( $cabinet_exhibits as $slug => $exhibit ) : ?>
+						<article class="related-exhibit-card">
+							<h3>
+								<a href="<?php echo esc_url( home_url( '/cabinet/' . $slug . '/' ) ); ?>">
+									<?php echo esc_html( $exhibit['title'] ); ?>
+								</a>
+							</h3>
+							<?php if ( ! two_bit_alchemy_is_cabinet_exhibit_published( $exhibit ) ) : ?>
+								<p class="entry-meta"><?php esc_html_e( 'Preview only. Not publicly published.', 'two-bit-alchemy' ); ?></p>
+							<?php endif; ?>
+							<p><?php echo esc_html( $exhibit['excerpt'] ); ?></p>
+						</article>
+					<?php endforeach; ?>
+				</div>
+			</section>
+		<?php endif; ?>
 	</article>
 
 <?php endwhile; ?>
