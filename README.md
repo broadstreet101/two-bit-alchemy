@@ -13,15 +13,17 @@ The current baseline is documented in `Two-Bit_Alchemy_Website_AI_Handoff.md`. T
 
 ## Development Status
 
-Planning scaffold only.
+Repository-controlled WordPress theme implementation is in progress.
 
-No website code has been generated yet. Implementation should begin only after approval of the structure, platform approach, and first development milestone.
+No live WordPress content should be published or cleaned up without explicit approval. Theme packages should be built and validated from the repository before WordPress installation or update.
 
 ## Key Files
 
 - `docs/project-summary.md` - concise project summary.
 - `docs/brand-manifest.md` - long-term creative and design constitution.
 - `docs/development-workflow.md` - permanent development workflow policy.
+- `docs/wordpress-baseline-automation.md` - WordPress cleanup, baseline audit, and automation plan.
+- `docs/theme-deployment.md` - theme packaging, installation, activation, and rollback instructions.
 - `docs/repository-structure.md` - recommended folder structure.
 - `docs/planning/missing-project-files.md` - missing files and why they matter.
 - `docs/decisions.md` - durable project decisions.

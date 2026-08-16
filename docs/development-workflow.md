@@ -39,3 +39,15 @@ Every implementation task should leave the repository in a deployable state.
 
 No code should exist only inside a chat conversation.
 
+## Automation Principles
+
+- Maximize deterministic automation for repository-controlled work.
+- Minimize unnecessary manual file handling.
+- Batch related safe operations when practical.
+- Never publish live content without explicit approval.
+- Preserve preview and draft states.
+- Never commit credentials, secrets, private exports, backup files, or production access details.
+- Validate WordPress theme ZIP structure before presenting it for installation.
+- Use `D:\TBA` for all project-controlled files rather than creating additional root-level `D:\` directories.
+
+For the current WordPress baseline and automation plan, see `docs/wordpress-baseline-automation.md`.

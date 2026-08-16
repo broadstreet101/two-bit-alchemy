@@ -2,6 +2,24 @@
 
 ## 2026-08-16
 
+WordPress Baseline and Automation Phase completed.
+
+### Completed
+
+- Added `docs/wordpress-baseline-automation.md` with a conservative WordPress baseline audit, cleanup sequence, automation architecture, deployment readiness guidance, and permanent automation guardrails.
+- Added `scripts/package-theme.ps1` as the canonical Windows-compatible local theme packaging and ZIP validation script.
+- Updated `docs/theme-deployment.md` to use the packaging script before manual WordPress upload.
+- Updated `docs/development-workflow.md` with automation-specific project instructions.
+- Updated `README.md` to reflect the current repository-controlled WordPress theme status and link to the baseline automation plan.
+- Ran the packaging script locally and verified `dist/two-bit-alchemy.zip` contains `two-bit-alchemy/style.css` with no enclosing `src/`, `themes/`, or `dist/` paths.
+
+### Notes
+
+- No live WordPress site changes, cleanup, content publication, theme upload, plugin changes, credential setup, story edits, or image edits were performed.
+- Live WordPress cleanup remains blocked pending manual audit, backup and restore confirmation, and explicit approval for each consequential change batch.
+
+## 2026-08-16
+
 Cabinet exhibit preview mode completed.
 
 ### Completed

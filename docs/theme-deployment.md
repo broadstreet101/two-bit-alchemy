@@ -6,6 +6,29 @@ This document explains how to package, install, activate, and roll back the Two-
 
 Package the theme from the repository root so the ZIP contains the `two-bit-alchemy` folder with `style.css`, `functions.php`, and `theme.json` at that folder root.
 
+Use the repository packaging script for review or release packages:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\package-theme.ps1
+```
+
+The script builds `dist/two-bit-alchemy.zip`, verifies the archive structure, confirms required theme files, rejects accidental enclosing folders such as `src/`, `themes/`, or `dist/`, and reports the archive contents.
+
+The ZIP must contain:
+
+```text
+two-bit-alchemy/
+|-- style.css
+|-- functions.php
+|-- index.php
+|-- theme.json
+`-- ...
+```
+
+Do not upload a package unless `two-bit-alchemy/style.css` is verified inside the archive.
+
+### Manual Packaging Reference
+
 PowerShell example:
 
 ```powershell
@@ -53,16 +76,6 @@ try {
 ```
 
 This creates explicit folder entries and forward-slash ZIP paths so WordPress sees `two-bit-alchemy/style.css` directly inside the theme folder. Avoid `Compress-Archive` for this package because it can create backslash paths inside the ZIP on Windows.
-
-Before uploading, confirm the ZIP structure resembles:
-
-```text
-two-bit-alchemy/
-|-- style.css
-|-- functions.php
-|-- theme.json
-`-- ...
-```
 
 ## Install In WordPress
 
